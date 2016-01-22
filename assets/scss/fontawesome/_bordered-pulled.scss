@@ -1,0 +1,27 @@
+// Bordered & Pulled
+// -------------------------
+
+.#{$fa-css-prefix}-border {
+  padding: 0;
+  width:68px;
+  height:68px;
+  line-height:68px;
+  text-align:center;
+  border: solid 0px $fa-border-color;
+  border-radius: 900px;
+}
+
+.#{$fa-css-prefix}-pull-left {
+   margin-right: 1.5rem;
+   float: left;
+}
+
+.#{$fa-css-prefix}-pull-right {
+   margin-left: 1rem;
+   float: right;
+}
+
+.#{$fa-css-prefix}-top {
+   margin-bottom: 0.5rem;
+}
+

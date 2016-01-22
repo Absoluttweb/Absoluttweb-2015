@@ -1,0 +1,102 @@
+{% layout 'styleguide' %}
+
+{% block main %}
+
+<div class="band band-main pad-bot">
+	<div class="row">
+		<div class="large-12 columns">
+			<h3>Standard knapper</h3>
+			<p class="lead">Knappens utforming tilpasses websidens typografi og fargeprofil. Vi har semi-automatisert løsning for at knapper harmonerer med websidens innhold.</p>
+			<a href="#" class="btn btn-primary">Klikk meg</a>
+			<a href="#" class="btn btn-secondary">Klikk meg</a>
+			<a href="#" class="btn btn-dark-grey">Klikk meg</a>
+			<a href="#" class="btn btn-light-grey">Klikk meg</a>
+			<div class="row">
+				<div class="large-12 columns">
+					{% include 'code/code-buttons' %}	
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="large-6 columns">
+					<h4>Knapp med dropdown</h4>
+					<p>Dropdowns er en UL som blir synlig ved å klikke på knappen. Kan inneholde ulike elementer.</p>
+					<div class="dropdown marg-bot">
+						<a href="#" class="btn btn-primary with-icon">Dropdown med icon <i class="fa fa-bars"></i></a>
+						<ul>
+							<li><a href="#">Link 1</a></li>
+							<li><a href="#">Link 1</a></li>
+							<li><a href="#">Link 1</a></li>
+						</ul>
+					</div><br>
+					{% include 'code/code-dropdown' %}		
+				</div>
+				<div class="large-6 columns">
+					<h4>Grupperte knapper</h4>
+					<p>Perfekt løsning om man ønsker å gi brukeren alternativer. Man bør maks bruke 3 knapper og konsis tekst.</p>
+					<div class="button-group clearfix">
+						<a href="#" class="btn btn-primary">Kontakt oss</a>
+						<a href="#" class="btn btn-light-grey with-icon">send mail <i class="fa fa-envelope"></i></a>
+						<a href="#" class="btn btn-light-grey with-icon">Ring oss <i class="fa fa-phone"></i></a>
+					</div>
+					{% include 'code/code-button-group'%}
+				</div>
+			</div>
+
+			<hr>
+			<div class="row">
+				<div class="large-6 columns">
+					<h4>Størrelser</h4>
+					<p>Løsningen genererer størrelser som passer linjehøyde og typografi</p>
+					<a href="#" class="btn btn-light-grey x-large radius">X-Large</a>
+					<a href="#" class="btn btn-light-grey large radius">Large</a>
+					<a href="#" class="btn btn-light-grey radius">Default</a>
+					<a href="#" class="btn btn-light-grey small radius">Small</a>	
+				</div>
+				<div class="large-6 columns">
+					<h4>Avrundet</h4>
+					<p>Mykere knapp, her med tykkere ramme</p>
+					
+					<a href="#" class="btn btn-dark-grey round border">I am rounded</a>
+						
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="large-6 columns">
+					<h4>Effekter og rammer</h4>
+					<p>Skygger, highlights og 3d varianter</p>
+					<a href="#" class="btn btn-primary radius popout">Pop-out</a>
+					<a href="#" class="btn btn-primary radius shadow">Shadow</a>
+					<a href="#" class="btn btn-primary radius border">Border</a>
+				</div>
+				<div class="large-6 columns">
+					<h4>Mixin Button</h4>
+					<p>Skreddersydde knapper</p>
+						<a href="#" class="btn btn-1 with-icon">Button btn-1 <i class="fa fa-rss"></i></a>
+						<a href="#" class="btn btn-2">Button btn-2</a>
+						<a href="#" class="btn btn-3">Button btn-3</a>
+					<div class="row">
+						<div class="large-12 columns">
+							{% include 'code/mixin-button' %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="large-12 columns">
+					<h4>Cool CSS3 Buttons - Links</h4>
+					<a href="http://tympanus.net/Development/CreativeButtons" target="_blank">Tympanus Creative Buttons</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

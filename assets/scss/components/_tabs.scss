@@ -1,0 +1,83 @@
+/* TABS AND PANES
+======================================================== */
+//Show Hide
+.tabs-content > .content {
+display: none;
+  &.active {
+    display:block;
+  }
+}
+
+//Fallback no JS
+.no-js .tabs-content > .content {
+display: block;
+float: none; }
+
+.tabs {
+	margin-bottom: $font-line-height;
+	li + li {
+		margin-top: 0;
+	}
+	li {
+		display:block;
+		float: left;
+		margin: 0 2px 2px 0;
+		color: $tab-color;
+		background-color: $tab-bg-color;
+		border:1px solid $tab-border-color;
+		a {
+			display:block;
+			font-size: $tab-font-size;
+			font-weight:$tab-font-weight;
+			text-transform: $tab-text-transform;
+			line-height: 1;
+			padding: $tab-padding;
+			color: $tab-color;
+		}
+		&.active {
+			background: $tab-bg-active-color;
+			border-color: $tab-border-active-color;
+			a {
+				color: $tab-active-color;
+			}
+		}
+	}
+	&.small-fill {
+		@media only screen and (max-width: $medium-size) { 
+			li {
+				width: 100%;
+				max-width: 100%;
+				display: block;
+				a {
+					width: 100%;
+					margin-bottom: 5px;
+					display: block;
+				}
+			}
+		}
+	}
+	&.vertical {
+		width:100%;
+		max-width:100%;
+		li {
+			width:100%;
+		}
+		@media only screen and (max-width: $large-size) { 
+			float: none;
+			width:100%;
+			max-width:100%;
+			li {
+				float:left;
+				width: auto;
+			}
+		}
+	}
+}
+
+.tabs-content .vertical {
+	width: 100%;
+	max-width: 100%;
+	float:none;
+	margin:0;
+	padding:0;
+}

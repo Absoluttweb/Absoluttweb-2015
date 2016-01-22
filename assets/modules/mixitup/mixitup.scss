@@ -1,0 +1,44 @@
+@import "../../scss/_variables";
+
+/* TODO: ADD MIXITUP TO STYLEGUIDE
+================================================================ */
+#mixitup {
+	clear: both;
+}
+#mixitup .mix{
+    opacity: 0;
+    display: none;
+    clear: none;
+}
+ul.mixitup-nav, dl.mixitup-nav  {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin:0;
+}
+ul.mixitup-nav li, dl.mixitup-nav dd, dl.mixitup-nav dt {
+	float: left;
+	text-transform: $tab-text-transform;
+	font-size: $tab-font-size;
+	font-weight: $tab-font-weight;
+	padding: $tab-padding;
+	margin: 0;
+}
+dl.mixitup-nav dt {
+	padding-left:0;
+	color: lighten($font-color,25%);
+}
+ul.mixitup-nav li, dl.mixitup-nav dd {
+	color: $tab-color;
+	background: $tab-bg-color;
+	cursor: pointer;
+	margin: 0 1px 1px 0;
+}
+ul.mixitup-nav li:hover,ul.mixitup-nav li:focus, dl.mixitup-nav dd:hover,dl.mixitup-nav dd:focus {
+	color: $tab-color;
+  	background: $tab-bg-color;
+}
+ul.mixitup-nav li.active, dl.mixitup-nav dd.active {
+	color: $tab-active-color;
+    background: $tab-bg-active-color;
+}

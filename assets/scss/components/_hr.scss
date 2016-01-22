@@ -1,0 +1,29 @@
+hr,.hr {
+	height: $hr-size;
+	background-color: $hr-color;
+	margin: 0.75rem auto 1.5rem auto;
+	display: block;
+	border:none;
+	position:relative;
+	&.marg-half, &.half-marg, &.half {
+		margin: 0 auto 0.75rem auto;
+	}
+	// Medium and up
+	@media only screen and (min-width: $medium-size) {
+		margin: 1.5rem auto 3rem auto;
+		&.marg-half, &.half-marg {
+			margin: 0.75rem auto 1.5rem auto;
+		}
+	}
+}
+//Fixes for overlapping
+p + hr, img + hr, a + hr, ul + hr, ol + hr, h1 +hr, h2 + hr, h3 + hr, h4 + hr, h5 + hr, h6 + hr {
+	margin: 0.75rem auto 1.5rem auto;
+	// Medium and up
+	@media only screen and (min-width: $medium-size) {
+		margin: 1.5rem auto 1.5rem auto;
+		&.marg-half, &.half-marg, &.half {
+			margin: 0.75rem auto 0.75rem auto;
+		}
+	}
+}

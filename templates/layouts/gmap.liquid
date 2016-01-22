@@ -1,0 +1,26 @@
+<!doctype html>
+<html class="no-js" lang="no">
+
+<head>
+  <meta charset="utf-8" />
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ global.title }} | Beliggenhet</title>
+  <meta name="author" content="Absoluttweb - Webdesign Bergen">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+
+<link href="/assets/scss/components.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+
+<body>
+<div id="gmap"></div>
+<a href="javascript:history.go(-1)" class="gmap-close">Lukk</a>
+
+{% block main %}
+{% endblock %}  <!--<pop:region name="main"></pop:region>-->
+
+{% include 'gmap' %}
+
+</body>
+</html>

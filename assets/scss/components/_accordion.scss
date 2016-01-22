@@ -1,0 +1,26 @@
+/* ACCORDION
+======================================================== */
+
+.accordion p.question {
+    position: relative;
+    cursor:pointer;
+    margin: 0;
+    border-top: 1px dotted $light-grey-color;
+    padding: 0.25em 0;
+}
+.accordion p.question:before {
+    content: "\f055";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    padding-right: 5px;
+}
+.accordion p.question.current {
+    cursor:default;
+}
+.accordion p.question.current:before {
+	content: "\f056";
+}
+.accordion div.answer {
+}

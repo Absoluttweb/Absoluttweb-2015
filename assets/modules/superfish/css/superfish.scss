@@ -1,0 +1,168 @@
+@import "../../../scss/_variables";
+@import "../../../scss/_mixins";
+
+/* ESSENTIAL STYLES 
+======================================================= */
+ul.sf-menu, ul.sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		position: relative;
+		text-align:left;
+		float: left;
+		//display:inline-block;
+		&:hover > ul, &.sfHover > ul {
+			display: block;
+		}
+	}
+	ul {
+		position: absolute;
+		display: none;
+		top: 100%;
+		left: 0;
+		z-index: 99;
+		li {
+			float: none;
+			width:100%;
+		}
+		ul {
+			top: 0;
+			left: 100%;
+		}
+	}
+	a {
+		display: block;
+		position: relative;
+		
+	}	
+}
+
+/* THEME STYLES 
+======================================================= */
+
+ul.sf-menu {
+	@if $nav-logo-adjust == true {
+		margin-top: ($logo-space / 2) - ($nav-height / 2);
+	}
+	@else if $nav-logo-adjust == false {
+		margin-top:0;
+	}
+	@if $nav-float == left {float:left;}
+	@else if $nav-float == right {float:right;}
+
+	a {
+		zoom: 1; /* IE7 */
+		text-transform: $nav-text-transform;
+		padding: $nav-padding 1em;
+		font-weight: $nav-font-weight;
+		font-size: $nav-font-size;
+		font-family: $nav-family;
+		letter-spacing: $nav-letter-spacing;
+		color: $nav-color;
+		white-space: nowrap; /* no need for Supersubs plugin */
+		*white-space: normal; /* ...unless you support IE7 (let it wrap) */
+	}
+	> li {
+		background:$nav-bg;
+		@include transition-background(200ms);
+		&:hover, &.sfHover {
+			background:$nav-bg-hover;
+			@include transition-background(200ms);
+			> a {
+				color:$nav-color-hover;
+			}
+		}
+		&.active {
+			background:$nav-bg-active;
+			@include transition-background(200ms);
+			border-bottom: 0 solid $nav-border-active;
+			> a {
+				color:$nav-color-active;
+			}
+		}
+	}
+
+	/* CHILD ELEMENTS */
+
+	ul {
+		min-width: 12em; /* allow long menu items to determine submenu width */
+		*width: 12em; /* no auto sub width for IE7, see white-space comment below */
+		-webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+		-moz-box-shadow:    2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+		box-shadow:         2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+		li {
+			background-color:$nav-sublevel-bg;
+			margin-top:0px;
+			border-bottom: $nav-sublevel-border;
+			&:hover, &.sfHover {
+				background:$nav-sublevel-bg-hover;
+			}
+			&.active {
+				background:$nav-sublevel-bg-active;
+				a {
+					color:$nav-sublevel-color-active;
+					&:hover, &.sfHover {
+						color:$nav-sublevel-color-active;
+					}
+				}
+			}
+			a {
+				padding:12px 20px;
+				font-weight: $nav-font-weight;
+				font-size: $nav-sublevel-font-size;
+				text-transform: $nav-sublevel-text-transform;
+				letter-spacing: 0;
+				line-height: 1em;
+				color:$nav-sublevel-color;
+				&:hover, &.sfHover {
+					color:$nav-sublevel-color-hover;
+			}
+			}
+		}
+		ul li {
+    		margin-left:1px;
+    		margin-bottom:0;
+    		margin-top:0;
+		}	
+	}	 
+}
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -2px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 5px solid transparent;
+	border-top-color: $nav-color; /* edit this to suit design (no rgba in IE8) */
+	border-top-color: rgba($nav-color,.5);
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: $nav-color; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: $nav-color; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba($nav-color,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: $nav-color;
+}
+

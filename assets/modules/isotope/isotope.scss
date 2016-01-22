@@ -1,0 +1,25 @@
+@import "../../scss/_variables";
+
+//Defaults. Can be overwritten in Style.scss. Give the Isotope an induvidual ID. See specs for demo.
+
+.isotope {
+	> img {
+	min-width: 100%;
+	}
+	.item {
+	  width: 25%;
+	  &.item-2x {
+	    width: 50%;
+	  }
+	  &.item-3x {
+	    width: 75%;
+	  }
+	  &.item-4x {
+	    width: 100%;
+	  }
+	  // ONLY Small
+	  @media only screen and (max-width: $medium-size) {
+	    width:50%;
+	  }
+	}
+}

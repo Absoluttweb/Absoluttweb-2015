@@ -1,0 +1,245 @@
+/* Variables for Visible
+=================================== */
+/* Visible Blocks
+=================================== */
+.bottom {
+  display: none; }
+
+.bottom-block-01 {
+  display: block; }
+
+.footer {
+  display: none; }
+
+.footer-block-01 {
+  display: block; }
+
+body {
+  background-image: none;
+  background-color: white; }
+
+/* Code
+=================================== */
+a.code {
+  color: #000;
+  text-align: right;
+  display: none;
+  width: 100%;
+  font-weight: bold; }
+  a.code:before {
+    content: "["; }
+  a.code:after {
+    content: "]"; }
+
+.corner-trigger {
+  position: fixed;
+  display: block;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 50px 0;
+  border-color: transparent #231f20 transparent transparent; }
+
+pre,
+code {
+  display: none;
+  clear: both;
+  height: auto;
+  font-family: Consolas, monospace;
+  border: 1px solid #F1F1EF;
+  background: #f7f7f7;
+  padding: 1.62em;
+  border-radius: 3px;
+  margin: 0 0 1.62em 0;
+  overflow-x: auto;
+  box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, post millennium */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ }
+
+/* Colors 
+=================================== */
+.colorbox {
+  display: block;
+  width: 3.24em;
+  height: 3.24em;
+  border-radius: 3px;
+  margin: 0 6px; }
+  .colorbox.white {
+    background-color: white; }
+  .colorbox.primary {
+    background-color: #df4a43; }
+  .colorbox.secondary {
+    background-color: #000000; }
+  .colorbox.light-grey {
+    background-color: #F1F1EF; }
+  .colorbox.medium-grey {
+    background-color: #c1c1cf; }
+  .colorbox.dark-grey {
+    background-color: #231f20; }
+  .colorbox.font-color {
+    background-color: #454545; }
+  @media only screen and (max-width: 760px) {
+    .colorbox {
+      width: 1.62em;
+      height: 1.62em; } }
+
+/* Code Toggle Button
+========================================= */
+a.code-toggle {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 18px;
+  border-radius: 0;
+  border: none;
+  margin: 0;
+  z-index: 99; }
+
+/* Fixed Nav in bottom
+========================================== */
+.dropdown-2 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99; }
+  .dropdown-2 > a {
+    font-size: 18px;
+    border-radius: 0;
+    border: none;
+    margin: 0; }
+  .dropdown-2 ul {
+    position: fixed;
+    z-index: 100;
+    background: #cc2a23;
+    bottom: 0;
+    right: 0;
+    border: none;
+    padding: 24px 24px 72px;
+    z-index: -1;
+    width: 500px;
+    max-width: 100%; }
+    .dropdown-2 ul li {
+      border-color: #db352d; }
+      .dropdown-2 ul li a {
+        color: white;
+        padding: 2% 0; }
+
+/* Custom Bands
+================================================================ */
+.band-sg-top {
+  background-color: white;
+  border-bottom: 3px solid #F1F1EF; }
+
+.band-sg-main {
+  background-color: #ffffff;
+  background-image: none; }
+
+/* Button Wrapper for showing buttons together 
+================================================ */
+.button-wrapper .button {
+  margin: 0 12px 12px 0 !important; }
+
+/* Custom Buttons
+================================================================ */
+.btn-1 {
+  color: #df4a43 !important;
+  background-color: white;
+  border: 1px solid #f2f2f2;
+  border-color: #df4a43 !important; }
+  .btn-1.with-icon .fa {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid rgba(223, 74, 67, 0.2); }
+  .btn-1.border {
+    border: 0.1em solid #f2f2f2; }
+    .btn-1.border.dashed {
+      border-style: dashed; }
+  .btn-1.shadow {
+    border-bottom: 2px solid #f2f2f2; }
+  .btn-1.popout {
+    border: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid #f2f2f2; }
+  .btn-1:hover, .btn-1:focus {
+    background-color: white;
+    border-color: white;
+    color: #df4a43; }
+
+/* Custom HR
+================================================================ */
+.hr-1 {
+  height: 6px;
+  background-color: #F1F1EF;
+  background-image: url("/img/overlays/6.png");
+  opacity: 0.1; }
+
+.hr-2::after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: inherit;
+  background: #d9d9d4;
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  z-index: 2; }
+
+.hr-3::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: #e71634;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -8px -8px 0 0;
+  z-index: 2;
+  -webkit-border-radius: 3px;
+  -mos-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
+
+/* Custom Dropdown
+================================================================ */
+.dropdown-1 ul {
+  -webkit-border-radius: 3px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius: 3px;
+  -moz-border-radius-topleft: 0;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5); }
+.dropdown-1 li {
+  padding-bottom: 6px;
+  padding-top: 6px; }
+.dropdown-1 li img {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin: 0 12px 0 0;
+  clear: left; }
+.dropdown-1 p {
+  line-height: 12px;
+  margin: 0;
+  padding-top: 4px; }
+  .dropdown-1 p small {
+    color: #594f51; }
+
+/* Custom Tabs
+================================================================ */

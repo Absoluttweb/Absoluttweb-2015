@@ -1,0 +1,48 @@
+html {
+  height: 100%; 
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0; 
+}
+
+#gmap, #gmap-location {
+  height: 100%;
+}
+
+#gmap img, #gmap-location img {
+    max-width: none;
+}
+
+#gmap.inside, #gmap-location.inside {
+    padding-top: 50%;
+    min-height: 200px; 
+}
+
+a.gmap-close {
+  display: block;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  right: 50%;
+  background: #008852;
+  opacity: 0.7;
+  border-radius: 5px;
+  color: white;
+  margin-right: -50px;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "open-sans", "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase; 
+}
+
+a.gmap-close:hover {
+    opacity: 1; 
+}

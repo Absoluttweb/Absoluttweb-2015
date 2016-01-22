@@ -1,0 +1,178 @@
+{% layout 'styleguide' %}
+
+{% block main %}
+
+
+		<div class="band">
+				<div class="row">
+					<div class="large-12 columns">
+						<h3>Captions og hover<hr></h3>
+						{% include 'code/code-panel'%}
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="large-12 columns">
+						<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 captions">
+						  <li><div class="panel">
+							<figure>
+									<a href="/img/globals/placeholder.jpg" class="fancybox frame no-marg" rel="gallery" title="Jeg er en bildetittel">
+									<div class="img-overlay">
+										<span>Zoom<span>
+									</div>
+									<img src="/img/globals/placeholder.jpg" alt="Jeg er alternativ tekst, og skal fortelle hva man ser på bildet"></a>
+								
+							</figure>
+							<div class="panel-content">
+								<h4>Caption default</h4>
+								
+							</div>
+						</div>
+						</li>
+						  <li><div class="panel">
+							<figure>
+									<div class="frame no-marg">
+									<img src="/img/globals/placeholder.jpg" alt="Jeg er alternativ tekst, og skal fortelle hva man ser på bildet">
+									<div class="img-overlay">
+										<div class="elements">
+											<a href="#" class="btn btn-secondary radius no-marg with-icon">Detaljer <i class="fa fa-search"></i></a>
+										</div>	
+									</div>
+									</div>
+								
+							</figure>
+							<div class="panel-content">
+								<h4>Caption 2 - Slide Up</h4>
+								
+							</div>
+						</div>
+						</li>
+						  <li class="cs-style-1">
+							<figure >
+					          <div class="frame">
+					           <img src="/img/globals/placeholder.jpg" alt="Jeg er alternativ tekst, og skal fortelle hva man ser på bildet">
+					          	</div>
+					            <figcaption>
+					                <h3>Camera</h3>
+					                <span>Jacob Cummings</span>
+					                <a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+					            </figcaption>
+					        </figure>
+							<div class="panel">
+							<div class="panel-content">
+								<h4>Caption 2 - Popout</h4>
+								
+							</div>
+						</div></li>
+						<li class="cs-style-2">
+							<figure>
+					           <div class="frame">
+					           <img src="/img/globals/placeholder.jpg" alt="Jeg er alternativ tekst, og skal fortelle hva man ser på bildet">
+					           </div>
+					            <figcaption>
+					                <h3>Camera</h3>
+					                <span>Jacob Cummings</span>
+					                <a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+					            </figcaption>
+					        </figure>
+					        <div class="panel">
+								<div class="panel-content">
+									<h4>Caption 2 - Reveal</h4>
+									
+								</div>
+							</div>
+						
+						</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+				
+
+	{% endblock %}
+
+	{% block script %}
+<script type="text/javascript">
+	/** Used Only For Touch Devices **/
+( function( window ) {
+  
+  // for touch devices: add class cs-hover to the figures when touching the items
+  if( Modernizr.touch ) {
+
+    // classie.js https://github.com/desandro/classie/blob/master/classie.js
+    // class helper functions from bonzo https://github.com/ded/bonzo
+
+    function classReg( className ) {
+      return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+    }
+
+    // classList support for class management
+    // altho to be fair, the api sucks because it won't accept multiple classes at once
+    var hasClass, addClass, removeClass;
+
+    if ( 'classList' in document.documentElement ) {
+      hasClass = function( elem, c ) {
+        return elem.classList.contains( c );
+      };
+      addClass = function( elem, c ) {
+        elem.classList.add( c );
+      };
+      removeClass = function( elem, c ) {
+        elem.classList.remove( c );
+      };
+    }
+    else {
+      hasClass = function( elem, c ) {
+        return classReg( c ).test( elem.className );
+      };
+      addClass = function( elem, c ) {
+        if ( !hasClass( elem, c ) ) {
+            elem.className = elem.className + ' ' + c;
+        }
+      };
+      removeClass = function( elem, c ) {
+        elem.className = elem.className.replace( classReg( c ), ' ' );
+      };
+    }
+
+    function toggleClass( elem, c ) {
+      var fn = hasClass( elem, c ) ? removeClass : addClass;
+      fn( elem, c );
+    }
+
+    var classie = {
+      // full names
+      hasClass: hasClass,
+      addClass: addClass,
+      removeClass: removeClass,
+      toggleClass: toggleClass,
+      // short names
+      has: hasClass,
+      add: addClass,
+      remove: removeClass,
+      toggle: toggleClass
+    };
+
+    // transport
+    if ( typeof define === 'function' && define.amd ) {
+      // AMD
+      define( classie );
+    } else {
+      // browser global
+      window.classie = classie;
+    }
+
+    [].slice.call( document.querySelectorAll( 'ul.captions > li > figure' ) ).forEach( function( el, i ) {
+      el.querySelector( 'figcaption > a' ).addEventListener( 'touchstart', function(e) {
+        e.stopPropagation();
+      }, false );
+      el.addEventListener( 'touchstart', function(e) {
+        classie.toggle( this, 'cs-hover' );
+      }, false );
+    } );
+
+  }
+
+})( window );
+</script>
+	{% endblock %}

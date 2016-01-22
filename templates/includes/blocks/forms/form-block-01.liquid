@@ -1,0 +1,35 @@
+<!-- 
+================================================
+Name:			Default Form
+Path:			Block -> Forms -> form-block-01
+Desc:			3 columns form with, name, phone, email, textarea and hidden page-url
+
+Class:			'form-block-01'
+
+Modifiers:		none
+===============================================
+-->
+
+<form class="form-block-01">
+	<div class="row">
+		<div class="medium-4 columns">
+			<input id="name" name="name" type="text" placeholder="Ditt navn" />
+		</div>
+		<div class="medium-4 columns">
+			<input id="email" name="email" type="email" placeholder="Din epostadresse" />
+		</div>
+		<div class="medium-4 columns">
+			<input id="tel" name="tel" type="tel" placeholder="Telefon" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="medium-12 columns">
+			<textarea id="message" name="message" rows="6" placeholder="Melding"></textarea>
+		</div>
+	</div>
+	<div class="row">
+		<div class="medium-12 columns">
+			<input type="submit" value="Send" class="btn btn-form btn-small">
+		</div>
+	</div>
+</form>

@@ -1,0 +1,38 @@
+{% layout 'styleguide' %}
+
+{% block main %}
+
+
+<div class="band band-main">
+	<div class="row">
+		<div class="large-12 columns">
+		<h4>Scrollreveal</h4>
+		<p class="subtle uppercase">Remember to activate JS</p>
+			<!-- Scrollreveal-->
+			<div class="row">
+				<div class="large-12 columns" data-sr="enter bottom and move 20px over 0.3s">
+					<blockquote>Blockquote er typisk sitater, ordtak og utsagn. Scrollreveal er en javascript plugin, som synliggjør innhold mens man scroller. Visningen kan animeres med ulike keywords.<br>
+						<span class="cite">Sindre Gusdal - Daglig leder i Absoluttweb</span>
+					</blockquote>
+					{% include 'code/code-scrollreveal' %}
+				</div>
+			</div>
+			<!-- End Scrollreveal -->
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+	<script type="text/javascript">
+		(function($) {
+			'use strict';
+			window.sr= new scrollReveal({
+			  reset: false,
+			  move: '50px',
+			  mobile: true
+			});
+		})();
+	</script>
+{% endblock %}

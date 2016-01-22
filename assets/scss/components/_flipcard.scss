@@ -1,0 +1,57 @@
+/* Flipcard variables ------------------------------------------- */
+$flipcard-height:300px;
+
+
+/* Flipcard Style ------------------------------------------- */
+.flipcard {
+  position: relative;
+  width: 31.333333333%;
+  height: $flipcard-height;
+  perspective: 500px;
+  float: left;
+  overflow: hidden;
+  margin: 0 1% 2%;
+  cursor: pointer;
+	  @media only screen and (max-width: $large-size) {
+	  		width: 48%;
+			height: $flipcard-height*1;	
+	  }
+	  @media only screen and (max-width: $medium-size) {
+	  		width: 100%;
+			height: $flipcard-height*1;
+	  }
+}
+.flipcard.v.flip .front{
+  transform: rotateX(180deg);
+}
+.flipcard.v.flip .back{
+  transform: rotateX(0deg);
+}
+.flipcard.v .back{
+  transform: rotateX(-180deg);
+}
+.flipcard.h.flip .front{
+  transform: rotateY(180deg);
+}
+.flipcard.h.flip .back{
+  transform: rotateY(0deg);
+}
+.flipcard.h .back{
+  transform: rotateY(-180deg);
+}
+.flipcard .front, .flipcard .back
+{
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in;
+  color: white;
+  background-color: #000;
+  backface-visibility: hidden;
+}
+.flipcard img {
+	min-height: $flipcard-height;
+}

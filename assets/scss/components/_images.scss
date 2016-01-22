@@ -1,0 +1,241 @@
+/* Images
+============================================================= */
+
+img {
+	position: relative;
+	margin-bottom: 0; //To prevent Sliders and Plugins to fail
+	&.pad-bot {
+		margin-bottom: 1rem;
+	}
+	&.pull-left {
+		float: left;
+		margin-right: $font-line-height;
+		margin-right: $font-line-height;
+	}
+	&.push-right {
+		float: right;
+		margin-left: $font-line-height;
+	}
+	&.max-50 {
+		max-width:50%;
+	}
+	&.max-40 {
+		max-width:40%;
+	}
+	&.max-30 {
+		max-width:30%;
+	}
+	&.radius {
+		@include border-radius($global-radius)
+	}
+	&.round {
+		@include border-radius(9000px)
+	}
+	&.border {
+		border:1px solid #000000;
+		padding:0;
+		background: #ffffff;
+	}
+	//Inline images
+	&.left-side,&.inline-left {
+		margin:0 3% 3% 0;
+		float: left;
+		width:30%;
+		min-width:180px;
+		max-width:100%;
+		z-index:2;
+	}
+	&.right-side,&.inline-right {
+		margin:0 0 3% 3%;
+		float: right;
+		width:30%;
+		min-width:180px;
+		max-width:100%;
+		z-index:2;
+	}
+}
+
+
+.frame, a.frame {
+	margin-bottom: $font-line-height/2;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	padding: $frame-size 0;
+	height:0;
+	position: relative;
+	&.pull-left {
+		float: left;
+		margin-right: $font-line-height / 2;
+	}
+	&.push-right {
+		float: right;
+		margin-left: $font-line-height / 2;
+	}
+	&.radius {
+		@include border-radius($global-radius)
+	}
+	&.border {
+		border:1px solid $light-grey-color;
+		padding:1%;
+		background: #ffffff;
+	}
+	&.round {
+		@include border-radius(9000px)
+	}
+	&.wide {
+		padding: $frame-size*0.6 0;
+	}
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		min-width:102%;
+	}
+}
+
+//Caption Hover Effect
+//====================================================
+
+.img-overlay {
+	display: block;
+	position: absolute;
+	z-index: 20;
+	background: $caption-bg;
+	opacity: $caption-opacity;
+	overflow: hidden;
+	transition: all 300ms;
+	span {
+		display: block;
+		position: absolute;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		z-index: 100;
+		text-align: center;
+		color: $caption-link-color;
+		font-weight: 500;
+		font-size: 85%;
+	}
+	.elements {
+		display: block;
+		position: absolute;
+		z-index: 100;
+		text-align: center;
+		width: 100%;
+	}
+}
+.frame.hover .img-overlay {
+	height: 100%;
+}
+.touch .img-overlay {
+	display: none;
+}
+
+.img-overlay {
+	bottom: 0;
+	left:0;
+	right: 0;
+	width: 100%;
+	height: 0;
+	span {
+		left: 0;
+		right: 0;
+		bottom: 50%;
+		margin: 0 auto -17px auto;
+	}
+	.elements {
+		left: 0;
+		right: 0;
+		bottom: 50%;
+		margin: 0 auto -17px auto;
+	}
+}
+
+//Caption Hover Effect (JS)
+//====================================================
+
+figure.hover {
+	position: relative;
+	margin: 0;
+}
+figcaption.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: $caption-bg;
+    color: #ffffff;
+    h3 {
+    margin: 0;
+    padding: 0;
+    color: $caption-header-color;
+	}
+	h4 {
+    margin: 0;
+    padding: 0;
+    color: $caption-header-color;
+	}
+	figcaption a {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    background: #ed4e6e;
+    color: $caption-link-color!important;
+	}
+}
+
+//Style 1 ----------------------------------------
+.cs-style-1 figcaption {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    backface-visibility: hidden;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.no-touch .cs-style-1 figure:hover figcaption,
+.cs-style-1 figure.cs-hover figcaption {
+    opacity: 1;
+    transform: translate(15px, 15px);
+}
+.cs-style-1 figcaption h3 {
+    margin-top: 10%;
+}
+.cs-style-1 figcaption h4 {
+    margin-top: 10%;
+}
+ 
+.cs-style-1 figcaption span {
+    display: block;
+}
+
+.cs-style-1 .frame {
+	margin: 0;
+}
+
+//Style 2 --------------------------------------------
+.cs-style-2 figure .frame {
+    z-index: 10;
+    transition: transform 0.4s;
+    margin: 0;
+}
+ 
+.no-touch .cs-style-2 figure:hover .frame,
+.cs-style-2 figure.cs-hover .frame {
+    transform: translateY(-90px);
+}
+.cs-style-2 figcaption {
+    height: 90px;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+}
+.cs-style-2 figcaption a {
+    //position: absolute;
+    right: 20px;
+    top: 30px;
+}

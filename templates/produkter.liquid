@@ -1,0 +1,99 @@
+{% layout 'layout' %}
+
+{% block header %}
+<div class="page-header">
+   {% include 'top' %}
+   <div class="row">
+   	<div class="large-12 columns">
+	   <div class="page-header-container text-center">
+		   <h2 class="header-title" data-sr="scale up 100%">Produkter</h2>
+		   <h3 class="header-title" data-sr="wait 400ms and enter from left then move 300px">En del av VVS EKSPERTEN</h3>
+   		</div>	
+   	</div>
+   </div>
+</div>
+
+<div class="profile-with-marks">
+	<div class="pwm-secoundary pwm-small"></div>
+	<div class="pwm-primary pwm-small"></div>
+</div>
+
+
+{% endblock %}
+
+{% block main %}
+
+<div class="band band-grad pad">
+	<div class="row">
+		<div class="large-4 columns">
+			<h3>Høy Kvalitet</h3>
+		</div>
+		<div class="large-8 columns">
+			<p>Som en del av VVS Eksperten kan VVS FAG tilby produkter av høy kvalitet, fra kjente leverandører. Våre produkter holder norsk standard bla bla bla bla.<br>
+			</p>
+		</div>
+		<div class="large-12 columns">
+			<p></p>
+			<p class="text-center"><img src="/img/theme/logo-vvseksperten.jpg"></p>
+		</div>
+	</div>
+</div>
+
+<div class="band band-big-buttons pad" style="border-top:1px solid #D4D5D7;border-bottom:1px solid #D4D5D7">
+	<div class="row">
+		<div class="medium-6 columns">
+			<a href="http://produkter.vvseksperten.no/?memberId=710" class="bb btn-1" target="_blank"> <i class="fa fa-folder-open fa-3x"></i><br>Åpne Produktliste<span>Kategorisert liste over alle produkter</span></a>	
+		</div>
+		<div class="medium-6 columns">
+			<a href="http://www.vvseksperten.no/leverandorer" class="bb btn-1" target="_blank"> <i class="fa fa-users fa-3x"></i><br>Alle leverandører<span>Liste over alle leverandørene</span></a>	
+		</div>	
+	</div>
+</div>
+
+<div class="band band-partner-logos pad">
+	<div class="row full">
+		<div class="large-12 columns text-center">
+			<img src="/img/theme/logo-ifoe.jpg" class="partner-logo">
+			<img src="/img/theme/logo-fossbad.jpg" class="partner-logo">
+			<img src="/img/theme/logo-laufen.jpg" class="partner-logo">
+			<img src="/img/theme/logo-vikingbad.jpg" class="partner-logo">
+			<img src="/img/theme/logo-villeroy.jpg" class="partner-logo">
+			<img src="/img/theme/logo-linnbad.jpg" class="partner-logo">
+			<img src="/img/theme/logo-gobad.jpg" class="partner-logo">
+			<img src="/img/theme/logo-porsgrund.jpg" class="partner-logo">
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}
+
+{% block fullscreen %}
+{% endblock %}
+
+{% block script %}
+<script>
+	$(document).ready(function() {
+	var owl = $("#owl-carousel");
+
+	owl.owlCarousel({
+	    navigation : false, // Show next and prev buttons
+	    navigationText : ["forrige","neste"],
+	    pagination: true, // Show dotted pagination
+	    paginationNumbers: false, // Show numbers in bullets
+	    autoPlay : false,
+	    stopOnHover: true,
+	    singleItem:false,
+	    slideSpeed : 300,
+	    paginationSpeed : 300,
+	    items : 3, //items
+	    itemsDesktop : [1024,3], //items from here and down
+	    itemsDesktopSmall : [700,2], //
+	    itemsTablet: [430,1], //items from here and down
+	    itemsMobile : [300,1], //items from here and down
+	});
+
+	});
+</script>
+{% endblock %}

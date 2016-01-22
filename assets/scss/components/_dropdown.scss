@@ -1,0 +1,48 @@
+/* AA-dropdown
+================================================================ */
+.dropdown {
+	position:relative;
+	display:inline-block;
+	a.btn {
+		margin:0;
+	}
+	&.right {
+		float:right;
+	ul {
+		right:0;
+	}
+	}
+	ul {
+		list-style: none;
+		display: none;
+		position: absolute;
+		max-width:100%;
+		min-width:200px;
+		background: $dropdown-bg;
+		border:$dropdown-border;
+		z-index:2;
+		li {
+		border-bottom: $dropdown-border;
+		margin:0;
+			&:last-child {
+				border-bottom:none;
+			}
+			a {
+				color:$nav-color;
+				padding:0.5em 0.75em;
+				display:block;
+				font-family: $button-family;
+				font-size: $dropdown-font-size;
+				font-weight: $dropdown-font-weight;
+				letter-spacing: $dropdown-letter-spacing;
+				text-transform: $dropdown-text-transform;
+				line-height: 1;
+				&:hover,&:focus {
+					background-color:$dropdown-bg-hover;
+					color:$dropdown-color-hover;
+				}
+
+			}
+		}
+	}
+}

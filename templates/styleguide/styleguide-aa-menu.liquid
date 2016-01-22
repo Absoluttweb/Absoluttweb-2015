@@ -1,0 +1,23 @@
+{% layout 'styleguide' %}
+
+{% block main %}
+
+{% include 'basics/aa-menu' %}
+<div class="band">
+	<div class="row">
+		<div class="large-12 columns">
+			<nav class=" hide-for-small left">
+		        <ul class="sf-menu no-marg">
+		          {% include 'basics/menu' %}
+		        </ul>
+		      </nav>
+		      <a class="burger right no-marg"><span><i class="fa fa-bars"></i></span> </a>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

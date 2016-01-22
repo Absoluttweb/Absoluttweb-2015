@@ -1,0 +1,23 @@
+// Fixed
+// -------------------------
+
+$fa-fixed-size:48px;
+$fa-fixed-size-large:62px;
+.#{$fa-css-prefix}-fixed {
+	display:inline-block;
+	width: $fa-fixed-size;
+	height: $fa-fixed-size;
+	text-align: center;
+	line-height: $fa-fixed-size;
+}
+.#{$fa-css-prefix}-fixed-2x {
+	display:inline-block;
+	width: $fa-fixed-size-large;
+	height: $fa-fixed-size-large;
+	text-align: center;
+	line-height: $fa-fixed-size-large;
+}
+.#{$fa-css-prefix}-stroke {
+  border-radius: 900px;
+  border:1px solid $font-color;
+}

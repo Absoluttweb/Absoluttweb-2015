@@ -1,0 +1,8 @@
+{
+  "host": "www.absotest1.no",
+  "port": 21,
+  "username": "absotest",
+  "password": "Singus78_",
+  "path": "www/absoluttweb",
+  "secure": false
+}

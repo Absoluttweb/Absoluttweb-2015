@@ -1,0 +1,29 @@
+{% layout 'styleguide' %}
+
+{% block main %}
+
+<div class="band band-main">
+	<div class="row">
+		<div class="large-12 columns">
+			<h3>HR og dividers</h3>
+			
+			<hr>
+			<hr class="hr-1">
+			<hr class="hr-2">
+			<hr class="hr-3">
+			<h4 class="divider">Tittel med divider</h4>
+			<div class="text-center">
+			<h4 class="divider-center">Divider på begge sider</h4>	
+			</div>
+			
+			{% include 'code/code-hr'%}
+			{% include 'code/mixin-hr'%}
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

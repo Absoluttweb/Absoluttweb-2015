@@ -1,0 +1,278 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/* base
+================================================================ */
+
+/*A-Sidenav
+How it works: In LAYOUT add include file in DOM. Set width in variables.
+It will show in the right, until it chrashes with the content. Then the visibility is hidden, and a trigger will show in main-menu.
+
+*/
+
+.sidenav {
+	display:block;
+	box-sizing:border-box;
+	position: fixed;
+	right: 0;
+	width:$sidenav-width;
+	height:100%;
+	background:#252525;
+	border-left:2px solid black;
+	text-align:center;
+	font-size: 1em;
+	z-index: 99;
+	padding-top: ($logo-space / 2) - ($nav-height / 2);
+	@media only screen and (max-width: $medium-size) {
+		width:0px;
+		visibility: hidden;
+	}
+	ul {
+		list-style: none;
+		li {
+			line-height: 1;
+			margin-bottom: 2em;
+		}
+		a {
+			color: white;
+		}
+		span {
+			font-size: 0.75em;
+			font-weight: 300;
+		}
+	}
+}
+
+html, body {
+	height: 100%;
+	font-size: 16px;
+}
+body {
+	background-color: $bg-color;
+	@if $bg-image == image {
+		background-image: url(/img/theme/bg-image-small.jpg);
+		background-size: cover;	
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: top center;
+		@media only screen and (min-width: $large-size) { 
+			background-image: url(/img/theme/bg-image.jpg);
+		}
+	}
+	@else if $bg-image == pattern {
+		background-image: url(/img/theme/bg-pattern.png);
+	}
+	@else if $bg-image == none {
+		background-image: none;
+	}
+	font-family: $font-family;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	color: $font-color;
+	line-height: $font-line-height;
+	cursor: default;
+	overflow-x: hidden;
+}
+body.boxed {
+	.left-aside-wrapper {
+		display:none;
+	}
+	.wrapper {
+		background-color: $bg-color;
+		max-width: 100%;
+		max-width: $xlarge-size;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	// XLarge and down
+	@media only screen and (max-width: $xlarge-size) { 
+		.sticky.cloned {
+			left:0;
+			margin-left: 0;
+		}
+	}
+}
+body.wide {
+	margin: 0 $sidenav-width 0 0;
+	@media only screen and (max-width: $medium-size) {
+		margin:0;
+	}
+	.wrapper {
+		max-width: 100%;
+	}
+
+}
+.sidebar-right {
+	border-left: 0px solid $light-grey-color;
+	padding-left: 2 * $column-gutter;
+}
+.sidebar-right-pad {
+	border-right: 1px solid $light-grey-color;
+	padding-right: 2 * $column-gutter;
+}
+.sidebar-left {
+	border-right: 1px solid $light-grey-color;
+	padding-right: 2 * $column-gutter;
+}
+.sidebar-left-pad {
+	border-left: 1px solid $light-grey-color;
+	padding-left: 2 * $column-gutter;
+}
+.no-wrap, .no-wrapping {
+	overflow:auto;
+}
+.pull-left {
+	float: left;
+	margin-right: 1em;
+}
+
+//Equal Panel height with use of equalizer. If this doesnt work, add class .data-equalizer-watch to element after LI in UL that is being watched
+[data-equalizer-watch],.data-equalizer-watch {
+  height:100%;
+}
+
+//Share Icon Size
+.share-icons .fa {
+  font-size: 1.8em;
+
+}
+.share-icons.fullscreen .fa {
+  font-size: 2.5em;
+  @include transform ($scale:1);
+  @include transition (300ms);
+  &:hover {
+  	@include transform ($scale:1.5);
+  	z-index: 9999;
+  	@include transition (300ms);
+  	padding: 0 0.3em;
+  }
+} 
+
+/* GLOBAL ANIMATED HOVER
+========================================================== */
+a, a:visited,input {
+	text-decoration: none;
+	outline: 0;
+}
+a:hover, a:focus, input:hover, input:focus {
+	text-decoration: none;
+}
+
+
+/* READMORE MODULE
+========================================================== */
+
+.readmore-js-toggle, .readmore-js-section {
+  display: block;
+  width: 100%; }
+
+.readmore-js-section {
+  overflow: hidden; }
+
+/* Center Content 
+====================================================== */
+.outer {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.inner {
+	margin: 1rem auto; 
+	width: 75%;
+	min-width: 360px;
+}
+
+/* Block
+=============================================================*/
+.block {
+	clear:both;
+	padding-bottom: 0;
+	margin-bottom: $font-line-height;
+	p:last-child {
+		margin-bottom: 0;
+	}
+	&.panel, .panel {
+		background-color: $light-grey-color;
+		padding-left: $column-gutter;
+		padding-right: $column-gutter;
+	}
+}
+
+/* MEDIA QUERIES
+============================================================ */
+
+// Small only
+@media only screen and (max-width: $medium-size) { 
+	
+	body {
+		font-size: $phone-font-size;
+		line-height: 1.25em;
+	}
+	.sticky-placeholder {
+		display:block;
+		height: $logo-space * $sticky-shrink;
+	}
+	.sidebar-right {
+		border:none;
+		padding-left: $column-gutter;
+	}
+	.sidebar-right-pad {
+		border-right: none;
+		padding-right: $column-gutter;
+	}
+	.sidebar-left {
+		border:none;
+		padding-right: $column-gutter;
+	}
+	.sidebar-left-pad {
+		border-left: none;
+		padding-left: $column-gutter;
+	}
+}
+
+// Medium only
+@media only screen and (max-width: $large-size) { 
+	.sidebar-right {
+		border:none;
+		padding-left: $column-gutter;
+	}
+	.sidebar-right-pad {
+		border-right: none;
+		padding-right: $column-gutter;
+	}
+	.sidebar-left {
+		border:none;
+		padding-right: $column-gutter;
+	}
+	.sidebar-left-pad {
+		border-left: none;
+		padding-left: $column-gutter;
+	}
+}
+
+// Left aside trigger size
+@media only screen and (min-width: $xlarge-size + $left-aside-width) {
+	body {
+		&.left-aside {
+			padding-left:$left-aside-width;
+			.row {
+				max-width: 100%;
+			}
+			div[class^="band"] {
+				padding-left: 35px;
+				padding-right: 35px;
+			}
+			.left-aside-wrapper {
+				display:block;
+			}
+		}
+	}
+}
+

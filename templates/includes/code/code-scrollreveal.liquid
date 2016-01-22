@@ -1,0 +1,30 @@
+<a class="code" id="code-scrollreveal">Scrollreveal</a>
+<pre id="code-scrollreveal" class="text-left">
+
+Aktiver JS-Scrollreveal. Det er ingen CSS. Legg data-sr objekt i HTML tag. Eks:
+
+&lt;div class="large-12 columns" data-sr&gt;....&lt;/div&gt;
+
+Kan legge inn options som:
+enter [top,left,right,bottom]
+move/ease/ease-in/ease-in-out/ease-out/hustle [px]
+scale up/down [%]
+wait [200ms,0.2s]
+over [1000ms,1s]
+reset/no reset
+
+
+Eks: data-sr="wait 200ms and enter top then move 20px over 1s and scale up 20% reset"
+
+Aktiver Scrollreveal:
+&lt;script type="text/javascript"&gt;
+	(function($) {
+		'use strict';
+		window.sr= new scrollReveal({
+		&#160;&#160;mobile: false
+		});
+	})();
+&lt;/script&gt;
+
+Mer info: https://github.com/julianlloyd/scrollReveal.js/wiki/Keywords
+</pre>

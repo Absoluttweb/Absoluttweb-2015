@@ -1,0 +1,526 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+p.lead {
+	font-family: "Raleway";
+	font-weight: 200;
+}
+.home h2.logo {
+	visibility: hidden;
+}
+img.profile-image {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	border:1px solid black;
+
+	//float: left;
+	//margin-right: 20px;
+	margin-bottom: 1.5em;
+}
+span.numbers,span.montserrat {
+	font-family: "montserrat";
+}
+body.no-scroll {
+	overflow: hidden;
+}
+body.darken {
+	&::after {
+		content:"";
+		top:0;
+		left: 0;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color:black;
+		opacity: 0.5;
+		z-index: 99;
+	}
+}
+
+
+/* Info Bar
+================================================================ */
+
+.info-bar {
+	width: 460px;
+	height: 100%;
+	background-color: $light-grey-color;
+	border-right:10px solid $primary-color;
+	margin-left: -450px;
+	position: fixed;
+	z-index: 999;
+	@include transition (200ms);
+	&.active {
+		margin-left: 0;
+	}
+	a.fancybox-media {
+		position: relative;
+		display: block;
+		&:after {
+			content:"SPILL AV VIDEO";
+			background-color: rgba(0,0,0,0.5);
+			color: white;
+			font-family: "montserrat";
+			display: block;
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			right: 0;
+			padding: 10px 0;
+			text-align: center;
+		}
+	}
+	.close-info {
+		display: inline-block;
+		font-family: "montserrat";
+		text-transform: uppercase;
+		color: black;
+		padding-bottom: 20px;
+
+	}
+	.info-scroll {
+		overflow-y:auto;
+		height: 100%;
+	}
+	.info-tips {
+		position: absolute;
+		color: white;
+		top:150px;
+		right: -200px;
+		text-align: right;
+		display: none;
+	}
+	a.info-trigger {
+		position: absolute;
+		top: 80px;
+		display: block;
+		white-space: nowrap;
+		background-color: $primary-color;
+		font-family: "montserrat";
+		font-size: 0.85em;
+		color: white;
+		padding: 10px 20px;
+		border-radius: 0 3px 3px 0;
+		.fa {
+			margin-right: 5px;
+		}
+		span {
+			font-family: "montserrat";
+			color: $primary-color;
+			text-align: center;
+			background-color: white;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			border-radius: 2px;
+			margin-left: 5px;
+		}
+	}
+	.panel {
+		background-color: white;
+		-webkit-box-shadow: 2px 2px 0 0 darken($light-grey-color,5%);
+		box-shadow: 2px 2px 0 0 darken($light-grey-color,5%);
+		.panel-content {
+			padding: 4%;
+		}
+		.date {
+			font-family: "montserrat";
+			font-size: 0.80em;
+			color: lighten($font-color,50%);
+		}
+		img {
+			margin-bottom: 10px;
+		}
+		h5,h4,h3 {
+			letter-spacing: 0;
+			text-transform: none;
+		}
+		p,li {
+			font-size: 0.9em;
+			color: $font-color;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		ul {
+			margin: 0;
+		}
+		}
+	}
+	// ONLY Small
+		@media only screen and (max-width: $medium-size) {
+			width: 367px;
+			border-right:0;
+			&.active {
+				border-right: 3px solid black;
+			}
+		}
+}
+
+
+/* Page Loader
+================================================================ */
+.page-loader {
+	position: fixed;
+	top: 0;
+	bottom: 0%;
+	left: 0;
+	right: 0%;
+	z-index: 9999;
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding-top: 25px;
+	background: white;
+}
+.pulsing-logo {
+	position: fixed;
+	width: 90px;
+	height: 90px;
+	top: 50%;
+	left: 50%;
+	margin: -45px 0 0 -45px;
+	-moz-animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;
+	-o-animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;    
+	-webkit-animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;
+	animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;
+}
+@keyframes pulsingLogo {
+    0% { transform: scale(0.8); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0.8); }
+}
+@keyframes fadeInLogo {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* Charachters
+================================================================ */
+.char-1 {
+	font-family: "raleway";
+	font-weight: 300;
+	color: $font-color;
+}
+
+/* Buttons
+================================================================ */
+.btn-1 {
+	@include button (black, white);
+	border:2px solid black;
+	@include transition (200ms);
+	&:hover,&:active {
+		border:2px solid black;
+		background-color: black;
+		color: white !important;
+		@include transition (300ms);
+	}
+}
+.btn-2 {
+	@include button (white, black);
+	border:2px solid black;
+	@include transition (200ms);
+	&:hover,&:active {
+		border:2px solid black;
+		background-color: #ffffff;
+		color: black !important;
+		@include transition (300ms);
+	}
+}
+.btn-3 {
+	@include button (white, $primary-color);
+	border:2px solid $primary-color;
+	@include transition (200ms);
+	&:hover,&:active {
+		border:2px solid black;
+		background-color: black;
+		color: white !important;
+		@include transition (300ms);
+	}
+}
+
+/* Big Screens on Index 
+================================================================ */
+.big-screens {
+	margin-top: -8%;
+	@media only screen and (max-width: $medium-size) {
+		margin-top: -16%;
+	}
+	.owl-carousel .item {
+		margin: 0 20px;
+		text-align: center;
+	}
+	span {
+		@extend .char-1;
+		display: block;
+		margin-top: 2em;
+	}
+	a .fa {
+		color: black !important;
+	}
+	.owl-theme .owl-controls {
+		margin: 2em 0;
+	}
+}
+
+/* Header
+================================================================ */
+
+.header { 
+	position: relative;
+	background-color: transparent;
+	background-position: center center;
+	background-size: cover;
+	overflow: hidden;
+	background-image: url("/img/theme/bg-header-city.jpg");
+	@media only screen and (min-width: $medium-size) {
+		background-image: url("/img/theme/bg-header-city.jpg");
+	}
+}
+
+.header-container {
+	padding: 13% 0 25%;
+	// Small only
+	@media only screen and (max-width: $medium-size) {
+		padding: 16% 0 35%;
+	}
+	
+	div.header-icon {
+		display: block;
+		width: 110px;
+		height: 110px;
+		background:transparent url("/img/theme/logo-icon-220.png") no-repeat center center;
+		background-size: cover;
+		margin: 0 auto;
+		// Small only
+		@media only screen and (max-width: $medium-size) {
+			width:75px;
+			height: 75px;
+		}
+	}
+	.header-type {
+		font-family: 'montserrat';
+		font-weight: 300;
+		letter-spacing: 0.3em;
+		color: white;
+	}
+	h2.header-company {
+		padding-top: 3%;
+		font-size: 100%;
+		@extend .header-type;
+	}
+	h2.header-title {
+		padding-top: 7%;
+		font-size: 300%;
+		@extend .header-type;
+
+		// Medium only
+		@media only screen and (max-width: $large-size) {
+			font-size: 250%;
+		}
+		// Small only
+		@media only screen and (max-width: $medium-size) {
+			font-size: 200%;
+			text-align: center;
+		}
+	}
+	.header-line {
+		display: block;
+		height: 3px;
+		background-color: white;
+		width: 20%;
+		margin: 0 auto;
+	}
+}
+.tilt-primary {
+	-moz-transform: rotate(-4.2deg);
+	-webkit-transform: rotate(-4.2deg);
+	-o-transform: rotate(-4.2deg);
+	-ms-transform: rotate(-4.2deg);
+	transform: rotate(-4.2deg);
+	display:block;
+	width:110%;
+	height: 5%;
+	background-color: $primary-color;
+	position: absolute;
+	bottom: 5%;
+	left: -5%;
+	}
+.tilt-white, .tilt-light-grey {
+	-moz-transform: rotate(-3.5deg);
+	-webkit-transform: rotate(-3.5deg);
+	-o-transform: rotate(-3.5deg);
+	-ms-transform: rotate(-3.5deg);
+	transform: rotate(-3.5deg);
+	display:block;
+	width:110%;
+	height: 16%;
+	background-color: white;
+	position: absolute;
+	bottom: -8%;
+	left: -5%;
+	}
+.tilt-light-grey {
+	background-color: $light-grey-color;
+	}
+
+.page-header {
+	.header-container {
+		padding: 8% 0 15%;
+		// Small only
+		@media only screen and (max-width: $medium-size) {
+			padding: 8% 0 25%;
+		}
+	}
+	.tilt-primary {
+		bottom:12%;
+		height: 8%;
+	}
+	.tilt-white, .tilt-light-grey {
+		bottom:-16%;
+		height: 32%;
+	}
+}
+
+
+
+
+/* Parallaxers
+================================================================ */
+.band-parallax-1 {
+	background-color: $primary-color;
+	@include type-color (#ffffff,#ffffff);
+	.wide {
+		width: 80%;
+	}
+}
+
+/* Bands
+================================================================ */
+
+.band-light-grey {
+	background-color: $light-grey-color;
+	border-top:darken($light-grey-color,5%);
+}
+.band-dark {
+	@include type-color (lighten($font-color,40%),$light-grey-color,$light-grey-color,$light-grey-color);
+}
+
+/* Top
+================================================================ */
+.band-top {
+	// ONLY Small
+	@media only screen and (max-width: $large-size) {
+		background-color: white;
+		border-bottom:1px solid black;
+		h2.logo {
+			visibility: visible;
+			a {
+				background-image: url("/img/theme/logo-dark.png");
+			}
+		}
+	}
+}
+
+.band-top.sticky.cloned {
+	background-color: white;
+	border-bottom:1px solid black;
+	ul.sf-menu > li a {
+		color: $dark-grey-color;
+	}
+	ul.sf-menu > li:hover a,ul.sf-menu > li.active a {
+		color: $primary-color;
+	}
+	h2.logo {
+			visibility: visible;
+			a {
+				background-image: url("/img/theme/logo-dark.png");
+			}
+		}
+}
+
+
+/* Footer
+================================================================ */
+.footer {
+	background-color: black;
+	padding: 2rem 0;
+	a,p {
+		color: #847676;
+	}
+}
+
+/* Custom Fullscreen
+================================================================ */
+.fullscreen-gradient-black {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#332d35+0,262626+39,332d35+71,000000+100 */
+background: rgb(51,45,53); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(51,45,53,1) 0%, rgba(38,38,38,1) 39%, rgba(51,45,53,1) 71%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(51,45,53,1)), color-stop(39%,rgba(38,38,38,1)), color-stop(71%,rgba(51,45,53,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  rgba(51,45,53,1) 0%,rgba(38,38,38,1) 39%,rgba(51,45,53,1) 71%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  rgba(51,45,53,1) 0%,rgba(38,38,38,1) 39%,rgba(51,45,53,1) 71%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  rgba(51,45,53,1) 0%,rgba(38,38,38,1) 39%,rgba(51,45,53,1) 71%,rgba(0,0,0,1) 100%); /* IE10+ */
+background: linear-gradient(135deg,  rgba(51,45,53,1) 0%,rgba(38,38,38,1) 39%,rgba(51,45,53,1) 71%,rgba(0,0,0,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#332d35', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+}
+
+
+
+/* Custom Lists
+================================================================ */
+
+
+/* Custom HRs
+================================================================ */
+
+.hr-1 {
+	@include hr ($height:3px, $color:$hr-color, $pattern:2, $opacity:0.3);
+}
+
+/* Custom Dropdowns
+================================================================ */
+
+
+/* Custom Forms
+================================================================ */
+
+
+/* Custom Tabs
+================================================================ */
+
+
+/* MEDIA QUERIES
+============================================================ */
+
+// ONLY Small
+@media only screen and (max-width: $medium-size) {}
+
+// Medium and up
+@media only screen and (min-width: $medium-size) {}
+	
+// Large and up
+@media only screen and (min-width: $large-size) {}
+
+// XLarge and up
+@media only screen and (min-width: $xlarge-size) {}
+
+// XXLarge and up
+@media only screen and (min-width: $xxlarge-size) {} 
+
+// Small and medium
+@media only screen and (max-width: $large-size) {}
+
+// Medium and Large
+@media only screen and (min-width: $medium-size) and (max-width: $large-size) {} 
+
+// Large and XLarge
+@media only screen and (min-width: $large-size) and (max-width: $xlarge-size) {} 
+
+// Left aside trigger size
+@media only screen and (min-width: $xlarge-size + $left-aside-width) {}
+
+/* PRINT
+================================================================ */
+@media print {}

@@ -1,0 +1,160 @@
+//MIXINS
+//----------------------------------------------------------------
+
+@mixin transition($speed) {
+	-webkit-transition: all ($speed) ease-in-out;
+	-moz-transition: all ($speed) ease-in-out;
+	-ms-transition: all ($speed) ease-in-out;
+	-o-transition: all ($speed) ease-in-out;
+	transition: all ($speed) ease-in-out;
+}
+
+@mixin transition-background($speed) {
+	-webkit-transition: background ($speed) ease-in-out;
+	-moz-transition: background ($speed) ease-in-out;
+	-ms-transition: background ($speed) ease-in-out;
+	-o-transition: background ($speed) ease-in-out;
+	transition: background ($speed) ease-in-out;
+}
+
+@mixin transform($scale:1,$rotate:0deg,$translate-x:0px,$translate-y:0px,$skew-x:0deg,$skew-y:0deg) {
+	-moz-transform: scale($scale) rotate($rotate) translateX($translate-x) translateY($translate-y) skewX($skew-x) skewY($skew-y);
+	-webkit-transform: scale($scale) rotate($rotate) translateX($translate-x) translateY($translate-y) skewX($skew-x) skewY($skew-y);
+	-o-transform: scale($scale) rotate($rotate) translateX($translate-x) translateY($translate-y) skewX($skew-x) skewY($skew-y);
+	-ms-transform: scale($scale) rotate($rotate) translateX($translate-x) translateY($translate-y) skewX($skew-x) skewY($skew-y);
+	transform: scale($scale) rotate($rotate) translateX($translate-x) translateY($translate-y) skewX($skew-x) skewY($skew-y);
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -mos-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//Shadows in top of band. Types is 'shadow-in' and 'shadow-out'
+@mixin shadow($opacity,$type,$padding) {
+	$url:"/img/globals/#{$type}.png";
+	position: absolute;
+	top:0;
+	left: 0;
+	display: block;
+	padding: $padding 0;
+	width:100%;
+	background: transparent url($url) center top no-repeat;
+	background-size: contain;
+	opacity:$opacity;
+}
+
+@mixin sprite($width,$height) {
+	background-repeat: no-repeat;
+	background-position: top center;
+	display: inline-block;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	z-index: 99;
+	background-image: url(/img/globals/sprite-placeholder.jpg);
+	top: 0;
+	right:0;
+	width: $width;
+	height: $height; 
+	&:hover {
+		background-position: bottom center;
+	}
+}
+//MIXIN TYPE COLOR
+//----------------------------------------------------------------
+
+@mixin type-color ($font:$font-color, $header:$header-color, $subheader:$subheader-color, $link:$link-color, $hr:$hr-color) {
+	p,li,ul.icon li:before {
+		color: $font;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		color: $header;
+	}
+	a {
+		color: $link;
+	}
+	hr {
+		background-color: $hr;
+	}
+}
+
+//MIXIN BUTTON
+//----------------------------------------------------------------
+@mixin button ($color:#ffffff, $bg-color:$primary-color) {
+	color: $color !important;
+	background-color: $bg-color;
+	border:1px solid darken($bg-color,5%);
+		&.with-icon {
+			.fa {
+				margin-left: 10px;
+				padding-left: 10px;
+				border-left: 1px solid rgba($color,0.2);
+			}
+		}
+		&.border {
+			border:0.1em solid darken($bg-color,5%);
+			&.dashed {
+				border-style: dashed;
+			}
+		}
+		&.shadow {
+			border-bottom: 2px solid darken($bg-color,5%);
+		}
+		&.popout {
+			border:none;
+			border-top:1px solid lighten($bg-color,5%);
+			border-bottom:1px solid darken($bg-color,5%);
+		}
+		&:hover, &:focus {
+			background-color: lighten($bg-color,5%);
+			border-color: $bg-color;
+			color: $color;
+		}	
+}
+//MIXIN HR WITH PATTERN BG
+//----------------------------------------------------------------
+@mixin hr ($height:1px, $color:$hr-color, $pattern:none, $opacity:1) {
+	height: $height;
+	background-color: $hr-color;
+	background-image: url('/img/overlays/#{$pattern}.png');
+	opacity: $opacity;
+}
+
+//Add this if you want a bullet -----------------------------------
+@mixin hr-bullet ($width:16px,$height:16px,$color:$hr-color,$radius:$global-radius,$left:50%) {
+	&::after {
+	content: "";
+	display: block;
+	width:$width;
+	height: $height;
+	background: $color;
+	position:absolute;
+	left:$left;
+	top:50%;
+	margin: (-$height/2) (-$width/2) 0 0;
+	z-index: 2;
+	-webkit-border-radius: $radius;
+	-mos-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+	}
+}
+//Add this if you want a line -------------------------------------
+@mixin hr-line ($width:25%,$color:darken($hr-color,10%),$left:0px) {
+	&::after {
+	content: "";
+	display: block;
+	width: $width;
+	height: inherit;
+	background: $color;
+	position:absolute;
+	left:$left;
+	bottom:0;
+	z-index: 2;
+	}
+}

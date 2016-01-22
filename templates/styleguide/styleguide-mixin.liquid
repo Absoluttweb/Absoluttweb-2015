@@ -1,0 +1,58 @@
+{% layout 'styleguide' %}
+
+{% block main %}
+
+		<div class="band pad-half-bot">
+			<div class="row">
+				<div class="large-12 columns">
+					<h3>Mixin og Extend</h3>
+					<p class="lead">Begge automatiserer og utvider CSS koding.</p>
+					
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+							<hr>
+					</div>
+				</div>
+				<div class="large-4 columns">
+					<h4>Forskjellen</h4>
+					<p>En @mixin genererer nye classer. Brukes gjerne for border-radius, transform etc.<br><br>
+					En @extend kopierer stilen fra en eksisterende klasse.</p>
+
+				</div>
+				<div class="large-4 columns">
+					<h4>Slik bruker man mixin</h4>
+					<p>Lag ny klasse i style.scss (.btn-*, .hr-*).<br><br> Bruk @include [mixin-navn] og fyll inn variabler. Tomme variabler bruker default.<br>
+					</p>
+					
+				</div>
+				<div class="large-4 columns">
+					<h4>Hvorfor bruke extend</h4>
+					<p>Usikker. Har heller valgt å benytte 2 klasser i samme tag. F.eks "band band-top"</p>
+					
+				</div>
+				<div class="large-12 columns">
+					<hr>
+					<h4><i class="fa fa-at"></i> Mixin type-color</h4>
+					<p>Bruk denne for å endre farge på typografi i bands. Siden bands har ulike bakgrunner, trenger vi endre farger på mange elementer som p, strong, li, h1, h2 osv.</p>
+					{% include 'code/mixin-type-color'%}
+					<h4><i class="fa fa-at"></i> Mixin button</h4>
+					<p>Generere nye knapper. Kalles .btn-*</p>
+					{% include 'code/mixin-button'%}
+					<h4><i class="fa fa-at"></i> Mixin hr</h4>
+					<p>Bruk denne for å lage nye HR. Man kan også inkludere extra mixins for å legge på elementer. Kalles .hr-*</p>
+					{% include 'code/mixin-hr'%}
+					<h4><i class="fa fa-at"></i> Mixin border-radius</h4>
+					<p>Dersom man ønsker annen radius enn $global-radius, kan denne brukes.</p>
+					{% include 'code/mixin-border-radius'%}
+				</div>
+				
+			</div>
+		</div>
+				
+			
+	{% endblock %}
+
+	{% block script %}
+
+	{% endblock %}

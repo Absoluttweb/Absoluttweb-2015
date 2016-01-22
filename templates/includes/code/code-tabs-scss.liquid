@@ -1,0 +1,16 @@
+<a class="code" id="code-tabs-dom">SCSS Tabs</a>
+<pre id="code-tabs-dom">
+Tabs kommer uten styling, og man må lage custom class [.tabs-*] i style.scss. Dette er ett eksempel:
+.tabs-1 li {
+	a {
+	border-bottom: 2px solid $light-grey-color;
+	}
+	&.active a {
+		border-color: $secondary-color;
+		color: $header-color;
+	}
+	&:focus a, &:hover a {
+		color: $header-color;
+	}
+}
+</pre>

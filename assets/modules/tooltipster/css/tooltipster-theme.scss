@@ -1,0 +1,30 @@
+@import "../../../scss/_variables";
+
+.tooltipster-theme {
+	border-radius: $global-radius; 
+	border: none;
+	background: darken(#1F2526,5%);
+	color: white;
+	max-width:200px;
+	box-shadow: rgba(0,0,0,0.3) 0px 2px 2px;
+}
+.tooltipster-theme .tooltipster-content {
+	font-size: 13px;
+	line-height: 18px;
+	padding: 1em 1em 0.5em;
+	p {
+		margin-bottom: 7px;
+	}
+	button,.button,input[type="submit"] {
+		padding: 3px 8px;
+		font-size: 11px;
+		margin: 0;
+	}
+	form {
+		margin:0;
+		input {
+		margin-bottom:7px;
+		}
+	}
+	
+}

@@ -1,0 +1,86 @@
+<script type="text/javascript"
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhdjNdYhtHKMT7jDMT1tGHhrfrU-G8VjY&sensor=false">
+</script> 
+<script type="text/javascript">
+  var locations = [
+      ['Case and place', 19.124433,-94.310812,1]
+      
+      // NB!!!Add more loacations here. NB: Add comma behind all except the last. Also add the numbers after the coordinates
+    ];
+
+    var map = new google.maps.Map(document.getElementById('gmap'), {
+      zoom: 6,
+      scrollwheel: false,
+      center: new google.maps.LatLng(19.124433,-94.310812),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var styles =
+    [
+      {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      },{
+        "featureType": "water",
+        "stylers": [
+          { "color": "#00537A" }
+          
+        ]
+      },{
+        "featureType": "transit.line",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      },{
+        "featureType": "poi",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      },{
+        "featureType": "landscape.natural",
+        "stylers": [
+          { "color": "#ECECEC" }
+    
+        ]
+      },{
+        "featureType": "landscape.man_made",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      },{
+      },{
+      },{
+      }
+    ];
+    map.setOptions({styles: styles});
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+        icon:'/img/globals/icon-googlemap.png'
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+
+  // google.maps.event.addDomListener(window, 'load', initialize);
+  
+</script>
+
+
+
+
+

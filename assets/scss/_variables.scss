@@ -1,0 +1,245 @@
+//Pagesize
+//-------------------------------------------------------------------------------------
+$page-width: 1080px;
+$column-gutter:24px;
+$band-padding: 6em;
+$headers: #{h1,h2,h3,h4,h5,h6};
+$box-padding: 0.5em 1em;
+$wide-width: 1750px;
+$sidenav-width: 0;
+//Colors
+//-------------------------------------------------------------------------------------
+$default-color: #efefef;
+$primary-color: #df4a43;
+$primary-color-light: lighten($primary-color, 5%);
+$primary-color-dark: darken($primary-color, 5%);
+$secondary-color: #000000;
+$secondary-color-light: lighten($secondary-color, 5%);
+$secondary-color-dark: darken($secondary-color, 5%);
+$third-color: #e71634;
+$third-color-light: lighten($third-color, 5%);
+$third-color-dark: darken($third-color, 5%);
+$light-grey-color: #F1F1EF;
+$medium-grey-color: #c1c1cf;
+$dark-grey-color: #231f20;
+$correct-color: #80D480;
+$correct-color-light: lighten($correct-color, 5%);
+$correct-color-dark: darken($correct-color, 5%);
+$error-color: #e71634;
+$error-color-light: lighten($error-color, 5%);
+$error-color-dark: darken($error-color, 5%);
+//Layout
+//-------------------------------------------------------------------------------------
+$bg-color: white;
+$bg-image: none; //image, pattern or none
+$global-radius: 3px;
+$frame-size: 30%;
+//logo
+//-------------------------------------------------------------------------------------
+$logo-width: 180px;
+$logo-height: 24px;
+$logo-margin: 20px;
+//Type and elements
+//-------------------------------------------------------------------------------------
+$font-family: "Raleway",
+"Helvetica Neue",
+Helvetica,
+Helvetica,
+Arial,
+sans-serif;
+$font-size: 15px;
+$font-color: #454545;
+$font-weight: 300;
+$font-line-height: 1.62em;
+$strong-weight: 500;
+$strong-color: $dark-grey-color;
+$link-color: $primary-color;
+$link-weight: 300;
+$subtle-lighten: 50%;
+//Type on phone
+//-------------------------------------------------------------------------------------
+$phone-font-size: 0.85em;
+//Hr
+//-------------------------------------------------------------------------------------
+$hr-color: $light-grey-color;
+$hr-size: 1px;
+//Header
+//-------------------------------------------------------------------------------------
+$header-family: "Raleway";
+$header-weight: 500;
+$header-weight-thin: 300;
+$header-color: $dark-grey-color;
+$header-letter-spacing: 4px;
+$header-text-transform: uppercase;
+$subheader-family: $font-family;
+$subheader-size: 0.6em;
+$subheader-style: normal;
+$subheader-weight: 300;
+$subheader-color: lighten($font-color, 20%);
+$subheader-letter-spacing: 0;
+$subheader-text-transform:none;
+//Header sizes (Large Screen. Small is adjusted by percent)
+//-------------------------------------------------------------------------------------
+$h1:3em; //Not in use
+$h2:2.5em; //Not in use
+$h3:1.7em;
+$h4:1.2em;
+$h5:1em; //Not in use
+$h6:1em; //Not in use
+//Navigation
+//-------------------------------------------------------------------------------------
+$nav-float: right;
+$nav-logo-adjust: true; //Will vertically center nav with logo
+$logo-space: $logo-height + ($logo-margin * 2); // static in EM
+$nav-family: $font-family;
+$nav-bg: transparent;
+$nav-color: white;
+$nav-font-size: 12px;
+$nav-padding: 0.4em; //Vertical size of the elements
+$nav-font-weight: 500;
+$nav-text-transform: uppercase;
+$nav-letter-spacing: 0.2em;
+$nav-border-color: $primary-color;
+$nav-border-height: 0;
+$nav-height: 32px; // height of superfish UL 
+//Active
+//--------------------------
+$nav-color-active: $primary-color;
+$nav-bg-active: transparent;
+$nav-border-active: $third-color;
+$nav-border-size-active: 0;
+//Hover and focus
+//--------------------------
+$nav-color-hover: $primary-color;
+$nav-bg-hover: transparent;
+$nav-border-hover: $third-color;
+$nav-border-size-active: 0;
+//Sublevels
+//--------------------------
+$nav-sublevel-bg: $light-grey-color;
+$nav-sublevel-bg-hover: $light-grey-color;
+$nav-sublevel-bg-active: $light-grey-color;
+$nav-sublevel-color: $primary-color;
+$nav-sublevel-color-hover: $font-color;
+$nav-sublevel-color-active: $font-color;
+$nav-sublevel-border: 1px solid darken($light-grey-color, 5%);
+$nav-sublevel-text-transform: none;
+$nav-sublevel-font-size: 0.75em;
+$nav-sublevel-font-weight: 300;
+//Breadcrumbs
+//--------------------------
+$breadcrumbs-transform: uppercase;
+$breadcrumbs-size: 12px;
+$breadcrumbs-color: $primary-color;
+$breadcrumbs-active: $font-color;
+//Icons Share, search and map
+//-------------------------------------------------------------------------------------
+$nav-icon-color: $nav-color;
+$nav-icon-size: $nav-font-size;
+$nav-icon-padding: $nav-padding;
+//Burger Icon
+//-------------------------------------------------------------------------------------
+$burger-size: 22px;
+$burger-bg-color: $light-grey-color;
+$burger-color: #000000;
+$burger-color-active: $primary-color;
+$burger-border: true;
+$burger-border-color: #000000;
+//AA Menu
+//-------------------------------------------------------------------------------------
+$aa-menu-bg-image: true;
+$aa-menu-bg: #000000;
+$aa-menu-line-difference:5%;
+$aa-menu-font-color: $light-grey-color;
+$aa-menu-font-color-active: $third-color;
+$aa-menu-font-weight-active: 700;
+$aa-menu-close-color: #ffffff;
+$aa-menu-font-family: $font-family;
+$aa-menu-font-size: 14px;
+$aa-menu-font-weight: $nav-font-weight;
+$aa-menu-letter-spacing: $nav-letter-spacing;
+//Panels
+//-------------------------------------------------------------------------------------
+$panel-bg:white;
+$panel-padding:2rem;
+//Tabs
+//-------------------------------------------------------------------------------------
+$tab-font-size: 0.9em;
+$tab-font-weight: 400;
+$tab-text-transform: normal;
+$tab-padding: 0.45em 1em 0.35em;
+$tab-bg-color: $light-grey-color;
+$tab-border-color: $light-grey-color;
+$tab-color: $font-color;
+$tab-bg-active-color: $third-color;
+$tab-border-active-color: darken($third-color, 5%);
+$tab-active-color: white;
+//Forms
+//-------------------------------------------------------------------------------------
+$form-label-size: 0.9em;
+$form-label-weight: 400;
+$form-label-color: $light-grey-color;
+$form-label-text-transform:uppercae;
+$form-input-size: 1em;
+$form-input-bg: white;
+$form-input-bg-active: white;
+$form-input-color: $font-color;
+$form-border-color: $dark-grey-color;
+$form-border-size: 2px;
+$form-placeholder-color:lighten($font-color, 10%);
+//Fullscreen
+//-------------------------------------------------------------------------------------
+$fullscreen-bg: white;
+$fullscreen-close: $third-color;
+//Buttons
+//-------------------------------------------------------------------------------------
+$button-family: "raleway";
+$button-padding: 1.5em 2em;
+$button-font-weight: 300;
+$button-color: white;
+$button-font-size: 0.86em;
+$button-letter-spacing: 0.4em;
+$button-text-transform: uppercase;
+//Dropdowns
+//-------------------------------------------------------------------------------------
+$dropdown-bg: $light-grey-color;
+$dropdown-border: 1px solid darken($light-grey-color, 10%);
+$dropdown-font-weight: 400;
+$dropdown-color: $primary-color;
+$dropdown-font-size: 1em;
+$dropdown-letter-spacing: 0em;
+$dropdown-text-transform: none;
+$dropdown-bg-hover: darken($light-grey-color, 10%);
+$dropdown-color-hover: $secondary-color;
+//Lists
+//-------------------------------------------------------------------------------------
+$list-icon: "\f046";
+$list-icon-color: $secondary-color;
+$list-divider: 1px solid $light-grey-color;
+//Caption Hover Effect
+//====================================================
+$caption-bg: $third-color;
+$caption-header-color: white;
+$caption-link-color: white;
+$caption-opacity:0.7;
+//Sticky Nav
+//-------------------------------------------------------------------------------------
+$sticky-shrink: 0.8; // How much the sticky menu shall shrink on scroll
+$sticky-opacity: 1; // How much opacity on scroll
+//Sticky Footer
+//-------------------------------------------------------------------------------------
+$footer-height: 75px; // Height of the footer
+//Gmap
+//-------------------------------------------------------------------------------------
+$gmap-box-height: 50%;
+$gmap-header-height: 350px;
+//Left aside
+//-------------------------------------------------------------------------------------
+$left-aside-width: 300px;
+//Screen Sizes
+//-------------------------------------------------------------------------------------
+$small-size: 0;
+$medium-size: 760px; // Burger menu trigger
+$large-size: $page-width;
+$xlarge-size: 1580px; // Also the size of the boxed wrapper
+$xxlarge-size: 1900px;

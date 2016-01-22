@@ -1,0 +1,79 @@
+{% layout 'layout' %}
+
+{% block header %}
+<div class="page-header">
+   {% include 'top' %}
+   <div class="row">
+   	<div class="large-12 columns">
+	   <div class="page-header-container text-center">
+		   <h2 class="header-title" data-sr="scale up 100%">Ledig stilling</h2>
+		   <h3 class="header-title" data-sr="wait 400ms and enter from left then move 300px">Søk jobb hos oss</h3>
+   		</div>	
+   	</div>
+   </div>
+</div>
+
+<div class="profile-with-marks">
+	<div class="pwm-secoundary pwm-small"></div>
+	<div class="pwm-primary pwm-small"></div>
+</div>
+
+
+{% endblock %}
+
+{% block main %}
+
+<div class="band band-grad pad">
+	<div class="row">
+		<div class="large-12 columns">
+			<h3>Jobb hos oss!</h3>
+			<p>Vi søker rørleggere med fag/svennebrev. Du må være selvstendig og ha massevis av pågangsmot. Godt humør er også viktig.
+			</p>
+		</div>
+		<!--<div class="large-12 columns">
+			<p></p>
+			<p class="text-center"><img src="/img/theme/vvs-eksperten-banner.jpg"></p>
+		</div>-->
+	</div>
+</div>
+
+<div class="band band-big-buttons pad" style="border-top:1px solid #D4D5D7;border-bottom:1px solid #D4D5D7">
+	<div class="row">
+		<div class="small-12 columns">
+			<a href="mailto:steinar@vvsfag.no" class="bb btn-1 btn-single"> <i class="fa fa-envelope fa-3x"></i><br>Kontakt Steinar Eide<span>Eller ring: 917 75 009</span></a>
+		</div>	
+	</div>
+</div>
+
+
+
+{% endblock %}
+
+{% block fullscreen %}
+{% endblock %}
+
+{% block script %}
+<script>
+	$(document).ready(function() {
+	var owl = $("#owl-carousel");
+
+	owl.owlCarousel({
+	    navigation : false, // Show next and prev buttons
+	    navigationText : ["forrige","neste"],
+	    pagination: true, // Show dotted pagination
+	    paginationNumbers: false, // Show numbers in bullets
+	    autoPlay : false,
+	    stopOnHover: true,
+	    singleItem:false,
+	    slideSpeed : 300,
+	    paginationSpeed : 300,
+	    items : 3, //items
+	    itemsDesktop : [1024,3], //items from here and down
+	    itemsDesktopSmall : [700,2], //
+	    itemsTablet: [430,1], //items from here and down
+	    itemsMobile : [300,1], //items from here and down
+	});
+
+	});
+</script>
+{% endblock %}

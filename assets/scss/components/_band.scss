@@ -1,0 +1,90 @@
+/* Band
+====================================== */
+.band {
+	position: relative;
+	// Use Background image
+	&.img {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	// Fixed background when using image
+	&.fixed {
+		background-attachment: fixed;
+	}
+	// Padding control
+	&.pad {
+		padding: $band-padding 0;
+		// Small only
+		@media only screen and (max-width: $medium-size) { 
+			padding: $band-padding /2 0;
+		}
+	}
+	&.pad-half {
+		padding: $band-padding/2 0;
+		// Small only
+		@media only screen and (max-width: $medium-size) { 
+			padding: $band-padding /4 0;
+		}
+	}
+	&.pad-2x {
+		padding: $band-padding*1.5 0;
+		// Small only
+		@media only screen and (max-width: $medium-size) { 
+			padding: $band-padding 0;
+		}
+	}
+	&.pad-top {
+		padding-top: $band-padding;
+		// Small only
+		@media only screen and (max-width: $medium-size) { 
+			padding-top: $band-padding/2;
+		}
+	}
+	
+	&.pad-top-half, &.pad-half-top {
+		padding-top: $band-padding / 2;
+		// Small only
+		@media only screen and (max-width: $medium-size) { 
+			padding-top: $band-padding /4;
+		}
+	}
+	&.no-pad-top, &.no-top-half {
+		padding-top: 0;
+	}
+	&.pad-bot {
+		padding-bottom: $band-padding;
+		// Small only
+		@media only screen and (max-width: $medium-size) { 
+			padding-bottom: $band-padding /2;
+		}
+	}
+	&.pad-bot-half, &.pad-half-bot {
+		padding-bottom: $band-padding / 2;
+		// Small only
+		@media only screen and (max-width: $medium-size) { 
+			padding-bottom: $band-padding /4;
+		}
+	}
+	&.no-pad-bot, &.no-bot-pad {
+		padding-bottom: 0;
+	}
+	
+	//Colors
+	&.band-white {
+		background-color:white;
+	}
+	&.band-black {
+		background-color:black;
+	}
+	&.band-primary {
+		background-color:$primary-color;
+	}
+	//Make boxed bands on wide design
+	&.boxed {
+		max-width: 100%;
+		max-width: $xlarge-size;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

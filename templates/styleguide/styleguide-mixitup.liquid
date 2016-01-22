@@ -1,0 +1,78 @@
+{% layout 'styleguide' %}
+
+{% block main %}
+
+
+<div class="band band-white pad-top pad-bot-half">
+	<div class="row">
+		<div class="large-12 columns clearfix">
+			<!--<dl class="mixitup-nav left">
+				<dt>Filter:</dt>
+				<dd class="filter active" data-filter="mix">All</dd>
+			    <dd class="filter" data-filter="blue">Blue</dd>
+			    <dd class="filter" data-filter="red">Red</dd>
+			    <dd class="filter" data-filter="yellow">Yellow</dd>
+			    <dd class="filter" data-filter="pink">Pink</dd>
+			</dl>-->
+			<div class="dropdown">
+				<a href="#" class="btn btn-link with-icon">Filter <i class="fa fa-filter"></i> </a>
+				<ul>
+					<li class="filter active" data-filter="mix" data-order="desc"><a href="#">All</a></li>
+					<li class="filter" data-filter="blue" data-order="asc"><a href="#">Blue</a></li>
+					<li class="filter" data-filter="red" data-order="dasc"><a href="#">Red</a></li>
+					<li class="filter" data-filter="yellow" data-order="asc"><a href="#">Yellow</a></li>
+					<li class="filter" data-filter="pink" data-order="asc"><a href="#">Pink</a></li>
+				</ul>
+			</div>
+			<!--<dl class="mixitup-nav right">
+				<dt>Sorter:</dt>
+			    <dd class="sort active" data-sort="data-date" data-order="desc">Dato synkende</dd>
+			    <dd class="sort" data-sort="data-date" data-order="asc">Dato stigende</dd>
+			    <dd class="sort" data-sort="data-status" data-order="desc">Status</dd>
+			    <dd class="sort" data-sort="random">Random</dd>
+			</dl>-->
+			<div class="dropdown right">
+				<a href="#" class="btn btn-link with-icon">Sort <i class="fa fa-sort"></i> </a>
+				<ul>
+					<li class="sort" data-sort="data-date" data-order="desc"><a href="#">By latest</a></li>
+					<li class="sort" data-sort="data-date" data-order="asc"><a href="#">By first</a></li>
+					<li class="sort" data-sort="data-status" data-order="dasc"><a href="#">Status</a></li>
+					<li class="sort" data-sort="random" data-order="asc"><a href="#">Random</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="band band-white pad-bot">
+	<div class="row">
+		<div class="large-12 columns">	
+			<ul id="mixitup" class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+				<li class="mix blue red" data-status="2" data-date="20150302">
+					<img src="/img/globals/placeholder.jpg">
+				</li>
+				<li class="mix red yellow" data-status="1" data-date="20150302">
+					<img src="/img/globals/placeholder.jpg">
+				</li>
+				<li class="mix pink" data-status="2" data-date="20150202">
+					<img src="/img/globals/placeholder.jpg">
+				</li>
+				<li class="mix 4 blue yellow" data-status="2" data-date="20151102">
+					<img src="/img/globals/placeholder.jpg">
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+	$(function(){
+		$('#mixitup').mixitup({
+			easing: 'snap',
+			effects: ['fade','scale'],	
+		});
+	});
+</script>
+{% endblock %}

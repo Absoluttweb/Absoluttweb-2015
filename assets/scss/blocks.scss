@@ -1,0 +1,178 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/* TODO: Block 1 - Split Screen. Image and content.
+In this Block an image fills the left/right column, and there is content in the other.
+================================================================ */
+.block-1 {
+	border-bottom: 3px solid $light-grey-color;
+	.bg-img {
+		position: relative;
+		display: block;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.container {
+		padding: 8% 8% 0;
+	}
+	a.btn {
+		position: absolute;
+		left: $column-gutter;
+		bottom:$column-gutter;
+		margin: 0;
+	}
+}
+
+/* TODO: Block 2 - Only Big Button(s).
+Colors shall be set in style.scss, but the rest goes to block.scss
+================================================================ */
+.block-2 {
+	a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 6% 3%;
+		h5 {
+				color: white;
+			}
+		p {
+			color: white;
+			margin: 0;
+		}
+		&.btn-facebook {
+			background-color: #3E588E;
+			
+		}
+		&.btn-instagram {
+			background-color: #252020;
+
+		}
+	}
+}
+
+/* TODO: Block 3 - Left Title and text. Right content
+================================================================ */
+.block-3 {}
+
+/* TODO: Block 4 - Isotope Articles in panel.
+Can have Icons on top
+================================================================ */
+.block-4 {
+	.panel {
+		position: relative;
+		padding-top: 50px;
+	}
+	.icon {
+		display: block;
+		position: absolute;
+		width: 64px;
+		height: 64px;
+		top: -10px;
+		left: 32px;
+		margin-left: -32px;
+		text-align: center;
+		line-height: 64px;
+		background-color: $primary-color;
+		img {
+			width: 32px;
+		}
+	}
+}
+#isotope-block-4 {
+	.item {
+		width: 50%;
+		padding: 10px;
+		// ONLY Small
+		@media only screen and (max-width: $medium-size) {
+			width: 100%;
+		}	
+	}
+}
+
+/* TODO: Block 5 - BlockGrid with image, title and link
+NB: Must include script for Toggle elements;
+================================================================ */
+.block-5 {
+	h5 {
+		margin-top: 10px;
+	}
+	a img {
+		width:250px;
+	}
+	.see-more {
+		display: none;
+	}
+	.see-more-trigger {
+		display: none;
+		&.active {
+			display: inline-block;
+		}
+	}
+	// ONLY Small
+	@media only screen and (max-width: $medium-size) {
+		h5 {
+			margin-top: 5px;
+			letter-spacing: 0;
+			font-size: 11px;
+		}
+		a {
+			font-size: 12px;
+		}
+	}
+}
+
+/* TODO: Block 6 - Cards/Ports. logo left, title and description
+================================================================ */
+.block-6 {}
+
+/* TODO: Block 7 - Big title, Lead and a scroll link on bottom
+================================================================ */
+.block-7 {
+	a.scroll {
+		color: black;
+	}
+}
+
+/* TODO: Block 10 - Big Contact buttons. Title, icon, link
+================================================================ */
+.block-10 {
+	h3,h4 {
+		color: white;
+	}
+	a.btn {
+		width: 95%;
+		letter-spacing: 1px;
+		font-family: "montserrat";
+		p {
+			margin:0;
+		}
+		// ONLY Small
+		@media only screen and (max-width: $medium-size) {
+			.fa-fixed-2x {
+				height: 20px;
+				width: 20px;
+				line-height: 20px;
+			}
+		}
+	}
+}
+
+/* TODO: Block 11 - Isotope galleri. Default settings images with 
+hovers and Fancybox link
+================================================================ */
+.block-11 {
+	.item {
+		background-color: white;
+	}
+	a.fancybox {
+		display: block;
+		@include transition (200ms);
+		&:hover {
+			@include transition (400ms);
+			z-index: 3;
+			position: relative;
+			opacity: 0.8;
+			}
+	}	
+}

@@ -1,0 +1,22 @@
+.tooltipster-theme {
+  border-radius: 3px;
+  border: none;
+  background: #141718;
+  color: white;
+  max-width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px; }
+
+.tooltipster-theme .tooltipster-content {
+  font-size: 13px;
+  line-height: 18px;
+  padding: 1em 1em 0.5em; }
+  .tooltipster-theme .tooltipster-content p {
+    margin-bottom: 7px; }
+  .tooltipster-theme .tooltipster-content button, .tooltipster-theme .tooltipster-content .button, .tooltipster-theme .tooltipster-content input[type="submit"] {
+    padding: 3px 8px;
+    font-size: 11px;
+    margin: 0; }
+  .tooltipster-theme .tooltipster-content form {
+    margin: 0; }
+    .tooltipster-theme .tooltipster-content form input {
+      margin-bottom: 7px; }

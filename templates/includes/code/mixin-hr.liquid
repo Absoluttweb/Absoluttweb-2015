@@ -1,0 +1,10 @@
+<a class="code" id="mixin-hr">Mixin HR</a>
+<pre id="mixin-hr" class="text-left">
+.hr-* {
+	@include hr ($height:1px, $color:$hr-color, $pattern:6, $opacity:1);
+Optional add a circle:
+	@include hr-bullet ($width:16px,$height:16px,$color:$hr-color,$radius:$global-radius,$left:50%);
+Optional add a line:
+	@include hr-line ($width:25%,$color:darken($hr-color,10%),$left:0px);
+}
+</pre>

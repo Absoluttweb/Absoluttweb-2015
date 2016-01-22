@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="no">
+
+<head>
+	<meta charset="utf-8" />
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Styleguide</title>
+	<meta name="description" content="This is the Styleguide">
+	<meta name="author" content="Absoluttweb"> {% block meta %}{% endblock %}
+
+	<link rel="icon" type="image/png" href="/img/logo.png"> {% include 'basics/css' %}
+	<link href="/assets/styleguide/styleguide.css" rel="stylesheet" type="text/css" media="all"> {{ "modernizr.js" | asset_url | script_tag }} {% include 'basics/fonts' %}
+	<!-- ScrollReveal data-sr -->
+	<style>
+		[data-sr] {
+			visibility: hidden;
+		}
+	</style>
+
+</head>
+
+<body class="wide">
+	<!-- Use 'boxed' and 'wide' and 'left-aside'. Add 'snow' if we want snow in the background -->
+
+	<div class="wrapper">
+
+		<div class="wrapper-inner">
+
+			<div class="dropdown dropdown-2">
+				<a class="btn btn-primary"><i class="fa fa-th"></i></a>
+				<ul>
+					<li><a href="/styleguide/styleguide-index">Type</a></li>
+					<li><a href="/styleguide/styleguide-buttons">Buttons</a></li>
+					<li><a href="/styleguide/styleguide-hr">HR & Dividers</a></li>
+					<li><a href="/styleguide/styleguide-tabs">Tabs & Ports</a></li>
+					<li><a href="/styleguide/styleguide-mixitup">Mixitup v.1</a></li>
+					<li><a href="/styleguide/styleguide-captions">Captions & Hovers</a></li>
+					<li><a href="/styleguide/styleguide-mixin">Mixins</a></li>
+					<li><a href="/styleguide/styleguide-aa-menu">AA-Menu</a></li>
+					<li><a href="/styleguide/styleguide-panels">Panels</a></li>
+					<li><a href="/styleguide/styleguide-tables">Tables</a></li>
+					<li><a href="/styleguide/styleguide-owl">Carousel</a></li>
+					<li><a href="/styleguide/styleguide-scrollreveal">Scrollreveal</a></li>
+					<li><a href="/styleguide/styleguide-layout">Bands & Grid</a></li>
+				</ul>
+			</div>
+			<a class="btn btn-primary code-toggle"><i class="fa fa-code"></i></a>
+			<!-- LOGO AND COLOR IN TOP -->
+			<div class="band band-sg-top text-center pad-top pad-bot">
+				<div class="row">
+					<div class="medium-12 columns">
+						<a href="/"><img src="/img/theme/logo.png" class="marg-bot"></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<ul class="horizontal centered clearfix">
+							<!--<li class="colorbox white"></li>-->
+							<li class="colorbox primary" title="primary"></li>
+							<li class="colorbox secondary" title="secondary"></li>
+							<li class="colorbox light-grey" title="light-grey"></li>
+							<li class="colorbox dark-grey" title="dark-grey"></li>
+							<!--<li class="colorbox medium-grey" title="medium-grey"></li>-->
+							<!--<li class="colorbox font-color" title="font-color"></li>-->
+							<li class="colorbox white" title="white"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			{% block main %}{% endblock %} {% include 'blocks/bottoms/bottom-block-01' %}
+
+		</div>
+		<div class="push"></div>
+	</div>
+
+	{% include 'blocks/footers/footer-block-01' %} {% include 'blocks/footers/footer-block-02' %} {% include 'basics/scripts' %} {% block script %}{% endblock %}
+
+	<script>
+		$(document).ready(function () {
+			//Superfish Dropdown Menu
+			$('ul.sf-menu').superfish({
+				cssArrows: true,
+				animation: {
+					opacity: 'show',
+					height: 'show'
+				},
+			});
+			//Mobile Menu
+			$('ul.aa-menu').aamenu();
+			//Readmore
+			$(".readmore").readmore({
+				embedCSS: false,
+				maxHeight: 72,
+				speed: 300,
+				moreLink: '<a href="#">..... les mer</a>',
+				lessLink: '<a href="#"> lukk</a>'
+			});
+		});
+	</script>
+
+	<!--<script src="/assets/js/theme/baseliner.js"></script>
+  <script>
+    window.onload = function() {
+      baseliner = new Baseliner(24);
+    }
+  </script>-->
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+// Colors
+// -------------------------
+
+// Default
+.#{$fa-css-prefix}-color {
+  color: $header-color;
+}
+
+// Primary
+.#{$fa-css-prefix}-color-primary {
+  color: $primary-color;
+}
+
+// Secondary
+.#{$fa-css-prefix}-color-secondary {
+  color: $secondary-color;
+}
+
+// Dark Grey Color
+.#{$fa-css-prefix}-color-dark-grey {
+  color: $dark-grey-color;
+}
+
+// Light Grey Color
+.#{$fa-css-prefix}-color-light-grey {
+  color: $light-grey-color;
+}
+
+// White
+.#{$fa-css-prefix}-white {
+  color: white;
+}
+
+// Link
+.#{$fa-css-prefix}-link {
+  color: $link-color;
+}
+
+//Vimeo
+.#{$fa-css-prefix}-color-vimeo {
+  color: #44BBFF;
+}
+
+// Facebook
+.#{$fa-css-prefix}-color-facebook {
+  color: #3B5998;
+}
+
+// Twitter
+.#{$fa-css-prefix}-color-twitter {
+  color: #55ACEE;
+}
+// Google Plus
+.#{$fa-css-prefix}-color-google-plus {
+  color:#DD4B38;
+}
+
+// Linkedin
+.#{$fa-css-prefix}-color-linkedin {
+  color: #0077B5;
+}
+
+// Pinterest
+.#{$fa-css-prefix}-color-pinterest {
+  color: #D72329;
+}
+
+// Email
+.#{$fa-css-prefix}-color-envelope {
+  color: #000000;
+}
+
+// Rss
+.#{$fa-css-prefix}-color-rss {
+  color: #ED7B08;
+}
+
+// Digg
+.#{$fa-css-prefix}-color-digg {
+  color: #000000;
+}
+
+// Reddit
+.#{$fa-css-prefix}-color-reddit {
+  color: #FF500F;
+}
+
+// Backgrounds
+// 
+.#{$fa-css-prefix}-bg-color {
+  color: white;
+  background-color:$font-color;
+  padding:0.3em 0.5em;
+  //border-radius:2px;
+}
+
+.#{$fa-css-prefix}-bg-color-facebook {
+@extend .#{$fa-css-prefix}-bg-color;
+background-color: #3B5998;
+}
