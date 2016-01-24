@@ -51,10 +51,15 @@
   line-height: 62px; }
 
 .fa-stroke {
-  border-radius: 900px;
   border: 1px solid #454545; }
 
-.fa-color {
+.fa-round, .fa-rounded {
+  border-radius: 900px; }
+
+.fa-radius {
+  border-radius: 3px; }
+
+.fa-color-header {
   color: #231f20; }
 
 .fa-color-primary {
@@ -69,10 +74,10 @@
 .fa-color-light-grey {
   color: #F1F1EF; }
 
-.fa-white {
+.fa-color-white {
   color: white; }
 
-.fa-link {
+.fa-color-link {
   color: #df4a43; }
 
 .fa-color-vimeo {
@@ -105,10 +110,17 @@
 .fa-color-reddit {
   color: #FF500F; }
 
-.fa-bg-color, .fa-bg-color-facebook {
-  color: white;
-  background-color: #454545;
-  padding: 0.3em 0.5em; }
+.fa-bg-color {
+  background-color: #454545; }
+
+.fa-bg-color-primary {
+  background-color: #df4a43; }
+
+.fa-bg-color-white {
+  background-color: white; }
+
+.fa-bg-color-black {
+  background-color: black; }
 
 .fa-bg-color-facebook {
   background-color: #3B5998; }

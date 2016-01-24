@@ -115,7 +115,7 @@
 		    background:$light-grey-color; 
 		    display: block; 
 		    height: 1px; 
-		    margin-top: 0.2em;  
+		    margin-top: 1em;  
 		    position: relative; 
 		    width: 100%;
 
@@ -124,9 +124,9 @@
 		&.has-bg {
 			overflow: hidden;
 			&:after {
-				background: url("/img/bg-heading.png");
+				background: url("/img/patterns/debut-light.gif");
 				position: relative;
-				left: 18px;
+				left: 20px;
 				content: "";
 				display: inline-block;
 				width: 200%;
@@ -135,16 +135,14 @@
 			}
 		}
 		
-
-		
 	//Subheader	
 		span.subheader, span.subtitle {
-			font-size: $subheader-size;
 			display: block;
+			color: $subheader-color;
+			font-size: $subheader-size;
 			font-family: $subheader-family;
 			font-weight: $subheader-weight;
 			font-style: $subheader-style;
-			color: $subheader-color;
 			letter-spacing: $subheader-letter-spacing;	
 			text-transform: $subheader-text-transform;
 		}
@@ -270,31 +268,31 @@ h5 {
 		margin-bottom: 1.5em !important;
 	}
 	.marg-bot-double, .marg-bot-2x, .marg-bot-large {
-		margin-bottom: 1.5em *2 !important;
+		margin-bottom:(1.5em * 2) !important;
 	}
 	.marg-bot-triple, .marg-bot-3x, .marg-bot-xlarge {
-		margin-bottom: 1.5em *3 !important;
+		margin-bottom: (1.5em * 3)!important;
 	}
 	.marg-bot-quadrouple, .marg-bot-4x, .marg-bot-xxlarge {
-		margin-bottom: 1.5em *4 !important;
+		margin-bottom: (1.5em * 4)!important;
 	}
 	.marg-bot-half, .marg-bot-small {
-		margin-bottom: 1.5em /2 !important;
+		margin-bottom: (1.5em / 2) !important;
 	}
 	.marg-top {
 		margin-top: 1.5em !important;
 	}
 	.marg-top-double, .marg-top-2x, .marg-top-large {
-		margin-top: 1.5em *2 !important;
+		margin-top: (1.5em * 2)!important;
 	}
 	.marg-top-triple, .marg-top-3x, .marg-top-xlarge {
-		margin-top: 1.5em *3 !important;
+		margin-top: (1.5em * 3)!important;
 	}
 	.marg-top-quadrouple, .marg-top-4x, .marg-top-xxlarge {
-		margin-top: 1.5em *4 !important;
+		margin-top: (1.5em * 4)!important;
 	}
 	.marg-top-half, .marg-top-small {
-		margin-top: 1.5em /2 !important;
+		margin-top: (1.5em / 2)!important;
 	}
 	.no-marg {
 		margin:0 !important;

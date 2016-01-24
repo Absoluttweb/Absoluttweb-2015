@@ -28,7 +28,7 @@ img {
 	&.radius {
 		@include border-radius($global-radius)
 	}
-	&.round {
+	&.round, &.rounded {
 		@include border-radius(9000px)
 	}
 	&.border {

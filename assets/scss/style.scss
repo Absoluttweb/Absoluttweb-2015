@@ -263,29 +263,38 @@ body.darken {
 	}
 }
 
-/* Header
+/* Block-20 - Header as Absoluttweb 2015
 ================================================================ */
 
-.header { 
+.block-20 { 
 	position: relative;
-	background-color: transparent;
+	overflow: hidden;
+	margin:0 0px 0px;
+	border-bottom:5px solid #775F50;
 	background-position: center center;
 	background-size: cover;
-	overflow: hidden;
-	background-image: url("/img/theme/bg-header-city.jpg");
-	@media only screen and (min-width: $medium-size) {
-		background-image: url("/img/theme/bg-header-city.jpg");
+	&.bg-img-01 {
+		background-image: url("/img/globals/placeholder-01.jpg");
+			@media only screen and (min-width: $medium-size) {
+			background-image: url("/img/globals/placeholder-01.jpg");
+		};
 	}
+.overlay {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: black;
 }
-
-.header-container {
+.container {
+	text-align: center;
 	padding: 13% 0 25%;
 	// Small only
 	@media only screen and (max-width: $medium-size) {
 		padding: 16% 0 35%;
 	}
 	
-	div.header-icon {
+	div.hero {
 		display: block;
 		width: 110px;
 		height: 110px;
@@ -304,12 +313,12 @@ body.darken {
 		letter-spacing: 0.3em;
 		color: white;
 	}
-	h2.header-company {
+	h1 {
 		padding-top: 3%;
 		font-size: 100%;
 		@extend .header-type;
 	}
-	h2.header-title {
+	h2 {
 		padding-top: 7%;
 		font-size: 300%;
 		@extend .header-type;
@@ -324,15 +333,15 @@ body.darken {
 			text-align: center;
 		}
 	}
-	.header-line {
+	.line {
 		display: block;
 		height: 3px;
 		background-color: white;
-		width: 20%;
+		width: 33%;
 		margin: 0 auto;
 	}
 }
-.tilt-primary {
+.tilt-top-box {
 	-moz-transform: rotate(-4.2deg);
 	-webkit-transform: rotate(-4.2deg);
 	-o-transform: rotate(-4.2deg);
@@ -341,12 +350,11 @@ body.darken {
 	display:block;
 	width:110%;
 	height: 5%;
-	background-color: $primary-color;
 	position: absolute;
 	bottom: 5%;
 	left: -5%;
 	}
-.tilt-white, .tilt-light-grey {
+.tilt-bottom-box {
 	-moz-transform: rotate(-3.5deg);
 	-webkit-transform: rotate(-3.5deg);
 	-o-transform: rotate(-3.5deg);
@@ -355,16 +363,12 @@ body.darken {
 	display:block;
 	width:110%;
 	height: 16%;
-	background-color: white;
 	position: absolute;
 	bottom: -8%;
 	left: -5%;
 	}
-.tilt-light-grey {
-	background-color: $light-grey-color;
-	}
 
-.page-header {
+.small {
 	.header-container {
 		padding: 8% 0 15%;
 		// Small only
@@ -372,13 +376,22 @@ body.darken {
 			padding: 8% 0 25%;
 		}
 	}
-	.tilt-primary {
+	.tilt-top-box {
 		bottom:12%;
 		height: 8%;
 	}
-	.tilt-white, .tilt-light-grey {
+	.tilt-bottom-box {
 		bottom:-16%;
 		height: 32%;
+	}
+}
+
+}
+.band-top.sticky.cloned {
+	background-color: $dark-grey-color;
+	opacity: 0.97;
+	ul.sf-menu > li:hover a,ul.sf-menu > li.active a {
+		color: white;
 	}
 }
 
@@ -404,39 +417,6 @@ body.darken {
 }
 .band-dark {
 	@include type-color (lighten($font-color,40%),$light-grey-color,$light-grey-color,$light-grey-color);
-}
-
-/* Top
-================================================================ */
-.band-top {
-	// ONLY Small
-	@media only screen and (max-width: $large-size) {
-		background-color: white;
-		border-bottom:1px solid black;
-		h2.logo {
-			visibility: visible;
-			a {
-				background-image: url("/img/theme/logo-dark.png");
-			}
-		}
-	}
-}
-
-.band-top.sticky.cloned {
-	background-color: white;
-	border-bottom:1px solid black;
-	ul.sf-menu > li a {
-		color: $dark-grey-color;
-	}
-	ul.sf-menu > li:hover a,ul.sf-menu > li.active a {
-		color: $primary-color;
-	}
-	h2.logo {
-			visibility: visible;
-			a {
-				background-image: url("/img/theme/logo-dark.png");
-			}
-		}
 }
 
 

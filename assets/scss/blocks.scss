@@ -1,11 +1,10 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
-/* TODO: Block 1 - Split Screen. Image and content.
+/* Block 1 - Split Screen. Image and content.
 In this Block an image fills the left/right column, and there is content in the other.
 ================================================================ */
-.block-1 {
-	border-bottom: 3px solid $light-grey-color;
+.block-01 {
 	.bg-img {
 		position: relative;
 		display: block;
@@ -24,7 +23,7 @@ In this Block an image fills the left/right column, and there is content in the 
 	}
 }
 
-/* TODO: Block 2 - Only Big Button(s).
+/* Block 2 - Only Big Button(s).
 Colors shall be set in style.scss, but the rest goes to block.scss
 ================================================================ */
 .block-2 {
@@ -33,6 +32,8 @@ Colors shall be set in style.scss, but the rest goes to block.scss
 		color: white;
 		text-align: center;
 		padding: 6% 3%;
+		background-color: white;
+		@include transition(100ms);
 		h5 {
 				color: white;
 			}
@@ -42,23 +43,30 @@ Colors shall be set in style.scss, but the rest goes to block.scss
 		}
 		&.btn-facebook {
 			background-color: #3E588E;
+			&:hover {
+				@include transition(300ms);
+				@include transform(1.1);
+			}
 			
 		}
 		&.btn-instagram {
 			background-color: #252020;
-
+			&:hover {
+				@include transition(300ms);
+				@include transform(1.1);
+			}
 		}
 	}
 }
 
-/* TODO: Block 3 - Left Title and text. Right content
+/* Block - Left Title and description. Right Form / Content
 ================================================================ */
-.block-3 {}
+.block-03 {}
 
-/* TODO: Block 4 - Isotope Articles in panel.
+/* Block 4 - Isotope Articles in panel.
 Can have Icons on top
 ================================================================ */
-.block-4 {
+.block-04 {
 	.panel {
 		position: relative;
 		padding-top: 50px;
@@ -79,7 +87,7 @@ Can have Icons on top
 		}
 	}
 }
-#isotope-block-4 {
+#block-04 {
 	.item {
 		width: 50%;
 		padding: 10px;
@@ -122,9 +130,9 @@ NB: Must include script for Toggle elements;
 	}
 }
 
-/* TODO: Block 6 - Cards/Ports. logo left, title and description
+/* Block 6 - Cards/Ports. logo left, title and description
 ================================================================ */
-.block-6 {}
+.block-06 {}
 
 /* TODO: Block 7 - Big title, Lead and a scroll link on bottom
 ================================================================ */
@@ -158,12 +166,12 @@ NB: Must include script for Toggle elements;
 	}
 }
 
-/* TODO: Block 11 - Isotope galleri. Default settings images with 
+/* Block 11 - Isotope galleri. Default settings images with 
 hovers and Fancybox link
 ================================================================ */
 .block-11 {
 	.item {
-		background-color: white;
+		padding: 5px;
 	}
 	a.fancybox {
 		display: block;
@@ -175,4 +183,67 @@ hovers and Fancybox link
 			opacity: 0.8;
 			}
 	}	
+}
+
+/* Block 12 - Centered Title with intro below. then an centered
+image with 3 ports on the bottom
+================================================================ */
+.block-12 {
+	}
+
+/* Block 13 - Ports as on Harddisk and BEA
+================================================================ */
+.block-13 {
+	.loader {
+		visibility: hidden;
+	}
+
+	a {
+		@include transition (100ms);
+		&:hover {
+			@include transform ($scale:1.05);
+			@include transition (300ms);
+			z-index: 2;
+
+		}
+		display: block;
+		padding: 8% 0;
+		position: relative;
+		h3,h4,p {
+			color: white;
+		}
+		h3 {
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: 1.25em;
+		}
+		h4 {
+			font-weight: 300;
+		}
+		img.rounded {
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			border: 1px solid $light-grey-color;
+			border-radius: 80px;
+			margin-bottom: 1em;
+		}
+		&.primary {
+			background-color: $primary-color;
+		}
+		&.dark-grey {
+			background-color: $dark-grey-color;
+		}
+		&.image {
+			background-size: cover;
+			background-position: center center;
+			h3 {
+				position: absolute;
+				top: 50%;
+				margin-top: -9px;
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
 }

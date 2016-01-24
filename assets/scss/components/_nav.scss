@@ -43,7 +43,7 @@ h2.logo {
 .sticky.cloned {
 	@include transition(200ms);
 	position:fixed;
-	top:-$logo-space;
+	top:-$logo-space - 1px;
 	left: 0;
 	z-index: 98;
 	width: 100%;
@@ -93,7 +93,8 @@ a.burger, a.top-icon {
 	}
 }
 a.phone,a.burger,a.chat {
-	border-left: 1px solid black;
+	@if ($burger-border == true) {
+	border-left: 1px solid $burger-border-color}
 }
 
 //Input

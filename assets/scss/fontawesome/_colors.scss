@@ -1,8 +1,13 @@
+//TOC
+//01.Colors
+//02.Background colors
+//=====================================================
+
 // Colors
 // -------------------------
 
 // Default
-.#{$fa-css-prefix}-color {
+.#{$fa-css-prefix}-color-header {
   color: $header-color;
 }
 
@@ -27,12 +32,12 @@
 }
 
 // White
-.#{$fa-css-prefix}-white {
+.#{$fa-css-prefix}-color-white {
   color: white;
 }
 
 // Link
-.#{$fa-css-prefix}-link {
+.#{$fa-css-prefix}-color-link {
   color: $link-color;
 }
 
@@ -85,16 +90,24 @@
   color: #FF500F;
 }
 
-// Backgrounds
-// 
+// Background Colors
+// // -------------------------
 .#{$fa-css-prefix}-bg-color {
-  color: white;
   background-color:$font-color;
-  padding:0.3em 0.5em;
-  //border-radius:2px;
+}
+
+.#{$fa-css-prefix}-bg-color-primary {
+background-color: $primary-color;
+}
+
+.#{$fa-css-prefix}-bg-color-white {
+background-color: white;
+}
+
+.#{$fa-css-prefix}-bg-color-black {
+background-color: black;
 }
 
 .#{$fa-css-prefix}-bg-color-facebook {
-@extend .#{$fa-css-prefix}-bg-color;
 background-color: #3B5998;
 }

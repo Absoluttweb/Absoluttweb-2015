@@ -71,13 +71,13 @@ $header-weight-thin: 300;
 $header-color: $dark-grey-color;
 $header-letter-spacing: 4px;
 $header-text-transform: uppercase;
-$subheader-family: $font-family;
-$subheader-size: 0.6em;
+$subheader-family: $header-family;
+$subheader-size: 0.50em;
 $subheader-style: normal;
 $subheader-weight: 300;
 $subheader-color: lighten($font-color, 20%);
 $subheader-letter-spacing: 0;
-$subheader-text-transform:none;
+$subheader-text-transform:uppercase;
 //Header sizes (Large Screen. Small is adjusted by percent)
 //-------------------------------------------------------------------------------------
 $h1:3em; //Not in use
@@ -141,10 +141,10 @@ $nav-icon-padding: $nav-padding;
 //-------------------------------------------------------------------------------------
 $burger-size: 22px;
 $burger-bg-color: $light-grey-color;
-$burger-color: #000000;
-$burger-color-active: $primary-color;
-$burger-border: true;
-$burger-border-color: #000000;
+$burger-color: white;
+$burger-color-active: white;
+$burger-border: false;
+$burger-border-color: #3B4761;
 //AA Menu
 //-------------------------------------------------------------------------------------
 $aa-menu-bg-image: true;

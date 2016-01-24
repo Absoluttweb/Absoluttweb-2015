@@ -18,6 +18,13 @@ $fa-fixed-size-large:62px;
 	line-height: $fa-fixed-size-large;
 }
 .#{$fa-css-prefix}-stroke {
-  border-radius: 900px;
   border:1px solid $font-color;
+}
+
+.#{$fa-css-prefix}-round, .#{$fa-css-prefix}-rounded {
+  border-radius: 900px;
+}
+
+.#{$fa-css-prefix}-radius {
+  border-radius: $global-radius;
 }

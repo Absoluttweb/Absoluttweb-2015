@@ -598,7 +598,7 @@ img {
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
     border-radius: 3px; }
-  img.round {
+  img.round, img.rounded {
     -webkit-border-radius: 9000px;
     -mos-border-radius: 9000px;
     -ms-border-radius: 9000px;
@@ -902,7 +902,7 @@ h2.logo {
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   position: fixed;
-  top: -64px;
+  top: -65px;
   left: 0;
   z-index: 98;
   width: 100%;
@@ -934,17 +934,14 @@ h2.logo {
 ====================================================== */
 a.burger, a.top-icon {
   display: block;
-  color: #000000;
+  color: white;
   line-height: 51.2px;
   width: 60px;
   height: 51.2px;
   text-align: center;
   font-size: 22px; }
   a.burger.active, a.burger:hover, a.burger:focus, a.top-icon.active, a.top-icon:hover, a.top-icon:focus {
-    color: #000000; }
-
-a.phone, a.burger, a.chat {
-  border-left: 1px solid black; }
+    color: white; }
 
 input.q-phone {
   background: white; }
@@ -1256,29 +1253,29 @@ h1, h2, h3, h4, h5, h6 {
       background: #F1F1EF;
       display: block;
       height: 1px;
-      margin-top: 0.2em;
+      margin-top: 1em;
       position: relative;
       width: 100%; }
   h1.has-bg, h2.has-bg, h3.has-bg, h4.has-bg, h5.has-bg, h6.has-bg {
     overflow: hidden; }
     h1.has-bg:after, h2.has-bg:after, h3.has-bg:after, h4.has-bg:after, h5.has-bg:after, h6.has-bg:after {
-      background: url("/img/bg-heading.png");
+      background: url("/img/patterns/debut-light.gif");
       position: relative;
-      left: 18px;
+      left: 20px;
       content: "";
       display: inline-block;
       width: 200%;
       height: .75em;
       margin: 0 -200% 0 0; }
   h1 span.subheader, h1 span.subtitle, h2 span.subheader, h2 span.subtitle, h3 span.subheader, h3 span.subtitle, h4 span.subheader, h4 span.subtitle, h5 span.subheader, h5 span.subtitle, h6 span.subheader, h6 span.subtitle {
-    font-size: 0.6em;
     display: block;
-    font-family: "Raleway", "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
+    color: #787878;
+    font-size: 0.5em;
+    font-family: "Raleway";
     font-weight: 300;
     font-style: normal;
-    color: #787878;
     letter-spacing: 0;
-    text-transform: none; }
+    text-transform: uppercase; }
   h1.divider, h2.divider, h3.divider, h4.divider, h5.divider, h6.divider {
     position: relative;
     overflow: hidden; }
@@ -1391,7 +1388,7 @@ h5 {
   margin-bottom: 6em !important; }
 
 .marg-bot-half, .marg-bot-small {
-  margin-bottom: 1.5em /2 !important; }
+  margin-bottom: 0.75em !important; }
 
 .marg-top {
   margin-top: 1.5em !important; }
@@ -1406,7 +1403,7 @@ h5 {
   margin-top: 6em !important; }
 
 .marg-top-half, .marg-top-small {
-  margin-top: 1.5em /2 !important; }
+  margin-top: 0.75em !important; }
 
 .no-marg {
   margin: 0 !important; }
