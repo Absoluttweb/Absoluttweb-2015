@@ -3,18 +3,55 @@
 {% block main %}
 
 {% include 'blocks/headers/block-20' %}
+{% include 'blocks/content/block-09' %}
+{% include 'blocks/content/block-07' %}
 {% include 'blocks/content/block-01' %}
-{% include 'blocks/content/block-02' %}
-{% include 'blocks/content/block-04' %}
 {% include 'blocks/content/block-06' %}
+
+{% include 'blocks/content/block-05' %}
+{% include 'blocks/content/block-14' %}
+{% include 'blocks/content/block-04' %}
+{% include 'blocks/content/block-08' %}
+
+{% include 'blocks/content/block-10' %}
+
 {% include 'blocks/content/block-03' %}
+{% include 'blocks/content/block-02' %}
 {% include 'blocks/content/block-11' %}
 {% include 'blocks/content/block-12' %}
 {% include 'blocks/content/block-13' %}
 
+
+{% include 'blocks/bottoms/block-30' %}
+
 {% endblock %}
 
 {% block script %}
+
+<script type="text/javascript">
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+      slideshow: true,
+      animation: "slide",
+      easing: "easeOutSine",
+      directionNav: false,
+      controlNav: false, /* "thumbnails" or true */
+      controlsContainer: ".flexslider-custom-links",
+      manualControls: ".flex-control li"
+    });
+    $('.flex-loader').hide();
+  });
+</script>
+
+<!-- Block 01 -->
+<script>
+  $(window).load(function(setHeight) {
+    var blockHeight = $(".block-01").outerHeight(true);
+    var image = $(".block-01 .img");
+    console.log(blockHeight);
+    $(image).css('height', blockHeight + "px");
+  });
+</script>
 
 <!-- Block-13 -->
 <script>
@@ -22,7 +59,6 @@
 		$(".loader").css({"visibility": "visible"});
 	});
 </script>
-<!-- END Block-13 -->
 
 <!-- Block-11 -->
 <script>
@@ -38,11 +74,9 @@
 		})
 	});
 </script>
-<!-- END Block-11 -->
 
 <!-- Block-04 -->
 <script type="text/javascript">
-	//Deafult
 var container04 = $('#block-04').imagesLoaded( function() {;
   container04.isotope({
     itemSelector: '.item',
@@ -55,6 +89,151 @@ var container04 = $('#block-04').imagesLoaded( function() {;
   })
 });
 </script>
-<!-- END Block-04 -->
+
+<!-- Block 30 -->
+  <script>
+    $(document).ready(function () {
+        var owl = $("#owl-contactpersons");
+        owl.owlCarousel({
+            navigation: false, // Show next and prev buttons
+            navigationText: ["forrige", "neste"],
+            pagination: false, // Show dotted pagination
+            paginationNumbers: false, // Show numbers in bullets
+            autoPlay: true,
+            stopOnHover: true,
+            singleItem: false,
+            slideSpeed: 1000,
+            paginationSpeed: 1000,
+            items: 5, //items
+            itemsDesktop: [1224, 3], //items from here and down
+            itemsDesktopSmall: [960, 2], //
+            itemsTablet: [430, 1], //items from here and down
+            itemsMobile: [300, 1], //items from here and down
+        });
+    });
+</script>
+
+<!-- Chart JS Initials -->
+<script>
+      var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+      var Data09A = {
+        labels : ["2009","2010","2011","2012","2013","2014","2015"],
+        datasets : [
+          {
+            fillColor : "rgba(220,220,220,0.5)",
+            strokeColor : "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data : [20,35,50,55,65,78,85]
+          },
+          {
+            fillColor : "rgba(151,187,205,0.5)",
+            strokeColor : "rgba(151,187,205,0.8)",
+            highlightFill : "rgba(151,187,205,0.75)",
+            highlightStroke : "rgba(151,187,205,1)",
+            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+          }
+        ]
+
+      }
+      var Data09B = {
+        labels : ["2009","2010","2011","2012","2013","2014","2015"],
+        datasets : [
+          {
+            fillColor : "rgba(220,220,220,0.5)",
+            strokeColor : "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data : [20,35,50,55,65,78,85]
+          },
+          {
+            fillColor : "rgba(151,187,205,0.5)",
+            strokeColor : "rgba(151,187,205,0.8)",
+            highlightFill : "rgba(151,187,205,0.75)",
+            highlightStroke : "rgba(151,187,205,1)",
+            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+          }
+        ]
+
+      }
+      
+      var pieData = [
+        {
+          value: 300,
+          color:"#F7464A",
+          highlight: "#FF5A5E",
+          label: "Red"
+        },
+        {
+          value: 50,
+          color: "#46BFBD",
+          highlight: "#5AD3D1",
+          label: "Green"
+        },
+        {
+          value: 100,
+          color: "#FDB45C",
+          highlight: "#FFC870",
+          label: "Yellow"
+        },
+        {
+          value: 40,
+          color: "#949FB1",
+          highlight: "#A8B3C5",
+          label: "Grey"
+        },
+        {
+          value: 120,
+          color: "#4D5360",
+          highlight: "#616774",
+          label: "Dark Grey"
+        }
+
+      ];
+
+      var Data14 = {
+          labels: ["2010", "2011", "2012", "2013", "2014", "2015"],
+          datasets: [
+              {
+                  label: "Laptop/PC",
+                  fillColor: "rgba(220,220,220,0.2)",
+                  strokeColor: "rgba(220,220,220,1)",
+                  pointColor: "rgba(220,220,220,1)",
+                  pointStrokeColor: "#fff",
+                  pointHighlightFill: "#fff",
+                  pointHighlightStroke: "rgba(220,220,220,1)",
+                  data: [2.4, 2.6, 2.5, 2.3, 2.4, 2.4]
+              },
+              {
+                  label: "Mobil",
+                  fillColor: "rgba(151,187,205,0.2)",
+                  strokeColor: "rgba(151,187,205,1)",
+                  pointColor: "rgba(151,187,205,1)",
+                  pointStrokeColor: "#fff",
+                  pointHighlightFill: "#fff",
+                  pointHighlightStroke: "rgba(151,187,205,1)",
+                  data: [0.4,0.8,1.6,2.3,2.6,2.8]
+              }
+          ]
+      };
+
+    // Commented out because in Block14 I also use Lines. Can only use 1 of each type  
+    //window.onload = function(){
+    //var ctxA = document.getElementById("canvas09A").getContext("2d");
+    //window.myLine = new Chart(ctxA).Line(Data09A);
+
+    var ctxB = document.getElementById("canvas09B").getContext("2d");
+    window.myBar = new Chart(ctxB).Bar(Data09B);
+
+    var ctx = document.getElementById("chart-area").getContext("2d");
+    window.myPie = new Chart(ctx).Pie(pieData);
+
+     window.onload = function(){
+    var ctxC = document.getElementById("canvas14").getContext("2d");
+    window.myLine = new Chart(ctxC).Line(Data14);
+
+}
+
+      </script>
 
 {% endblock %}

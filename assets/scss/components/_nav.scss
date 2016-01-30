@@ -1,39 +1,46 @@
+/* Band Nav
+=================================== */
+.band-nav {
+	background-color: white;
+	border-top: $nav-border-weight solid $nav-border-color;
+}
+
 /* Logo in Top
 ==================================== */
-
-
 h2.logo {
-	max-width: 100%;
-	margin-top: $logo-margin;
-	margin-bottom: $logo-margin;
-	margin-left: $logo-margin;
+	margin: $logo-margin auto;
+	max-width:75%;
 	@media only screen and (max-width: $large-size) {
 		margin-top: $logo-margin * $sticky-shrink;
 		margin-bottom: $logo-margin * $sticky-shrink;
 	}
 	a {
 		display: block;
-		height: $logo-height;
-		width: $logo-width;
+		height: $logo-height;	
 		background-size: contain;
-		background-position: center left;
+		background-position: center center;
 		background-image: url(/img/theme/logo.png);
 		background-repeat: no-repeat;
 		font: 0/0 a;
 		text-shadow: none;
 		color: transparent;
-		@media only screen and (max-width: $large-size) {
-			height: $logo-height * $sticky-shrink;
-		}
-		&.center {
-			background-position: center center;
-		}
 	}
-	span.slogan {
-		text-align: center;
-		width: 100%;
-		display: block;
-		font-size: 12px;
+	&.transparent a {
+		background-image: url(/img/theme/logo-transparent.png);
+	}
+	&.invert a {
+		background-image: url(/img/theme/logo-invert.png);
+	}
+	&.left {
+		max-width: 100%;
+		width: $logo-width;
+		margin: $logo-margin;
+		a {
+			background-position: center left;
+			@media only screen and (max-width: $large-size) {
+				height: $logo-height * $sticky-shrink;
+			}
+		}
 	}
 }
 
@@ -43,40 +50,37 @@ h2.logo {
 .sticky.cloned {
 	@include transition(200ms);
 	position:fixed;
-	top:-$logo-space - 1px;
+	top:-$logo-space;
 	left: 0;
 	z-index: 98;
 	width: 100%;
 	margin: 0;
 	padding-right: $sidenav-width;
 	opacity: $sticky-opacity;
-	h1.logo a {
+	h2.logo-left a {
 		height: $logo-height * $sticky-shrink;
 		margin-top: $logo-margin * $sticky-shrink;
 		margin-bottom: $logo-margin * $sticky-shrink;
 	}
 	ul.sf-menu {
-		@if $nav-logo-adjust == true {
-		margin-top: (($logo-space / 2)  * $sticky-shrink) - (($nav-height / 2) * $sticky-shrink);
+		@if ($nav-logo-adjust == true) {
+		margin-top: ($logo-space / 2) - ($nav-height / 2);
 		}
-		@else if $nav-logo-adjust == false {
-			margin-top:0;
+		@else {
+			margin-top: 0;
 		}
 	}
 }
 .boxed .sticky.cloned {
-
 	width: $xlarge-size;
 	max-width: 100%;
 	left:50%;
 	margin-left: -($xlarge-size / 2);
 }
-
 .sticky.cloned.active {
 	@include transition(200ms);
 	top: 0;	
 }
-
 
 /* Burger Toggle for Mobile Menus
 ====================================================== */
@@ -84,10 +88,13 @@ a.burger, a.top-icon {
 	display:block;
 	color: $burger-color;
 	line-height: $logo-space * $sticky-shrink;
-	width: 60px;
 	height: $logo-space * $sticky-shrink;
+	width: 60px;
 	text-align:center;	
 	font-size:$burger-size;
+	@if $burger-position =="center" {
+		margin: 0 auto;
+	}
 	&.active, &:hover, &:focus {
 		color: $burger-color;
 	}

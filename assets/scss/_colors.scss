@@ -1,0 +1,39 @@
+//Profile Colors
+//-------------------------------------------------------------------------------------
+
+$primary-color: #df4a43;
+$primary-color-light: lighten($primary-color, 5%);
+$primary-color-dark: darken($primary-color, 5%);
+$secondary-color: #000000;
+$secondary-color-light: lighten($secondary-color, 5%);
+$secondary-color-dark: darken($secondary-color, 5%);
+$third-color: #e71634;
+$third-color-light: lighten($third-color, 5%);
+$third-color-dark: darken($third-color, 5%);
+
+
+//Grey Colors
+//-------------------------------------------------------------------------------------
+$light-grey-color: #F1F1EF;
+$medium-grey-color: #c1c1cf;
+$dark-grey-color: #252A2E;
+
+
+//Social Colors
+//-------------------------------------------------------------------------------------
+
+$facebook-color: #3B5998;
+$twitter-color: #55ACEE;
+$google-plus-color: #DD4B38;
+$linkedin-color: #0077B5;
+$pinterest-color: #D72329;
+$rss-color: #ED7B08;
+$vimeo-color: #44BBFF;
+$link-color: #2196F3;
+
+
+//System Colors
+//-------------------------------------------------------------------------------------
+$default-color: #efefef;
+$correct-color: #80D480;
+$error-color: #e71634;

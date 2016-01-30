@@ -125,17 +125,28 @@ body.wide {
 	float: left;
 	margin-right: 1em;
 }
+.overlay {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color: black;
+}
 
 //Equal Panel height with use of equalizer. If this doesnt work, add class .data-equalizer-watch to element after LI in UL that is being watched
-[data-equalizer-watch],.data-equalizer-watch {
-  height:100%;
-}
+	[data-equalizer-watch],.data-equalizer-watch {
+	  height:100%;
+	}
 
 //Share Icon Size
-.share-icons .fa {
-  font-size: 1.8em;
+	.share-icons .fa {
+	  font-size: 1.8em;
 
-}
+	}
 .share-icons.fullscreen .fa {
   font-size: 2.5em;
   @include transform ($scale:1);

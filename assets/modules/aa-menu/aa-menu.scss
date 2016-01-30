@@ -1,11 +1,11 @@
 @import "../../scss/variables";
 
 @function line-contrast($set-lines) {
-  @if (lightness($set-lines) > 50) {
-    @return darken($aa-menu-bg,$aa-menu-line-difference); // Lighter backgorund, return dark color
-  } @else {
-    @return lighten($aa-menu-bg,$aa-menu-line-difference); // Darker background, return light color
-  }
+	@if (lightness($set-lines) > 50) {
+	@return darken($aa-menu-bg,$aa-menu-line-difference); // Lighter backgorund, return dark color
+	} @else {
+		@return lighten($aa-menu-bg,$aa-menu-line-difference); // Darker background, return light color
+	}
 }
 
 .aa-menu-wrapper {
@@ -24,46 +24,51 @@
 	overflow-y:auto;
 	a.close {
 		position: absolute;
-	    top: 0;
-	    right: 0;
-	    display: block;
-	    line-height: 45px;
-	    color: $aa-menu-close-color;
-	    text-transform: uppercase;
-	    font-size: 18px;
-	    border: 0 solid line-contrast($aa-menu-bg);
-	    border-radius: 0;
-	    margin: $column-gutter;
-	    width: 45px;
-	    height: 45px;
-	    text-align: center;
-	    &:before {
-	    	content: "\f057";
-	    	font-family: FontAwesome;
-	    	font-size:26px;
-		    font-style: normal;
-		    font-weight: normal;
-		    text-decoration: inherit;
+		top: 0;
+		right: 0;
+		display: block;
+		line-height: 45px;
+		color: $aa-menu-close-color;
+		text-transform: uppercase;
+		font-size: 18px;
+		border: 0 solid line-contrast($aa-menu-bg);
+		border-radius: 0;
+		margin: $column-gutter;
+		width: 45px;
+		height: 45px;
+		text-align: center;
+		&:before {
+			content: "\f057";
+			font-family: FontAwesome;
+			font-size:26px;
+			font-style: normal;
+			font-weight: normal;
+			text-decoration: inherit;
 		}  
-    }
+	}
 }
 .aa-menu {
-  list-style:none;
+	list-style:none;
+	margin-left: 0;
 	clear: both;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 	width: 100%;
 	height: 100%;
-	min-height: 500px;
+	min-height: $aa-menu-height;
 	z-index: 998;
 	position: relative;
 	margin-top:80px;
 	li {
 		a {
 			display: block;
+			@if ($aa-menu-text-align == "center") {
+				text-align: center;
+				padding-left:0 !important;
+			}
 			width: 100%;
 			color: $aa-menu-font-color !important;
 			font-family: $aa-menu-font-family;
@@ -72,17 +77,19 @@
 			letter-spacing: $aa-menu-letter-spacing;
 			text-transform: uppercase;
 			border-bottom: 1px solid line-contrast($aa-menu-bg);
-			line-height:50px;
+			line-height:40px;
 			padding-left:21px;
-			&:before {
-				content:"";
-				display: inline-block;
-				width: 5px;
-				height: 5px;
-				background-color: $secondary-color;
-				margin-right: 10px;
-				margin-bottom: 3px;
+			@if ($aa-menu-bullets == true) {
+				&:before {
+					content:"";
+					display: inline-block;
+					width: 5px;
+					height: 5px;
+					background-color: $secondary-color;
+					margin-right: 10px;
+					margin-bottom: 3px;
 
+				}
 			}
 		}
 
@@ -90,15 +97,15 @@
 			color:$aa-menu-font-color-active;
 			font-weight: $aa-menu-font-weight-active;
 		}
-		
+
 		&:first-child {
 			border-top: 1px solid line-contrast($aa-menu-bg);
-			}	
+		}	
 		a.next {
 			float:right;
 			width:auto;
 			padding-right:21px;
-			line-height:50px;
+			line-height:40px;
 			border-left: 1px solid line-contrast($aa-menu-bg); 
 			border-bottom:none;
 			background-color: line-contrast($aa-menu-bg);
@@ -133,7 +140,7 @@
 }
 /* 2nd level nav */
 .js .aa-menu li ul {
-  list-style: none;
+	list-style: none;
 	position: absolute;
 	background-color: $aa-menu-bg;
 	top: 0;
@@ -149,14 +156,14 @@
 	transition: all 0.3s ease-out;
 }
 .js .aa-menu {
-    max-height: 0;
-    overflow: hidden;
-  }
+	max-height: 0;
+	overflow: hidden;
+}
 .js .aa-menu.active {
-    max-height: 30em;
-    overflow: hidden;
-  }
+	max-height: 30em;
+	overflow: hidden;
+}
 .js .aa-menu li ul.active {
-  /* reveal on active state */
- 	left: 0;
+	/* reveal on active state */
+	left: 0;
 }

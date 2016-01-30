@@ -15,6 +15,11 @@ $(document).keydown(function(e) {
 
 $(document).ready(function(){
 
+//Tooltipster
+$('.tooltip').tooltipster({
+    theme: 'tooltipster-noir'
+});
+
 //FadeOut Effect
 $('.fadeOut').click(function(event) {
     event.preventDefault();

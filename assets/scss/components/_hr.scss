@@ -5,6 +5,10 @@ hr,.hr {
 	display: block;
 	border:none;
 	position:relative;
+	//Colors
+	&.dark,&.darken {
+		background-color: darken($hr-color,10%);
+	}
 	&.marg-half, &.half-marg, &.half {
 		margin: 0 auto 0.75rem auto;
 	}

@@ -4,118 +4,219 @@
 <head>
 	<meta charset="utf-8" />
 	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Styleguide</title>
-	<meta name="description" content="This is the Styleguide">
-	<meta name="author" content="Absoluttweb"> {% block meta %}{% endblock %}
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Styleguide</title>
+		<meta name="description" content="This is the Styleguide">
+		<meta name="author" content="Absoluttweb"> {% block meta %}{% endblock %}
 
-	<link rel="icon" type="image/png" href="/img/logo.png"> {% include 'basics/css' %}
-	<link href="/assets/styleguide/styleguide.css" rel="stylesheet" type="text/css" media="all"> {{ "modernizr.js" | asset_url | script_tag }} {% include 'basics/fonts' %}
-	<!-- ScrollReveal data-sr -->
-	<style>
-		[data-sr] {
-			visibility: hidden;
-		}
-	</style>
+		<link rel="icon" type="image/png" href="/img/logo.png"> {% include 'basics/css' %}
+		<link href="/assets/styleguide/styleguide.css" rel="stylesheet" type="text/css" media="all"> {{ "modernizr.js" | asset_url | script_tag }} {% include 'basics/fonts' %}
+		<!-- ScrollReveal data-sr -->
+		<style>
+			[data-sr] {
+				visibility: hidden;
+			}
+		</style>
 
-</head>
+	</head>
 
-<body class="wide">
-	<!-- Use 'boxed' and 'wide' and 'left-aside'. Add 'snow' if we want snow in the background -->
+	<body class="wide">
 
-	<div class="wrapper">
-
-		<div class="wrapper-inner">
-
-			<div class="dropdown dropdown-2">
-				<a class="btn btn-primary"><i class="fa fa-th"></i></a>
-				<ul>
-					<li><a href="/styleguide/styleguide-index">Type</a></li>
-					<li><a href="/styleguide/styleguide-buttons">Buttons</a></li>
-					<li><a href="/styleguide/styleguide-hr">HR & Dividers</a></li>
-					<li><a href="/styleguide/styleguide-tabs">Tabs & Ports</a></li>
-					<li><a href="/styleguide/styleguide-mixitup">Mixitup v.1</a></li>
-					<li><a href="/styleguide/styleguide-captions">Captions & Hovers</a></li>
-					<li><a href="/styleguide/styleguide-mixin">Mixins</a></li>
-					<li><a href="/styleguide/styleguide-aa-menu">AA-Menu</a></li>
-					<li><a href="/styleguide/styleguide-panels">Panels</a></li>
-					<li><a href="/styleguide/styleguide-tables">Tables</a></li>
-					<li><a href="/styleguide/styleguide-owl">Carousel</a></li>
-					<li><a href="/styleguide/styleguide-scrollreveal">Scrollreveal</a></li>
-					<li><a href="/styleguide/styleguide-layout">Bands & Grid</a></li>
-					<li><a href="/styleguide/styleguide-blocks">Blocks</a></li>
-				</ul>
-			</div>
-			<a class="btn btn-primary code-toggle"><i class="fa fa-code"></i></a>
-			<!-- LOGO AND COLOR IN TOP -->
-			
-			<!--<div class="band band-sg-top text-center pad-top pad-bot">
-				<div class="row">
-					<div class="medium-12 columns">
-						<a href="/"><img src="/img/theme/logo.png" class="marg-bot"></a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="large-12 columns">
-						<ul class="horizontal centered clearfix">
-							<li class="colorbox primary" title="primary"></li>
-							<li class="colorbox secondary" title="secondary"></li>
-							<li class="colorbox light-grey" title="light-grey"></li>
-							<li class="colorbox dark-grey" title="dark-grey"></li>
-							<li class="colorbox medium-grey" title="medium-grey"></li>
-							<li class="colorbox font-color" title="font-color"></li>
-							<li class="colorbox white" title="white"></li>
-						</ul>
-					</div>
-				</div>
-			</div>-->
-
-			{% block main %}
-			{% endblock %}
-
+		<div class="top-bar">
+			<div class="corner-triangle" data-trigger="top-bar"></div>
 		</div>
-		<div class="push"></div>
-	</div>
 
-	{% include 'blocks/footers/footer-block-01' %}
-	{% include 'blocks/footers/footer-block-02' %}
+		<div class="bottom-bar">
+			<div class="news-card">
+				<div class="date">12.01.2016</div>
+				<div class="panel-content">
+					<a href="#" class="facebook-link"><i class="fa fa-facebook-square fa-color-facebook"></i> Åpne i Facebook</a>
+					<h4 class="handwriting">This is only bulletin</h4>
+					<p>It means it will only show in this sidebar, and not anywhere else.</p>
+				</div>
+			</div>
+		</div>
 
-	{% include 'basics/scripts' %} 
+		<div class="bottom-menu">
+			<div class="row full collapse">
+				<div class="small-4 columns">
+					<a data-trigger="info-bar-left"><i class="fa fa-chevron-left"></i> Leftbar</a>	
+				</div>
+					<div class="small-4 columns show-for-small text-center">
+						<a id="toTop">TOP <i class="fa fa-chevron-up"></i>  </a>	
+					</div>
+					<div class="small-4 columns hide-for-small text-center">
+						<div class="bm-share-icons">
+							<a data-name="Facebook" href="https://www.facebook.com/dialog/share?
+							app_id=<pop:home.app_id/>
+							&display=popup
+							&href=http://<pop:home.homepage/><pop:content.permalink/>
+							&redirect_uri=http://<pop:home.homepage/><pop:content.permalink/>
+							&picture=http://<pop:home.homepage/><pop:article_image/>" class="bottom-shareicon tooltip" title="Del på Facebook profil, side eller gruppe"><i class="fa fa-facebook"></i>
+						</a>
+						<a data-name="Twitter" href="http://twitter.com/share?url=http://<pop:home.homepage/><pop:content.permalink/>&text=<pop:content.title/>" class="bottom-shareicon tooltip" title="Tweet om denne siden"><i class="fa fa-twitter"></i></a>
+						<a data-name="GooglePlus" href="#" class="bottom-shareicon tooltip" title="Del på Google Plus"><i class="fa fa-google-plus"></i></a>
+						<a data-name="LinkedIn" href="#" class="bottom-shareicon tooltip" title="Tips kontakter på LinkedIn"><i class="fa fa-linkedin"></i></a>
+					</div>
+				</div>
 
-	{% block script %}{% endblock %}
+					<!--<div class="small-4 columns">
+						<a href="tel:91328419" class="right"><i class="fa fa-phone"></i> Call</a>	
+					</div>-->
+					<!--<div class="small-4 columns text-center">
+						<a data-trigger="bottom-bar"><i class="fa fa-chevron-up"></i> upbar</a>
+					</div>-->
+					<div class="small-4 columns text-right">
+						<a data-trigger="info-bar-right">Rightbar <i class="fa fa-chevron-right"></i></a>
+					</div>
 
-	<script>
-		$(document).ready(function () {
-			//Superfish Dropdown Menu
-			$('ul.sf-menu').superfish({
-				cssArrows: true,
-				animation: {
-					opacity: 'show',
-					height: 'show'
-				},
+				</div>
+			</div>
+
+			<div class="info-bar-left">
+				<div class="ib-scroll">
+					<a class="ib-tab" data-trigger="info-bar-left"><i class="fa fa-chevron-left"></i> Leftbar</a>
+					<div class="ib-container">
+
+						<div class="news-card">
+							<div class="date">12.01.2016</div>
+							<div class="panel-content">
+								<a href="#" class="facebook-link"><i class="fa fa-facebook-square fa-color-facebook"></i> Åpne i Facebook</a>
+								<h4 class="handwriting">This is only bulletin</h4>
+								<p>It means it will only show in this sidebar, and not anywhere else.</p>
+							</div>
+						</div>
+
+						<div class="news-card">
+							<div class="date">10.01.2016</div>
+							<div class="panel-content">
+								<a class="link" href="#">Les artikkel</a>
+								<h4 class="handwriting">This is a standard article with image</h4>
+								
+								<p>Noen nyheter er artikler/blogg. Det vil ha en link til selve artikkelen eter noe description. </p>
+								<a href="#"><img src="/img/globals/placeholder-08.jpg"></a>
+							</div>
+						</div>
+
+						<div class="news-card">
+							<div class="date">12.01.2016</div>
+							<div class="panel-content">
+								<a href="/" class="label">Gaming</a>
+								<a class="link" href="#">Les artikkel</a>
+								<h4 class="handwriting">Article in category</h4>
+								<p>No image is the best look, if using many entries here.</p>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="info-bar-right">
+				<div class="ib-scroll">
+					<a class="ib-tab" data-trigger="info-bar-right"> Rightbar <i class="fa fa-chevron-right"></i></a>
+					<div class="ib-container">
+
+						<div class="news-card">
+							<div class="date">12.01.2016</div>
+							<div class="panel-content">
+								<a href="#" class="facebook-link"><i class="fa fa-facebook-square fa-color-facebook"></i> Åpne i Facebook</a>
+								<h4 class="handwriting">This is only bulletin</h4>
+								<p>It means it will only show in this sidebar, and not anywhere else.</p>
+							</div>
+						
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			
+
+			<div class="wrapper">
+			
+
+
+				<div class="wrapper-inner">
+
+					{% block main %}{% endblock %}
+
+				</div>
+				<div class="push"></div>
+			</div>
+
+			{% include 'blocks/footers/block-40' %}
+
+			{% include 'basics/scripts' %} 
+
+			{% block script %}{% endblock %}
+
+			<script type="text/javascript">
+				(function($) {
+					'use strict';
+					window.sr= new scrollReveal({
+						mobile: false
+					});
+				})();
+			</script>
+
+			<script>
+			$(document).ready(function () {
+				
+				//Superfish Dropdown Menu
+				$('ul.sf-menu').superfish({
+					cssArrows: true,
+					animation: {
+						opacity: 'show',
+						height: 'show'
+					},
+				});
+
+				//Animated Burgers
+				$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+					$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').toggleClass('open');
+				});
+
+				//Mobile Menu
+				$("ul.aa-menu").aamenu();
+
+				//Readmore
+				$(".readmore").readmore({
+					embedCSS: false,
+					maxHeight: 72,
+					speed: 300,
+					moreLink: '<a href="#">..... les mer</a>',
+					lessLink: '<a href="#"> lukk</a>'
+				});
+
 			});
-			//Mobile Menu
-			$('ul.aa-menu').aamenu();
-			//Readmore
-			$(".readmore").readmore({
-				embedCSS: false,
-				maxHeight: 72,
-				speed: 300,
-				moreLink: '<a href="#">..... les mer</a>',
-				lessLink: '<a href="#"> lukk</a>'
-			});
-		});
-	</script>
+			</script>
 
-	  <script type="text/javascript">
-    (function($) {
-      'use strict';
-      window.sr= new scrollReveal({
-        mobile: false
-      });
-    })();
-  </script>
+			<script>
+			$(window).load(function() {
+		        
+		        //Bar Triggers
+		        $("*[data-trigger='info-bar-left']").click(function(){
+		        	$(".info-bar-left").toggleClass('active');
+		        	$(".info-bar-right").removeClass('active');
+		        });
+		        $("*[data-trigger='info-bar-right']").click(function(){
+		        	$(".info-bar-right").toggleClass('active');
+		        	$(".info-bar-left").removeClass('active');
+		        });
+		        $("*[data-trigger='top-bar']").click(function(){
+		        	$(".top-bar").toggleClass('active');
+		        });
+		        $("*[data-trigger='bottom-bar']").click(function(){
+		        	$(".bottom-bar").toggleClass('active');
+		        });
 
-</body>
+		    });
+			</script>
+			
 
-</html>
+
+		</body>
+
+		</html>

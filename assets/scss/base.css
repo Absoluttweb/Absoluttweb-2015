@@ -17,7 +17,7 @@ It will show in the right, until it chrashes with the content. Then the visibili
   text-align: center;
   font-size: 1em;
   z-index: 99;
-  padding-top: 16px; }
+  padding-top: 24px; }
   @media only screen and (max-width: 760px) {
     .sidenav {
       width: 0px;
@@ -91,6 +91,17 @@ body.wide {
 .pull-left {
   float: left;
   margin-right: 1em; }
+
+.overlay {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black; }
 
 [data-equalizer-watch], .data-equalizer-watch {
   height: 100%; }
@@ -176,12 +187,12 @@ a:hover, a:focus, input:hover, input:focus {
 ============================================================ */
 @media only screen and (max-width: 760px) {
   body {
-    font-size: 0.85em;
+    font-size: 0.9em;
     line-height: 1.25em; }
 
   .sticky-placeholder {
     display: block;
-    height: 51.2px; }
+    height: 57.6px; }
 
   .sidebar-right {
     border: none;

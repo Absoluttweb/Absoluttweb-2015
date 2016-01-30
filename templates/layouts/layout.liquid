@@ -72,10 +72,6 @@
   <script>
     $(window).load(function() {
         //Infobar
-        var trigger = $(".info-trigger");
-        var triggerSize = $(trigger).outerWidth(true);
-
-        $(trigger).css({'right':-triggerSize});
         $(".info-trigger, .pure-info-trigger").click(function(){
           $(".info-bar").show();
           $(".info-bar").toggleClass('active');

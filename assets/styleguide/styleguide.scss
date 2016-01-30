@@ -1,36 +1,6 @@
 @import "../scss/_variables.scss";
 @import "../scss/_mixins.scss";
 
-/* Variables for Visible
-=================================== */
-
-$bottom-block-number: '01';
-$footer-block-number: '01';
-
-/* Visible Blocks
-=================================== */
-
-.bottom {
-	display: none;
-}
-
-.bottom-block-#{$footer-block-number} {
-	display: block;
-}
-
-.footer {
-	display: none;
-}
-
-.footer-block-#{$footer-block-number} {
-	display: block;
-}
-
-body {
-	background-image: none;
-	background-color: white;
-}
-
 
 /* Code
 =================================== */
@@ -47,19 +17,6 @@ a.code {
 	&:after {
 		content: "]"
 	}
-}
-
-.corner-trigger {
-	position: fixed;
-	display: block;
-	z-index: 9999;
-	top: 0;
-	right: 0;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 50px 50px 0;
-	border-color: transparent $dark-grey-color transparent transparent;
 }
 
 pre,
@@ -127,71 +84,6 @@ code {
 }
 
 
-/* Code Toggle Button
-========================================= */
-
-a.code-toggle {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	font-size: 18px;
-	border-radius: 0;
-	border: none;
-	margin: 0;
-	z-index: 99;
-}
-
-
-/* Fixed Nav in bottom
-========================================== */
-
-.dropdown-2 {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	z-index: 99;
-	> a {
-		font-size: 18px;
-		border-radius: 0;
-		border: none;
-		margin: 0;
-	}
-	ul {
-		position: fixed;
-		z-index: 100;
-		background: darken($primary-color, 10%);
-		bottom: 0;
-		right: 0;
-		border: none;
-		padding: 24px 24px 72px;
-		z-index: -1;
-		width: 500px;
-		max-width: 100%;
-		li {
-			border-color: darken($primary-color, 5%);
-			a {
-				color: white;
-				padding: 2% 0;
-			}
-		}
-	}
-}
-
-
-/* Custom Bands
-================================================================ */
-
-.band-sg-top {
-	background-color: white;
-	border-bottom: 3px solid $light-grey-color;
-}
-
-.band-sg-main {
-	background-color: #ffffff;
-	background-image: none;
-}
-
-
 /* Button Wrapper for showing buttons together 
 ================================================ */
 
@@ -200,13 +92,9 @@ a.code-toggle {
 }
 
 
-/* Custom Buttons
+/* Custom Bands
 ================================================================ */
 
-.btn-1 {
-	@include button($primary-color, white);
-	border-color: $primary-color !important;
-}
 
 
 /* Custom HR

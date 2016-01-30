@@ -24,14 +24,12 @@
           $sublink = $('.aa-menu ul');
 
         //  Show/Hide menu
-        $(".burger, a.close").click(function(){
+        $(".burger, a.close,*[data-trigger='aa-menu']").click(function(){
           $(".burger, a.close").toggleClass('active');
           $(".aa-menu-wrapper").fadeToggle(300);
           $("body").toggleClass('no-scroll');
           
         });
-
-        
 
         // test for 2nd-level menu and add a link if true
         $('.aa-menu li').has( "ul" ).prepend(settings.next);

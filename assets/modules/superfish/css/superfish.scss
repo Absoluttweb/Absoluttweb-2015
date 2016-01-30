@@ -11,7 +11,6 @@ ul.sf-menu, ul.sf-menu * {
 		position: relative;
 		text-align:left;
 		float: left;
-		//display:inline-block;
 		&:hover > ul, &.sfHover > ul {
 			display: block;
 		}
@@ -48,8 +47,13 @@ ul.sf-menu {
 	@else if $nav-logo-adjust == false {
 		margin-top:0;
 	}
-	@if $nav-float == left {float:left;}
-	@else if $nav-float == right {float:right;}
+	@if $nav-position == left {float:left;}
+	@else if $nav-position == right {float:right;}
+	@else if $nav-position == center {
+		display:table;
+		float:none;
+		margin:0 auto;
+	}
 
 	a {
 		zoom: 1; /* IE7 */
@@ -65,6 +69,12 @@ ul.sf-menu {
 	}
 	> li {
 		background:$nav-bg;
+		@if($nav-border-weight != "0px") {
+			border-left: $nav-border-weight solid $nav-border-color;
+			&:last-child {
+				border-right: $nav-border-weight solid $nav-border-color;
+			}
+		}
 		@include transition-background(200ms);
 		&:hover, &.sfHover {
 			background:$nav-bg-hover;

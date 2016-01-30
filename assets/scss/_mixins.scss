@@ -25,6 +25,12 @@
 	transform: scale($scale) rotate($rotate) translateX($translate-x) translateY($translate-y) skewX($skew-x) skewY($skew-y);
 }
 
+@mixin box-shadow($h:0px,$v:2px,$b:4px,$s:0px,$o:0.08) {
+	-webkit-box-shadow: $h $v $b $s rgba(0, 0, 0, $o);
+	-moz-box-shadow: $h $v $b $s rgba(0, 0, 0, $o);
+	box-shadow: $h $v $b $s rgba(0, 0, 0, $o);
+}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -mos-border-radius: $radius;

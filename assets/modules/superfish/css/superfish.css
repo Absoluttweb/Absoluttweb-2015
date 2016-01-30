@@ -29,14 +29,14 @@ ul.sf-menu, ul.sf-menu * {
 /* THEME STYLES 
 ======================================================= */
 ul.sf-menu {
-  margin-top: 16px;
+  margin-top: 24px;
   float: right;
   /* CHILD ELEMENTS */ }
   ul.sf-menu a {
     zoom: 1;
     /* IE7 */
     text-transform: uppercase;
-    padding: 0.4em 1em;
+    padding: 0 1em;
     font-weight: 500;
     font-size: 12px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
@@ -48,11 +48,14 @@ ul.sf-menu {
     /* ...unless you support IE7 (let it wrap) */ }
   ul.sf-menu > li {
     background: transparent;
+    border-left: 0px solid #F1F1EF;
     -webkit-transition: background 200ms ease-in-out;
     -moz-transition: background 200ms ease-in-out;
     -ms-transition: background 200ms ease-in-out;
     -o-transition: background 200ms ease-in-out;
     transition: background 200ms ease-in-out; }
+    ul.sf-menu > li:last-child {
+      border-right: 0px solid #F1F1EF; }
     ul.sf-menu > li:hover, ul.sf-menu > li.sfHover {
       background: transparent;
       -webkit-transition: background 200ms ease-in-out;

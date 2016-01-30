@@ -104,23 +104,36 @@
 		color: $header-color;
 		letter-spacing: $header-letter-spacing;	
 		text-transform: $header-text-transform;
+	
+	// Thin version
 		&.thin, .thin {
 			font-weight: $header-weight-thin;
 		}
-		&.has-stroke {
+	
+	// Thick version
+		&.thick, .thick {
+			font-weight: $header-weight-thick;
+		}
+
+	// Handwriting
+		&.handwriting {
+			font-family: $font-handwriting;
+		}
+
+	// Has a border below with margin
+		&.has-stroke, &.has-border {
 		  margin-bottom: 1em;
-		  font-weight:500;
 		  &:after {
 		    content: "";
 		    background:$light-grey-color; 
 		    display: block; 
 		    height: 1px; 
-		    margin-top: 1em;  
+		    margin-top: 0.5em;  
 		    position: relative; 
 		    width: 100%;
-
 		    }		  
 		}
+	// Has background image or pattern
 		&.has-bg {
 			overflow: hidden;
 			&:after {
@@ -135,7 +148,7 @@
 			}
 		}
 		
-	//Subheader	
+	// Subheader/Subtitle	
 		span.subheader, span.subtitle {
 			display: block;
 			color: $subheader-color;
@@ -145,9 +158,10 @@
 			font-style: $subheader-style;
 			letter-spacing: $subheader-letter-spacing;	
 			text-transform: $subheader-text-transform;
+			margin:($subheader-size / 4) 0;
 		}
-	//Divider
-		&.divider {
+	// Has Divider
+		&.has-divider {
 			position: relative;
 			overflow: hidden;
 			&:after {
@@ -162,9 +176,10 @@
 			
 		}
 	//Divider if centered text
-		&.divider-center {
+		&.has-divider-center {
 			position: relative;
 			overflow: hidden;
+			text-align:center;
 			&:after {
 				position: absolute;
 				content: "\020";

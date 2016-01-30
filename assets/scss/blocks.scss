@@ -5,21 +5,30 @@
 In this Block an image fills the left/right column, and there is content in the other.
 ================================================================ */
 .block-01 {
-	.bg-img {
+	.img {
 		position: relative;
 		display: block;
 		width: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
+		// ONLY Small
+		@media only screen and (max-width: $medium-size) {
+			position: relative;
+			height: 200px !important;
+		}	
 	}
 	.container {
-		padding: 8% 8% 0;
+		padding: 7% 7%;
+		max-width:1000px;
 	}
 	a.btn {
 		position: absolute;
+		text-align: center;
+		right: $column-gutter;
 		left: $column-gutter;
-		bottom:$column-gutter;
-		margin: 0;
+		max-width: 250px;
+		bottom: 50%;
+		margin: 0 0 -25px 0;
 	}
 }
 
@@ -35,8 +44,8 @@ Colors shall be set in style.scss, but the rest goes to block.scss
 		background-color: white;
 		@include transition(100ms);
 		h5 {
-				color: white;
-			}
+			color: white;
+		}
 		p {
 			color: white;
 			margin: 0;
@@ -58,10 +67,6 @@ Colors shall be set in style.scss, but the rest goes to block.scss
 		}
 	}
 }
-
-/* Block - Left Title and description. Right Form / Content
-================================================================ */
-.block-03 {}
 
 /* Block 4 - Isotope Articles in panel.
 Can have Icons on top
@@ -98,56 +103,37 @@ Can have Icons on top
 	}
 }
 
-/* TODO: Block 5 - BlockGrid with image, title and link
-NB: Must include script for Toggle elements;
+/* Block 05 - Parallax with white text;
 ================================================================ */
-.block-5 {
-	h5 {
-		margin-top: 10px;
+
+.block-05 {
+	background-color: $primary-color;
+	@include type-color (#ffffff,#ffffff);
+	.wide {
+		width: 80%;
 	}
-	a img {
-		width:250px;
-	}
-	.see-more {
-		display: none;
-	}
-	.see-more-trigger {
-		display: none;
-		&.active {
-			display: inline-block;
-		}
-	}
-	// ONLY Small
-	@media only screen and (max-width: $medium-size) {
-		h5 {
-			margin-top: 5px;
-			letter-spacing: 0;
-			font-size: 11px;
-		}
-		a {
-			font-size: 12px;
+}
+
+
+/* Block 09 - Wide panel in background
+================================================================ */
+.block-09 {
+	.wide-panel {
+		width: 75%;
+		margin: 0 auto;
+		background-color: white;
+		padding: 5% 2%;
+		// MEDIUM-DOWN
+		@media only screen and (max-width: $large-size) {
+			width:90%;
 		}
 	}
 }
 
-/* Block 6 - Cards/Ports. logo left, title and description
-================================================================ */
-.block-06 {}
 
-/* TODO: Block 7 - Big title, Lead and a scroll link on bottom
-================================================================ */
-.block-7 {
-	a.scroll {
-		color: black;
-	}
-}
-
-/* TODO: Block 10 - Big Contact buttons. Title, icon, link
+/* Block 10 - Big Contact buttons. Title, icon, link
 ================================================================ */
 .block-10 {
-	h3,h4 {
-		color: white;
-	}
 	a.btn {
 		width: 95%;
 		letter-spacing: 1px;
@@ -181,7 +167,7 @@ hovers and Fancybox link
 			z-index: 3;
 			position: relative;
 			opacity: 0.8;
-			}
+		}
 	}	
 }
 
@@ -189,7 +175,7 @@ hovers and Fancybox link
 image with 3 ports on the bottom
 ================================================================ */
 .block-12 {
-	}
+}
 
 /* Block 13 - Ports as on Harddisk and BEA
 ================================================================ */
@@ -247,3 +233,136 @@ image with 3 ports on the bottom
 		}
 	}
 }
+
+/* Block 14 - Signup / Register / Contact Forms
+================================================================ */
+form.form-02 {
+	textarea,input:not([type="submit"]) {
+		border-top-width: 0; 
+		border-right-width: 0;
+		border-left-width: 0;
+		padding: 0;
+	}
+	input:not([type="submit"]) {
+		height: 2em;
+	}
+}
+
+
+/* Block-20 - Header as Absoluttweb 2015
+================================================================ */
+
+.block-20 { 
+	overflow: hidden;
+	margin:0 0px 0px;
+	//border-bottom:5px solid #775F50;
+	.container {
+		text-align: center;
+		padding: 13% 0 25%;
+		// Small only
+		@media only screen and (max-width: $medium-size) {
+			padding: 16% 0 35%;
+		}
+		
+		div.hero {
+			display: block;
+			width: 110px;
+			height: 110px;
+			background:transparent url("/img/theme/logo-icon-220.png") no-repeat center center;
+			background-size: cover;
+			margin: 0 auto;
+			// Small only
+			@media only screen and (max-width: $medium-size) {
+				width:75px;
+				height: 75px;
+			}
+		}
+		.header-type {
+			font-family: 'montserrat';
+			font-weight: 300;
+			letter-spacing: 0.3em;
+			color: white;
+		}
+		h1 {
+			padding-top: 3%;
+			font-size: 100%;
+			@extend .header-type;
+		}
+		h2 {
+			padding-top: 7%;
+			font-size: 300%;
+			@extend .header-type;
+
+			// Medium only
+			@media only screen and (max-width: $large-size) {
+				font-size: 250%;
+			}
+			// Small only
+			@media only screen and (max-width: $medium-size) {
+				font-size: 200%;
+				text-align: center;
+			}
+		}
+		.line {
+			display: block;
+			height: 3px;
+			background-color: white;
+			width: 33%;
+			margin: 0 auto;
+		}
+	}
+	.tilt-top-box {
+		-moz-transform: rotate(-4.2deg);
+		-webkit-transform: rotate(-4.2deg);
+		-o-transform: rotate(-4.2deg);
+		-ms-transform: rotate(-4.2deg);
+		transform: rotate(-4.2deg);
+		display:block;
+		width:110%;
+		height: 5%;
+		position: absolute;
+		bottom: 5%;
+		left: -5%;
+	}
+	.tilt-bottom-box {
+		-moz-transform: rotate(-3.5deg);
+		-webkit-transform: rotate(-3.5deg);
+		-o-transform: rotate(-3.5deg);
+		-ms-transform: rotate(-3.5deg);
+		transform: rotate(-3.5deg);
+		display:block;
+		width:110%;
+		height: 16%;
+		position: absolute;
+		bottom: -8%;
+		left: -5%;
+	}
+
+	.small {
+		.header-container {
+			padding: 8% 0 15%;
+			// Small only
+			@media only screen and (max-width: $medium-size) {
+				padding: 8% 0 25%;
+			}
+		}
+		.tilt-top-box {
+			bottom:12%;
+			height: 8%;
+		}
+		.tilt-bottom-box {
+			bottom:-16%;
+			height: 32%;
+		}
+	}
+
+	.band-top.sticky.cloned {
+		background-color: $dark-grey-color;
+		opacity: 0.97;
+		ul.sf-menu > li:hover a,ul.sf-menu > li.active a {
+			color: white;
+		}
+	}
+
+}
+
