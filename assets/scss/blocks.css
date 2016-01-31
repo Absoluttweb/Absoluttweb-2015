@@ -306,8 +306,3 @@ form.form-02 input:not([type="submit"]) {
   .block-20 .small .tilt-bottom-box {
     bottom: -16%;
     height: 32%; }
-  .block-20 .band-top.sticky.cloned {
-    background-color: #252A2E;
-    opacity: 0.97; }
-    .block-20 .band-top.sticky.cloned ul.sf-menu > li:hover a, .block-20 .band-top.sticky.cloned ul.sf-menu > li.active a {
-      color: white; }

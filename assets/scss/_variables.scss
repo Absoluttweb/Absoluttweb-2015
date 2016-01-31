@@ -38,30 +38,32 @@ $subtle-lighten: 50%;
 
 //logo
 //-------------------------------------------------------------------------------------
-$logo-width: 180px; //180
-$logo-height: 24px; //24
-$logo-margin: 24px;
+$logo-width: 360px; //180
+$logo-height: 48px; //24
+$logo-margin: 35px;
 	//Calculation used in aligning logo and navigation
 	$logo-space: $logo-height + ($logo-margin * 2); // static in EM
 
 
 //Navigation
 //-------------------------------------------------------------------------------------
-$nav-position: right;
-$nav-logo-adjust: true; //Will vertically center nav with logo
-$nav-padding: 0; //Vertical size of the elements
-$sticky-shrink: 0.8; // How much logo and margins will shrink on small screens
+$nav-position: center;
+$nav-logo-adjust: false; //Will vertically center nav with logo
+$nav-padding: 1em; //Vertical size of the LI elements
+$nav-height: 24px; // height of superfish UL. Used to calculate correct
+$sticky-shrink: 1; // How much logo and margins will shrink on small screens
 
+$nav-border-color: $light-grey-color;
+$nav-border-weight: 1px;
 $nav-family: $font-family;
 $nav-bg: transparent;
-$nav-color: white;
+$nav-color: $dark-grey-color;
 $nav-font-size: 12px;
 $nav-font-weight: 500;
 $nav-text-transform: uppercase;
 $nav-letter-spacing: 0.2em;
-$nav-border-color: $light-grey-color;
-$nav-border-weight: 0px;
-$nav-height: 24px; // height of superfish UL 
+
+
 
 		//Active
 		$nav-color-active: $primary-color;

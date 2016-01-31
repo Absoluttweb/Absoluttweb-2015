@@ -17,7 +17,7 @@ It will show in the right, until it chrashes with the content. Then the visibili
   text-align: center;
   font-size: 1em;
   z-index: 99;
-  padding-top: 24px; }
+  padding-top: 47px; }
   @media only screen and (max-width: 760px) {
     .sidenav {
       width: 0px;
@@ -57,7 +57,7 @@ body.boxed .wrapper {
   margin-left: auto;
   margin-right: auto; }
 @media only screen and (max-width: 1580px) {
-  body.boxed .sticky.cloned {
+  body.boxed .clone.cloned {
     left: 0;
     margin-left: 0; } }
 
@@ -189,10 +189,6 @@ a:hover, a:focus, input:hover, input:focus {
   body {
     font-size: 0.9em;
     line-height: 1.25em; }
-
-  .sticky-placeholder {
-    display: block;
-    height: 57.6px; }
 
   .sidebar-right {
     border: none;
