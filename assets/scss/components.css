@@ -319,7 +319,7 @@
       .dropdown ul li:last-child {
         border-bottom: none; }
       .dropdown ul li a {
-        color: white;
+        color: #252A2E;
         padding: 0.5em 0.75em;
         display: block;
         font-family: "raleway";
@@ -877,24 +877,20 @@ ul, ol {
       ul.specs li:last-child, ol.specs li:last-child {
         border: none; }
 
-/* Band Nav
-=================================== */
-.band-nav {
-  background-color: white;
-  border-top: 0px solid #F1F1EF; }
-
 /* Logo in Top
 ==================================== */
 h2.logo {
-  margin: 24px auto;
-  max-width: 75%; }
+  position: relative;
+  margin: 35px auto;
+  max-width: 75%;
+  z-index: 1; }
   @media only screen and (max-width: 1080px) {
     h2.logo {
-      margin-top: 19.2px;
-      margin-bottom: 19.2px; } }
+      margin-top: 35px;
+      margin-bottom: 35px; } }
   h2.logo a {
     display: block;
-    height: 24px;
+    height: 48px;
     background-size: contain;
     background-position: center center;
     background-image: url(/img/theme/logo.png);
@@ -908,44 +904,48 @@ h2.logo {
     background-image: url(/img/theme/logo-invert.png); }
   h2.logo.left {
     max-width: 100%;
-    width: 180px;
-    margin: 24px; }
+    width: 360px; }
     h2.logo.left a {
       background-position: center left; }
       @media only screen and (max-width: 1080px) {
         h2.logo.left a {
-          height: 19.2px; } }
+          height: 48px; } }
 
-/* Sticky Top Navigation
+/* Sticky and Clone Top Navigation
 ================================================================ */
-.sticky.cloned {
+.band.sticky {
+  position: fixed;
+  width: 100%;
+  z-index: 900; }
+
+.band.clone.cloned {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   -ms-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   position: fixed;
-  top: -72px;
+  top: -118px;
   left: 0;
   z-index: 98;
   width: 100%;
   margin: 0;
   padding-right: 0;
   opacity: 1; }
-  .sticky.cloned h2.logo-left a {
-    height: 19.2px;
-    margin-top: 19.2px;
-    margin-bottom: 19.2px; }
-  .sticky.cloned ul.sf-menu {
-    margin-top: 24px; }
+  .band.clone.cloned h2.logo-left a {
+    height: 48px;
+    margin-top: 35px;
+    margin-bottom: 35px; }
+  .band.clone.cloned ul.sf-menu {
+    margin-top: 0; }
 
-.boxed .sticky.cloned {
+.boxed band.clone.cloned {
   width: 1580px;
   max-width: 100%;
   left: 50%;
   margin-left: -790px; }
 
-.sticky.cloned.active {
+.band.clone.cloned.active {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   -ms-transition: all 200ms ease-in-out;
@@ -955,11 +955,16 @@ h2.logo {
 
 /* Burger Toggle for Mobile Menus
 ====================================================== */
+a.animated-burger {
+  display: block;
+  color: #252A2E;
+  float: right; }
+
 a.burger, a.top-icon {
   display: block;
   color: #252A2E;
-  line-height: 57.6px;
-  height: 57.6px;
+  line-height: 118px;
+  height: 118px;
   width: 60px;
   text-align: center;
   font-size: 28px;
@@ -1022,6 +1027,212 @@ nav.breadcrumbs {
       nav.breadcrumbs ul li.active {
         text-transform: uppercase;
         color: #454545; }
+
+/* Animated Burger Icon. 4 styles
+================================================================ */
+/* Icon 1 */
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 18px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer; }
+
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #252A2E;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out; }
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px; }
+
+#nav-icon1 span:nth-child(2) {
+  top: 18px; }
+
+#nav-icon1 span:nth-child(3) {
+  top: 36px; }
+
+#nav-icon1.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px; }
+
+#nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg); }
+
+/* Icon 2 */
+#nav-icon2 span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 50%;
+  background: #d3531a;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out; }
+
+#nav-icon2 span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0; }
+
+#nav-icon2 span:nth-child(odd) {
+  left: 0px;
+  border-radius: 9px 0 0 9px; }
+
+#nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2) {
+  top: 0px; }
+
+#nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(4) {
+  top: 18px; }
+
+#nav-icon2 span:nth-child(5), #nav-icon2 span:nth-child(6) {
+  top: 36px; }
+
+#nav-icon2.open span:nth-child(1), #nav-icon2.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+#nav-icon2.open span:nth-child(2), #nav-icon2.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+#nav-icon2.open span:nth-child(1) {
+  left: 5px;
+  top: 7px; }
+
+#nav-icon2.open span:nth-child(2) {
+  left: calc(50% - 5px);
+  top: 7px; }
+
+#nav-icon2.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0; }
+
+#nav-icon2.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0; }
+
+#nav-icon2.open span:nth-child(5) {
+  left: 5px;
+  top: 29px; }
+
+#nav-icon2.open span:nth-child(6) {
+  left: calc(50% - 5px);
+  top: 29px; }
+
+/* Icon 3 */
+#nav-icon3 span:nth-child(1) {
+  top: 0px; }
+
+#nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+  top: 18px; }
+
+#nav-icon3 span:nth-child(4) {
+  top: 36px; }
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%; }
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%; }
+
+/* Icon 4 */
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center; }
+
+#nav-icon4 span:nth-child(2) {
+  top: 8px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center; }
+
+#nav-icon4 span:nth-child(3) {
+  top: 16px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center; }
+
+#nav-icon4.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 5px; }
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0; }
+
+#nav-icon4.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 18px;
+  left: 5px; }
 
 @keyframes snow {
   0% {

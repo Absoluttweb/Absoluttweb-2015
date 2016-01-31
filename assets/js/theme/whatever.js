@@ -88,32 +88,21 @@ $(".fullscreen-trigger, .fullscreen-close").click(function(){
 });
 
 //Sticky Navigation
-    $('.sticky').clone().insertAfter('.sticky').addClass('cloned');
-    var sticky = $(".sticky");
-    var size = 200; /* When the element will get stuck */
+    $('.clone').clone().insertAfter('.clone').addClass('cloned');
+    var clone = $(".clone");
+    var size = 150; /* When the element will get stuck */
     
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
     
         if (scroll >= size) {
-            sticky.addClass('active');
+            clone.addClass('active');
         } else {
-          sticky.removeClass('active');
+          clone.removeClass('active');
         }
     });
-//Show Hide Search and Share Bars
-  $("a.share").click(function() {
-    $("a.share").toggleClass("active");
-    $(".share-bar").slideToggle(200);
-   $("a.search").removeClass("active");
-    $(".search-bar").hide();
-  });
-  $("a.search").click(function() {
-    $("a.search").toggleClass("active");
-    $(".search-bar").slideToggle(200);
-     $("a.share").removeClass("active");
-    $(".share-bar").hide();
-  });
+
+
 //Caption hover effects 1
 $(".frame").hover(function(){
     $(this).addClass("hover");

@@ -29,33 +29,35 @@ ul.sf-menu, ul.sf-menu * {
 /* THEME STYLES 
 ======================================================= */
 ul.sf-menu {
-  margin-top: 24px;
-  float: right;
+  margin-top: 0;
+  display: table;
+  float: none;
+  margin: 0 auto;
   /* CHILD ELEMENTS */ }
   ul.sf-menu a {
     zoom: 1;
     /* IE7 */
     text-transform: uppercase;
-    padding: 0 1em;
+    padding: 1em 1em;
     font-weight: 500;
     font-size: 12px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
     letter-spacing: 0.2em;
-    color: white;
+    color: #252A2E;
     white-space: nowrap;
     /* no need for Supersubs plugin */
     *white-space: normal;
     /* ...unless you support IE7 (let it wrap) */ }
   ul.sf-menu > li {
     background: transparent;
-    border-left: 0px solid #F1F1EF;
+    border-left: 1px solid #F1F1EF;
     -webkit-transition: background 200ms ease-in-out;
     -moz-transition: background 200ms ease-in-out;
     -ms-transition: background 200ms ease-in-out;
     -o-transition: background 200ms ease-in-out;
     transition: background 200ms ease-in-out; }
     ul.sf-menu > li:last-child {
-      border-right: 0px solid #F1F1EF; }
+      border-right: 1px solid #F1F1EF; }
     ul.sf-menu > li:hover, ul.sf-menu > li.sfHover {
       background: transparent;
       -webkit-transition: background 200ms ease-in-out;
@@ -127,14 +129,14 @@ ul.sf-menu {
   width: 0;
   /* order of following 3 rules important for fallbacks to work */
   border: 5px solid transparent;
-  border-top-color: white;
+  border-top-color: #252A2E;
   /* edit this to suit design (no rgba in IE8) */
-  border-top-color: rgba(255, 255, 255, 0.5); }
+  border-top-color: rgba(37, 42, 46, 0.5); }
 
 .sf-arrows > li > .sf-with-ul:focus:after,
 .sf-arrows > li:hover > .sf-with-ul:after,
 .sf-arrows > .sfHover > .sf-with-ul:after {
-  border-top-color: white;
+  border-top-color: #252A2E;
   /* IE8 fallback colour */ }
 
 /* styling for right-facing arrows */
@@ -142,11 +144,11 @@ ul.sf-menu {
   margin-top: -5px;
   margin-right: -3px;
   border-color: transparent;
-  border-left-color: white;
+  border-left-color: #252A2E;
   /* edit this to suit design (no rgba in IE8) */
-  border-left-color: rgba(255, 255, 255, 0.5); }
+  border-left-color: rgba(37, 42, 46, 0.5); }
 
 .sf-arrows ul li > .sf-with-ul:focus:after,
 .sf-arrows ul li:hover > .sf-with-ul:after,
 .sf-arrows ul .sfHover > .sf-with-ul:after {
-  border-left-color: white; }
+  border-left-color: #252A2E; }

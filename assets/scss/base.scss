@@ -86,7 +86,7 @@ body.boxed {
 	}
 	// XLarge and down
 	@media only screen and (max-width: $xlarge-size) { 
-		.sticky.cloned {
+		.clone.cloned {
 			left:0;
 			margin-left: 0;
 		}
@@ -225,10 +225,6 @@ a:hover, a:focus, input:hover, input:focus {
 	body {
 		font-size: $phone-font-size;
 		line-height: 1.25em;
-	}
-	.sticky-placeholder {
-		display:block;
-		height: $logo-space * $sticky-shrink;
 	}
 	.sidebar-right {
 		border:none;
