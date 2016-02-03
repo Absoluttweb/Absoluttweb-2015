@@ -23,52 +23,6 @@ In this Block an image fills the left/right column, and there is content in the 
   bottom: 50%;
   margin: 0 0 -25px 0; }
 
-/* Block 2 - Only Big Button(s).
-Colors shall be set in style.scss, but the rest goes to block.scss
-================================================================ */
-.block-2 a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 6% 3%;
-  background-color: white;
-  -webkit-transition: all 100ms ease-in-out;
-  -moz-transition: all 100ms ease-in-out;
-  -ms-transition: all 100ms ease-in-out;
-  -o-transition: all 100ms ease-in-out;
-  transition: all 100ms ease-in-out; }
-  .block-2 a h5 {
-    color: white; }
-  .block-2 a p {
-    color: white;
-    margin: 0; }
-  .block-2 a.btn-facebook {
-    background-color: #3E588E; }
-    .block-2 a.btn-facebook:hover {
-      -webkit-transition: all 300ms ease-in-out;
-      -moz-transition: all 300ms ease-in-out;
-      -ms-transition: all 300ms ease-in-out;
-      -o-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out;
-      -moz-transform: scale(1.1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-      -webkit-transform: scale(1.1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-      -o-transform: scale(1.1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-      -ms-transform: scale(1.1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-      transform: scale(1.1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg); }
-  .block-2 a.btn-instagram {
-    background-color: #252020; }
-    .block-2 a.btn-instagram:hover {
-      -webkit-transition: all 300ms ease-in-out;
-      -moz-transition: all 300ms ease-in-out;
-      -ms-transition: all 300ms ease-in-out;
-      -o-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out;
-      -moz-transform: scale(1.1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-      -webkit-transform: scale(1.1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-      -o-transform: scale(1.1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-      -ms-transform: scale(1.1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-      transform: scale(1.1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg); }
-
 /* Block 4 - Isotope Articles in panel.
 Can have Icons on top
 ================================================================ */
@@ -225,18 +179,18 @@ form.form-02 textarea, form.form-02 input:not([type="submit"]) {
 form.form-02 input:not([type="submit"]) {
   height: 2em; }
 
-/* Block-20 - Header as Absoluttweb 2015
+/* Header-01 - Header as Absoluttweb 2015
 ================================================================ */
-.block-20 {
+.header-01 {
   overflow: hidden;
   margin: 0 0px 0px; }
-  .block-20 .container {
+  .header-01 .container {
     text-align: center;
     padding: 13% 0 25%; }
     @media only screen and (max-width: 760px) {
-      .block-20 .container {
+      .header-01 .container {
         padding: 16% 0 35%; } }
-    .block-20 .container div.hero {
+    .header-01 .container div.hero {
       display: block;
       width: 110px;
       height: 110px;
@@ -244,34 +198,34 @@ form.form-02 input:not([type="submit"]) {
       background-size: cover;
       margin: 0 auto; }
       @media only screen and (max-width: 760px) {
-        .block-20 .container div.hero {
+        .header-01 .container div.hero {
           width: 75px;
           height: 75px; } }
-    .block-20 .container .header-type, .block-20 .container h1, .block-20 .container h2 {
+    .header-01 .container .header-type, .header-01 .container h1, .header-01 .container h2 {
       font-family: 'montserrat';
       font-weight: 300;
       letter-spacing: 0.3em;
       color: white; }
-    .block-20 .container h1 {
+    .header-01 .container h1 {
       padding-top: 3%;
       font-size: 100%; }
-    .block-20 .container h2 {
+    .header-01 .container h2 {
       padding-top: 7%;
       font-size: 300%; }
       @media only screen and (max-width: 1080px) {
-        .block-20 .container h2 {
+        .header-01 .container h2 {
           font-size: 250%; } }
       @media only screen and (max-width: 760px) {
-        .block-20 .container h2 {
+        .header-01 .container h2 {
           font-size: 200%;
           text-align: center; } }
-    .block-20 .container .line {
+    .header-01 .container .line {
       display: block;
       height: 3px;
       background-color: white;
       width: 33%;
       margin: 0 auto; }
-  .block-20 .tilt-top-box {
+  .header-01 .tilt-top-box {
     -moz-transform: rotate(-4.2deg);
     -webkit-transform: rotate(-4.2deg);
     -o-transform: rotate(-4.2deg);
@@ -283,7 +237,7 @@ form.form-02 input:not([type="submit"]) {
     position: absolute;
     bottom: 5%;
     left: -5%; }
-  .block-20 .tilt-bottom-box {
+  .header-01 .tilt-bottom-box {
     -moz-transform: rotate(-3.5deg);
     -webkit-transform: rotate(-3.5deg);
     -o-transform: rotate(-3.5deg);
@@ -295,14 +249,14 @@ form.form-02 input:not([type="submit"]) {
     position: absolute;
     bottom: -8%;
     left: -5%; }
-  .block-20 .small .header-container {
+  .header-01 .small .header-container {
     padding: 8% 0 15%; }
     @media only screen and (max-width: 760px) {
-      .block-20 .small .header-container {
+      .header-01 .small .header-container {
         padding: 8% 0 25%; } }
-  .block-20 .small .tilt-top-box {
+  .header-01 .small .tilt-top-box {
     bottom: 12%;
     height: 8%; }
-  .block-20 .small .tilt-bottom-box {
+  .header-01 .small .tilt-bottom-box {
     bottom: -16%;
     height: 32%; }

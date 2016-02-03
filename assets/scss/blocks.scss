@@ -32,42 +32,6 @@ In this Block an image fills the left/right column, and there is content in the 
 	}
 }
 
-/* Block 2 - Only Big Button(s).
-Colors shall be set in style.scss, but the rest goes to block.scss
-================================================================ */
-.block-2 {
-	a {
-		display: block;
-		color: white;
-		text-align: center;
-		padding: 6% 3%;
-		background-color: white;
-		@include transition(100ms);
-		h5 {
-			color: white;
-		}
-		p {
-			color: white;
-			margin: 0;
-		}
-		&.btn-facebook {
-			background-color: #3E588E;
-			&:hover {
-				@include transition(300ms);
-				@include transform(1.1);
-			}
-			
-		}
-		&.btn-instagram {
-			background-color: #252020;
-			&:hover {
-				@include transition(300ms);
-				@include transform(1.1);
-			}
-		}
-	}
-}
-
 /* Block 4 - Isotope Articles in panel.
 Can have Icons on top
 ================================================================ */
@@ -249,10 +213,10 @@ form.form-02 {
 }
 
 
-/* Block-20 - Header as Absoluttweb 2015
+/* Header-01 - Header as Absoluttweb 2015
 ================================================================ */
 
-.block-20 { 
+.header-01 { 
 	overflow: hidden;
 	margin:0 0px 0px;
 	//border-bottom:5px solid #775F50;
