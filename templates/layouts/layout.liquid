@@ -3,38 +3,38 @@
 
 <head>
   <meta charset="utf-8" />
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Absoluttweb</title>
-  <meta name="Keywords" content="" />
-  <meta name="Description" content="" />
-  {% block meta %}{% endblock %}
-  <link rel="icon" type="image/png" href="/img/theme/favicon.png">
-  {% include 'basics/css' %}
-  {{ "modernizr.js" | asset_url | script_tag }}
-  {% include 'basics/fonts' %}
-  <style> [data-sr] { visibility: hidden; }</style>
-</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <title>Blocks</title>
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <link rel="icon" type="image/png" href="/img/theme/favicon.png">
+    {{ "modernizr.js" | asset_url | script_tag }}
+    {% include 'basics/fonts' %}
+    {% include 'basics/css' %}
+    {% block meta %}{% endblock %}
+    <style> [data-sr] { visibility: hidden; }</style>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  </head>
 
-<body class="wide"> <!-- 'boxed' 'wide' 'left-aside'. Add 'snow' if we want snow -->
- 
-  {% include 'basics/aa-menu' %}
-  <!-- {% include 'basics/aa-sidenav' %} Include if sidenav is wanted. Set width in variables-->
-  <div class="wrapper">
-  {% block infobar %}{% endblock %}
+  <body class="wide"> <!-- 'boxed' 'wide' 'left-aside'. Add 'snow' if we want snow -->
+   
+    {% include 'basics/aa-menu' %}
+    <!-- {% include 'basics/aa-sidenav' %} Include if sidenav is wanted. Set width in variables-->
+    <div class="wrapper">
+      {% block infobar %}{% endblock %}
 
-   <div class="page-loader">
-     <img src="/img/theme/logo-icon-220-black.png" class="pulsing-logo">
-   </div>
-    <div class="wrapper-inner">
-    
-    {% block header %}
-    {% endblock %}
+      <div class="page-loader">
+       <img src="/img/theme/logo-icon-220-black.png" class="pulsing-logo">
+     </div>
+     <div class="wrapper-inner">
       
-    {% block main %}
-    {% endblock %}
+      {% block header %}
+      {% endblock %}
+      
+      {% block main %}
+      {% endblock %}
 
-    <!--{% include 'bottom' %}-->
+      <!--{% include 'bottom' %}-->
 
     </div>
     <div class="push"></div>
@@ -47,14 +47,14 @@
   {% endblock %}
 
   <div class="fullscreen-overlay text-center">
-  <a href="#" class="fullscreen-close">x</a>
-  <div class="outer">
-    <div class="middle">
-      <div class="inner">
-           
+    <a href="#" class="fullscreen-close">x</a>
+    <div class="outer">
+      <div class="middle">
+        <div class="inner">
+         
+        </div>
       </div>
     </div>
-  </div>
   </div> 
 
   <script>

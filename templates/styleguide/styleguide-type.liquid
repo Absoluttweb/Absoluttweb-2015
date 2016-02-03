@@ -1,0 +1,221 @@
+{% layout 'styleguide' %}
+
+{% block main %}
+
+<!-- BAND WITH TYPOGRAPHY -->
+<div class="band band-sg-main pad-top pad-bot">
+	
+	<!-- H2 & Lead -->
+	<div class="row">
+		<div class="large-8 large-centered large-text-center columns">
+			<h2>Overskrift 2</h2>
+			<p class="lead">Dette er en sentrert ingress, som ofte brukes direkte under en tittel eller bilde. Bør minimum gå over 2 linjer og maks 3. Justeres med kolonne bredde som her.</p>
+		</div>
+	</div>
+	<!-- End H2 & Lead -->
+
+	<!-- Hr - Styled if set -->
+	<div class="row">
+		<div class="large-12 columns">
+			<hr>
+		</div>
+	</div>
+	<!-- End Hr -->
+	
+	<!-- H3 Left, 3 columns -->
+	<div class="row">
+		<div class="large-5 text-left columns">
+			<h3>Overskrift tre<span class="subheader">Undertittel</span></h3>
+			<p>All typografi er optimalisert for alle skjermoppløsninger, og gir betydelig bedre design på mobiltelefoner.</p>
+		</div>
+		<div class="large-7 text-left columns">
+			<p>Lundium pellentesque nunc penatibus. Sit sed? Integer diam facilisis porttitor odio natoque, proin duis nunc urna amet mattis!</p>
+			<p>Augue in, natoque ut porttitor! Purus elit phasellus nec hac cras placerat dapibus rhoncus turpis etiam augue rhoncus rhoncus elementum! Adipiscing diam, mattis. Vel quis enim sed rhoncus arcu, augue sagittis.</p>
+			<p class="strong"><a href="#">Link ser slik ut</a></p>
+		</div>
+		
+	</div>
+	<!-- End H3 Left, 3 columns -->
+
+	<!-- Hr -->
+	<div class="row">
+		<div class="large-12 columns">
+			<hr>
+		</div>
+	</div>
+	<!-- End Hr -->
+
+	<!-- Without Subtitle H3 -->
+	<div class="row">
+		<div class="medium-12 columns">
+			<h3>Knapper</h3>
+			
+			<p>For å lage nye knapper, bruker man mixin for buttons. Denne tar 2 variabler i følgende rekkefølge: Color og Background-color. Kalles .btn-*<br>
+
+			Dropdowns kan legges på alle elementer.
+			</p>
+			
+				<a href="#" class="btn btn-primary with-icon">Primær <i class="fa fa-rss"></i></a>
+				<a href="#" class="btn btn-secondary">Sekundær</a>
+				<a href="#" class="btn btn-link">Link</a>
+				<div class="dropdown dropdown-1">
+				<a href="#" class="btn btn-dark-grey with-icon">Dropdown <i class="fa fa-user"></i></a>
+				<ul>
+					<li><a href="#">
+						<img src="/img/globals/placeholder.png">
+						<p>Sindre Gusdal<br><small>Webdesigner</small></p>
+					</a>
+					</li>
+					<li><a href="#">
+						<img src="/img/globals/placeholder.png" class="pull-left">
+						<p>Stian Romlagrø<br><small>Grafisk designer</small></p>
+					</a>
+					</li>
+				</ul>
+			</div>
+				<a href="#" class="btn btn-light-grey border">Lys med ramme</a>
+				
+		</div>
+		<div class="large-12 columns">
+			{% include 'code/code-buttons' %}
+			{% include 'code/mixin-button' %}
+			{% include 'code/code-dropdown' %}
+		</div>
+	</div>
+	<!-- End Without Subtitle H3 -->
+
+		<!-- Hr -->
+		<div class="row">
+			<div class="large-12 columns">
+				<hr>
+			</div>
+		</div>
+		<!-- End Hr -->
+
+		<!-- Dropcap & Highlight -->
+		<div class="row">
+			<div class="large-6 columns">
+				<h4>Drop Cap</h4>
+				<p><span class="dropcap">D</span>ropcap brukes normalt lite på moderne websider, men kan være fint å bruke på sider med ett elegant og eksklusivt preg.</p>
+				{% include 'code/code-dropcap' %}
+			</div>
+			<div class="large-6 columns">
+				<h4>Strong & Highlight</h4>
+				<p>Når man skriver tekst, ønsker man gjerne å <strong>tydeliggjøre viktig innhold</strong>. Å  bruke <span class="highlight">highlight</span> ligger inne i en span tag.</p>
+				{% include 'code/code-highlight' %}
+			</div>
+		</div>
+		<!-- End Dropcap & Highlight -->
+
+		<!-- Hr -->
+		<div class="row">
+			<div class="large-12 columns">
+				<hr>
+			</div>
+		</div>
+		<!-- End Hr -->
+
+		<!-- Blockquote-->
+			<div class="row">
+				<div class="large-12 columns">
+					<h4>Blockquote</h4>
+					<blockquote>Blockquote gir en typografisk stil, som gir en følelse av det er ett utsagn. Enten kommentar, sitat eller direkte dialog til leseren.<br>
+						<span class="cite">Sindre Gusdal - Daglig leder i Absoluttweb</span>
+					</blockquote>
+					{% include 'code/code-blockquote' %}
+				</div>
+			</div>
+		<!-- End Blockquote -->
+
+		<!-- Hr -->
+		<div class="row">
+			<div class="large-12 columns">
+				<hr>
+			</div>
+		</div>
+		<!-- End Hr -->
+
+		<!-- P Classes-->
+			<div class="row">
+				<div class="large-12 columns">
+					<h4>Paragraph classes</h4>
+					<p class="subtle uppercase">This is an uppercase subtle paragraph<br>
+					If more P classes is added, then add them here.</p>
+					{% include 'code/code-p-classes' %}
+				</div>
+			</div>
+		<!-- End P Classes -->
+
+		<!-- Hr -->
+		<div class="row">
+			<div class="large-12 columns">
+				<hr>
+			</div>
+		</div>
+		<!-- End Hr -->
+
+		<!-- Lists -->
+		<div class="row">
+			<div class="medium-12 large-4 columns">
+				<h4>Uordnede lister</h4>
+				<ul>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Aliquam tincidunt mauris eu risus</li>
+					<li>Vestibulum auctor dapibus neque</li>
+				</ul>
+				{% include 'code/code-ul' %}
+			</div>
+			<div class="medium-12 large-4 columns">
+				<h4>Ordnede lister</h4>
+				<ol>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Aliquam tincidunt mauris eu risus</li>
+					<li>Vestibulum auctor dapibus neque</li>
+				</ol>
+				{% include 'code/code-ol' %}
+			</div>
+			<div class="medium-12 large-4 columns">
+				<h4>Icon lister</h4>
+				<ul class="icon">
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Aliquam tincidunt mauris eu risus</li>
+					<li>Vestibulum auctor dapibus neque</li>
+				</ul>
+				{% include 'code/code-ul-icon' %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 columns">
+					<hr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 columns">
+				<ul class="specs">
+					<li><span class="title">Place</span>Abudabi</li>
+					<li><span class="title">Period</span>May 2013 - Jun 2015</li>
+					<li><span class="title">Contractor</span>Abudabi</li>
+					<li><span class="title">Amount</span>2.4 mill</li>
+					<li><span class="title">PDF</span><a href="#">Download brochure</a></li>
+				</ul>
+				{% include 'code/code-ul-specs' %}	
+			</div>
+		</div>
+		<!-- End Lists -->
+
+		<!-- Hr -->
+		<div class="row">
+			<div class="large-12 columns">
+				<hr>
+			</div>
+		</div>
+		<!-- End Hr -->
+
+	</div>
+	<!-- END BAND WITH TYPOGRAPHY -->
+
+	{% endblock %}
+
+	{% block script %}
+		
+	{% endblock %}

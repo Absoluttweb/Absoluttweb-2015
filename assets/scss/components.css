@@ -389,16 +389,16 @@
 ============================================================ */
 .wrapper {
   min-height: 100%;
-  margin: 0 auto -75px;
+  margin: 0 auto -88px;
   /* the bottom margin is the negative value of the footer's height */ }
 
 .footer {
-  height: 75px; }
+  height: 88px; }
   .footer p {
     margin: 0; }
 
 .push {
-  height: 75px; }
+  height: 88px; }
 
 /* Forms
 =================================== */
@@ -679,125 +679,6 @@ img {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     min-width: 102%; }
-
-.img-overlay {
-  display: block;
-  position: absolute;
-  z-index: 20;
-  background: #e71634;
-  opacity: 0.7;
-  overflow: hidden;
-  transition: all 300ms; }
-  .img-overlay span {
-    display: block;
-    position: absolute;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    z-index: 100;
-    text-align: center;
-    color: white;
-    font-weight: 500;
-    font-size: 85%; }
-  .img-overlay .elements {
-    display: block;
-    position: absolute;
-    z-index: 100;
-    text-align: center;
-    width: 100%; }
-
-.frame.hover .img-overlay {
-  height: 100%; }
-
-.touch .img-overlay {
-  display: none; }
-
-.img-overlay {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 0; }
-  .img-overlay span {
-    left: 0;
-    right: 0;
-    bottom: 50%;
-    margin: 0 auto -17px auto; }
-  .img-overlay .elements {
-    left: 0;
-    right: 0;
-    bottom: 50%;
-    margin: 0 auto -17px auto; }
-
-figure.hover {
-  position: relative;
-  margin: 0; }
-
-figcaption.hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  background: #e71634;
-  color: #ffffff; }
-  figcaption.hover h3 {
-    margin: 0;
-    padding: 0;
-    color: white; }
-  figcaption.hover h4 {
-    margin: 0;
-    padding: 0;
-    color: white; }
-  figcaption.hover figcaption a {
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 2px;
-    display: inline-block;
-    background: #ed4e6e;
-    color: white !important; }
-
-.cs-style-1 figcaption {
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  text-align: center;
-  backface-visibility: hidden;
-  transition: transform 0.3s, opacity 0.3s; }
-
-.no-touch .cs-style-1 figure:hover figcaption,
-.cs-style-1 figure.cs-hover figcaption {
-  opacity: 1;
-  transform: translate(15px, 15px); }
-
-.cs-style-1 figcaption h3 {
-  margin-top: 10%; }
-
-.cs-style-1 figcaption h4 {
-  margin-top: 10%; }
-
-.cs-style-1 figcaption span {
-  display: block; }
-
-.cs-style-1 .frame {
-  margin: 0; }
-
-.cs-style-2 figure .frame {
-  z-index: 10;
-  transition: transform 0.4s;
-  margin: 0; }
-
-.no-touch .cs-style-2 figure:hover .frame,
-.cs-style-2 figure.cs-hover .frame {
-  transform: translateY(-90px); }
-
-.cs-style-2 figcaption {
-  height: 90px;
-  width: 100%;
-  top: auto;
-  bottom: 0; }
-
-.cs-style-2 figcaption a {
-  right: 20px;
-  top: 30px; }
 
 /* UL
 ============================================================= */
