@@ -1,20 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="no">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-    <title>Blocks</title>
-    <meta name="Keywords" content="" />
-    <meta name="Description" content="" />
-    <link rel="icon" type="image/png" href="/img/theme/favicon.png">
-    {{ "modernizr.js" | asset_url | script_tag }}
-    {% include 'basics/fonts' %}
-    {% include 'basics/css' %}
-    {% block meta %}{% endblock %}
-    <style> [data-sr] { visibility: hidden; }</style>
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-  </head>
+{% include 'head' %}
 
 	<body class="wide">
 	{% include 'basics/bottom-bar'%}
@@ -75,28 +62,6 @@
 				});
 
 			});
-		</script>
-
-		<script>
-			$(window).load(function() {
-
-		        //Bar Triggers
-		        $("*[data-trigger='info-bar-left']").click(function(){
-		        	$(".info-bar-left").toggleClass('active');
-		        	$(".info-bar-right").removeClass('active');
-		        });
-		        $("*[data-trigger='info-bar-right']").click(function(){
-		        	$(".info-bar-right").toggleClass('active');
-		        	$(".info-bar-left").removeClass('active');
-		        });
-		        $("*[data-trigger='top-bar']").click(function(){
-		        	$(".top-bar").toggleClass('active');
-		        });
-		        $("*[data-trigger='bottom-bar']").click(function(){
-		        	$(".bottom-bar").toggleClass('active');
-		        });
-
-		    });
 		</script>
 
 	</body>
