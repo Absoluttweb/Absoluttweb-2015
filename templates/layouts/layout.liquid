@@ -4,14 +4,51 @@
 {% include 'head' %}
 
   <body class="wide">
-  {% include 'basics/bottom-bar'%}
-  {% include 'basics/bottom-menu'%}
-  {% include 'basics/infobar-left' %}
-  {% include 'basics/infobar-right' %}
+    <div class="bottom-menu hide-for-medium-up">
+      <div class="row full collapse">
+        <div class="small-6 columns">
+          <a data-trigger="info-bar-left"><i class="fa fa-chevron-left"></i> GUIDE</a>  
+        </div>
+        <div class="small-6 columns text-right">
+          <a id="toTop">TOPP <i class="fa fa-chevron-up"></i>  </a>  
+        </div>
+      </div>
+    </div>
+
+    <div class="info-bar-left">
+      <div class="ib-scroll">
+        <a class="ib-tab" data-trigger="info-bar-left"><i class="fa fa-chevron-left"></i> Guide</a>
+        <div class="ib-container">
+          
+          <div class="news-card">
+            <div class="panel-content">
+              <h4>HMS kurs er lovpålagt</h4>
+              <p>Super kort om hvem det gjelder og en link til loven hvor det står skrevet</p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="panel-content">
+              <h4>Slik tar man kursene</h4>
+              <p>Gå til ønsket kurs, og start den interaktive opplæringen. Du må laste ned <a href="#">Adobe Flash Player</a> om den spør om dette.</p>
+              <p>Les gjennom kurset, og svar på spørsmålene i slutten av filmen</p>
+              <p>Du har 3 forsøk på å oppnå 75% riktig svar. Når testen er bestått, vil du få tildelt en kode.</p>
+              <p>Bruk skjemaet på kurssiden, og send koden til FokusHMS. Vi sender deg kursbevis og faktura per. epost</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
     <div class="wrapper">
 
       <div class="wrapper-inner">
+
+        {% include 'blocks/pretops/pretop-01' %}
+        {% include 'blocks/tops/top-01' %}
+        {% include 'blocks/headers/header-01' %}
+        
         {% block main %}{% endblock %}
       </div>
       

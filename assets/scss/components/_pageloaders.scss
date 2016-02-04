@@ -1,0 +1,36 @@
+/* Page Loader
+================================================================ */
+.page-loader {
+	position: fixed;
+	top: 0;
+	bottom: 0%;
+	left: 0;
+	right: 0%;
+	z-index: 9999;
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding-top: 25px;
+	background: white;
+}
+.pulsing-logo {
+	position: fixed;
+	width: 90px;
+	height: 90px;
+	top: 50%;
+	left: 50%;
+	margin: -45px 0 0 -45px;
+	-moz-animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;
+	-o-animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;    
+	-webkit-animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;
+	animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;
+}
+@keyframes pulsingLogo {
+    0% { transform: scale(0.8); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0.8); }
+}
+@keyframes fadeInLogo {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

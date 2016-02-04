@@ -1,7 +1,23 @@
 <!doctype html>
 <html class="no-js" lang="no">
 
-{% include 'head' %}
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Blocks</title>
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <link rel="icon" type="image/png" href="/img/theme/favicon.png">
+  {{ "modernizr.js" | asset_url | script_tag }}
+  {% include 'basics/fonts' %}
+  {% include 'basics/css' %}
+  <link href="/assets/scss/blocks.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/assets/scss/styleguide.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/assets/scss/style.css" rel="stylesheet" type="text/css" media="all">
+  {% block meta %}{% endblock %}
+  <style> [data-sr] { visibility: hidden; }</style>
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  </head>
 
 	<body class="wide">
 	{% include 'basics/bottom-bar'%}

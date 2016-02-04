@@ -1,0 +1,83 @@
+/* Cards (Panel)
+=============================================================== */
+
+.card, .panel {
+		background-color: white;
+		position: relative;
+		margin-bottom: 20px;
+		.panel-content {
+			padding: 30px 20px;
+		}
+	
+		&.panel-light-grey {
+			background-color: $light-grey-color;
+		}
+	}
+
+	.news-card {
+		@extend .card;
+
+		margin-bottom: 10px;
+		.date {
+		    font-size: 11px;
+		    color: #787878;
+		    font-weight: 300;
+		    position: absolute;
+		    right: 10px;
+		    top: 10px;
+		    line-height: 1;
+		}
+		a.link {
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 900;
+			display: block;
+		}
+		a.facebook-link {
+			@extend .link;
+			color: #3B5998 !important;
+		}
+		a.label {
+			position: absolute;
+			right: 0;
+			top:30px;
+			padding: 8px 8px;
+			color: white;
+			background-color: $dark-grey-color;
+			text-transform: uppercase;
+			font-size: 11px;
+			font-weight: $font-thick;
+			line-height: 1;
+		}
+		img {
+			margin-bottom: 10px;
+		}
+		h5,h4,h3 { 
+			letter-spacing: 0;
+			text-transform: none;
+		}
+		p,li {
+			font-size: 0.9em;
+			color: $font-color;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		a.fancybox-media {
+		position: relative;
+		display: block;
+		&:after {
+			content:"SPILL AV VIDEO";
+			background-color: rgba(0,0,0,0.5);
+			color: white;
+			font-family: "montserrat";
+			display: block;
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			right: 0;
+			padding: 10px 0;
+			text-align: center;
+		}
+		}
+	}

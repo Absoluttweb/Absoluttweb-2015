@@ -1,0 +1,184 @@
+/* Top-bar with triangle in corner
+================================================================*/
+$top-bar-height: 75px;
+$top-bar-bg: $dark-grey-color;
+.top-bar {
+	position: fixed;
+	top: -$top-bar-height;
+	height: $top-bar-height;
+	width: 100%;
+	z-index: 996;
+	background-color: $top-bar-bg;
+	color: $light-grey-color;
+	@include transition (300ms);
+	&.active {
+		top: 0;
+	}
+	.corner-triangle {
+		position: absolute;
+		display: block;
+		z-index: 995;
+		cursor: pointer;
+		top: $top-bar-height;
+		right: 0;
+		width: 50px;
+		height: 50px;
+		border-style: solid;
+		border-width: 0 50px 50px 0;
+		border-color: transparent $dark-grey-color transparent transparent;
+		&::after {
+			content: "+";
+			font-family:"arial";
+			color:white;
+			font-size:16px;
+			font-weight:900;
+			line-height:1;
+			position:absolute;
+			right:-40px;
+			top:10px;
+		}
+	}
+}
+
+/* Bottom bar . Slide-up Overlay
+================================================================*/
+$bottom-bar-height: 245px;
+$bottom-bar-bg: $dark-grey-color;
+.bottom-bar {
+	position: fixed;
+	bottom: -$bottom-bar-height;
+	height: $bottom-bar-height;
+	padding: $column-gutter;
+	width: 100%;
+	max-width: $page-width;
+	left: 50%;
+  	transform: translateX(-50%);
+	z-index: 996;
+	background-color: $bottom-bar-bg;
+	color: $light-grey-color;
+	@include transition (300ms);
+	&.active {
+		@include transition (300ms);
+		bottom: 0;
+	}
+}
+
+/* Bottom Fixed Menu
+================================================================ */
+.bottom-menu {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
+	background-color: white;
+	-webkit-box-shadow: 	0px -1px 1px 0px rgba(50, 50, 50, 0.30);
+		-moz-box-shadow:    0px -1px 1px 0px rgba(50, 50, 50, 0.30);
+		box-shadow:         0px -1px 1px 0px rgba(50, 50, 50, 0.30);
+	a {
+		display: inline-block;
+		text-transform: uppercase;
+		font-weight: $header-weight-thick;
+		font-size: 0.85em;
+		padding: 20px ($column-gutter / 1.25);
+		color: $dark-grey-color;
+	}
+	.bm-share-icons a {
+		font-size: 16px;
+	}
+}
+
+
+
+/* Common Infobar & Extend Left & Right
+================================================================ */
+$info-bar-tab-top: 89px;
+$info-bar-tab-display: block; //block or None
+
+.info-bar {
+	position: fixed;
+	height: 100%;
+	padding-bottom: 20px;
+	position: fixed;
+	z-index: 998;
+	background-size: cover;
+	@include transition (300ms);
+	.ib-scroll {
+		overflow-y:auto;
+		height: 100%;
+	}
+	a.ib-tab {
+		position: absolute;
+		cursor: pointer;
+		display: $info-bar-tab-display;
+		top: $info-bar-tab-top;
+		z-index: 9998;
+		padding: 20px 15px;
+		white-space: nowrap;
+		text-transform: uppercase;
+		font-weight: $header-weight-thick;
+		font-size: 0.85em;
+		// ONLY Small
+		@media only screen and (max-width: medium-size) {
+			display:none;
+		}
+	}
+	.ib-container {
+		padding: 15px 15px 45px 15px;
+	}
+	
+	// ONLY Small
+		@media only screen and (max-width: $medium-size) {
+			max-width: 100%;
+			border-right:0;
+		}
+}
+
+$info-bar-left-bg: $primary-color;
+$info-bar-left-width: 340px;
+
+.info-bar-left {
+	@extend .info-bar;
+	left: 0;
+	width: $info-bar-left-width;
+	margin-left: -($info-bar-left-width+4);
+	background-color: $info-bar-left-bg;
+	//background-image: url('/img/globals/placeholder-08.jpg');
+	@include box-shadow (2px, 0px, 2px, 0px, 0.3);
+	&.active {
+		margin-left: 0;
+	}
+	a.ib-tab {
+		color: white;
+		left: $info-bar-left-width;
+		background-color: $info-bar-left-bg;
+		border-radius: 0 $global-radius $global-radius 0;
+		-webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.30);
+		-moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.30);
+		box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.30);
+	}
+}
+
+$info-bar-right-bg: $dark-grey-color;
+$info-bar-right-width: 340px;
+
+.info-bar-right {
+	@extend .info-bar;
+	right: 0;
+	width: $info-bar-right-width;
+	margin-right: -($info-bar-right-width+4);
+	background-color: $info-bar-right-bg;
+	//background-image: url('/img/globals/placeholder-08.jpg');
+	@include box-shadow (-2px, 0px, 2px, 0px, 0.3);
+	&.active {
+		margin-right: 0;
+	}
+	a.ib-tab {
+		color: white;
+		right: $info-bar-right-width;
+		background-color: $info-bar-right-bg;
+		border-radius: $global-radius 0 0 $global-radius;
+		-webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.30);
+		-moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.30);
+		box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.30);
+	}
+}
