@@ -1,8 +1,3 @@
-//TOC
-//01.Colors
-//02.Background colors
-//=====================================================
-
 // Colors
 // -------------------------
 
@@ -18,6 +13,16 @@
 
 // Secondary
 .#{$fa-css-prefix}-color-secondary {
+  color: $secondary-color;
+}
+
+// Third
+.#{$fa-css-prefix}-color-third {
+  color: $secondary-color;
+}
+
+// Fourth
+.#{$fa-css-prefix}-color-fourth {
   color: $secondary-color;
 }
 
@@ -91,13 +96,25 @@
 }
 
 // Background Colors
-// // -------------------------
+// ============================================
 .#{$fa-css-prefix}-bg-color {
   background-color:$font-color;
 }
 
 .#{$fa-css-prefix}-bg-color-primary {
 background-color: $primary-color;
+}
+
+.#{$fa-css-prefix}-bg-color-secondary {
+background-color: $secondary-color;
+}
+
+.#{$fa-css-prefix}-bg-color-third {
+background-color: $third-color;
+}
+
+.#{$fa-css-prefix}-bg-color-fourth {
+background-color: $fourth-color;
 }
 
 .#{$fa-css-prefix}-bg-color-white {

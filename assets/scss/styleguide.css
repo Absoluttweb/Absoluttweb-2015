@@ -1,0 +1,64 @@
+/* Code
+=================================== */
+a.code {
+  color: #000;
+  text-align: right;
+  display: none;
+  width: 100%;
+  font-weight: bold; }
+  a.code:before {
+    content: "["; }
+  a.code:after {
+    content: "]"; }
+
+pre,
+code {
+  display: none;
+  clear: both;
+  height: auto;
+  font-family: Consolas, monospace;
+  border: 1px solid #EBEFF4;
+  background: #f7f7f7;
+  padding: 1.62em;
+  border-radius: 3px;
+  margin: 0 0 1.62em 0;
+  overflow-x: auto;
+  box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, post millennium */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ }
+
+/* Colors Palette
+=================================== */
+.colorbox {
+  display: block;
+  width: 3.24em;
+  height: 3.24em;
+  border-radius: 3px;
+  margin: 0 7.5px; }
+  .colorbox.white {
+    background-color: white; }
+  .colorbox.primary {
+    background-color: #0084B4; }
+  .colorbox.secondary {
+    background-color: #FB970D; }
+  .colorbox.light-grey {
+    background-color: #EBEFF4; }
+  .colorbox.medium-grey {
+    background-color: #A4A4A4; }
+  .colorbox.dark-grey {
+    background-color: #202020; }
+  .colorbox.font-color {
+    background-color: #505050; }
+  @media only screen and (max-width: 760px) {
+    .colorbox {
+      width: 1.62em;
+      height: 1.62em; } }

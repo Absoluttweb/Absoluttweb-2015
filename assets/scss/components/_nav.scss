@@ -2,8 +2,9 @@
 ==================================== */
 h2.logo {
 	position:relative;
-  margin: $logo-margin auto;
-	max-width:75%;
+  @if $logo-position == center {margin: $logo-margin auto}
+  @else {margin: $logo-margin 0}
+	//max-width:75%;
   z-index:1;
 	@media only screen and (max-width: $large-size) {
 		margin-top: $logo-margin * $sticky-shrink;
@@ -11,7 +12,8 @@ h2.logo {
 	}
 	a {
 		display: block;
-		height: $logo-height;	
+		height: $logo-height;
+    width: $logo-width; 
 		background-size: contain;
 		background-position: center center;
 		background-image: url(/img/theme/logo.png);

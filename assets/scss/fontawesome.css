@@ -51,7 +51,7 @@
   line-height: 62px; }
 
 .fa-stroke {
-  border: 1px solid #454545; }
+  border: 1px solid #505050; }
 
 .fa-round, .fa-rounded {
   border-radius: 900px; }
@@ -60,25 +60,31 @@
   border-radius: 3px; }
 
 .fa-color-header {
-  color: #252A2E; }
+  color: #202020; }
 
 .fa-color-primary {
-  color: #df4a43; }
+  color: #0084B4; }
 
 .fa-color-secondary {
-  color: #000000; }
+  color: #FB970D; }
+
+.fa-color-third {
+  color: #FB970D; }
+
+.fa-color-fourth {
+  color: #FB970D; }
 
 .fa-color-dark-grey {
-  color: #252A2E; }
+  color: #202020; }
 
 .fa-color-light-grey {
-  color: #F1F1EF; }
+  color: #EBEFF4; }
 
 .fa-color-white {
   color: white; }
 
 .fa-color-link {
-  color: #df4a43; }
+  color: #0084B4; }
 
 .fa-color-vimeo {
   color: #44BBFF; }
@@ -111,10 +117,19 @@
   color: #FF500F; }
 
 .fa-bg-color {
-  background-color: #454545; }
+  background-color: #505050; }
 
 .fa-bg-color-primary {
-  background-color: #df4a43; }
+  background-color: #0084B4; }
+
+.fa-bg-color-secondary {
+  background-color: #FB970D; }
+
+.fa-bg-color-third {
+  background-color: #5BA921; }
+
+.fa-bg-color-fourth {
+  background-color: #E75627; }
 
 .fa-bg-color-white {
   background-color: white; }

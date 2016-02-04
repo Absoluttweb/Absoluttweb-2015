@@ -1,51 +1,144 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
-p.lead {
-	font-family: "Raleway";
-	font-weight: 200;
-}
-.home h2.logo {
-	visibility: hidden;
-}
-img.profile-image {
-	width: 100px;
-	height: 100px;
-	border-radius: 50px;
-	border:1px solid black;
 
-	//float: left;
-	//margin-right: 20px;
-	margin-bottom: 1.5em;
+/* Custom Bands
+================================================================ */
+
+.band-pretop {
+	background-color: #303030;
+	@include type-color (#a9a9a9,#a9a9a9,#a9a9a9,#a9a9a9);
+	padding:10px 0;
 }
-span.numbers,span.montserrat {
-	font-family: "montserrat";
+.band-top {
+	background-color: #202020;
 }
-body.no-scroll {
+.band-primary {
+	@include type-color($font-color, $primary-color);
+	h3,h2 {
+	color:white;
+	}
+}
+.band-stillas {
+	@include type-color (white,white);
+}
+
+/* PRETOP 01
+================================================================ */
+.pretop-01 {
+	.pretop-icons {
+		font-size: 0.85em;
+		padding-top:9px;
+		a {
+			margin-right:15px;
+		}
+	}
+}
+
+/* PORT 02 - Panels equalized in 2 columns, with stroke
+================================================================ */
+.port-02 {
+	.panel {
+		border: 2px solid darken($light-grey-color,5%);
+	}
+}
+
+/* Header-01 - Header as Absoluttweb 2015
+================================================================ */
+
+.header-01 { 
 	overflow: hidden;
-}
-a.scroll {
-  color: black; }
+	margin:0 0px 0px;
+	//border-bottom:5px solid #775F50;
+	.container {
+		padding: 13% 0 13%;
+		// Small only
+		@media only screen and (max-width: $medium-size) {
+			padding: 16% 0 35%;
+		}
+		.header-type {
+			color: $dark-grey-color;
+		}
+		h1 {
+			padding-top: 3%;
+			font-size: 500%;
+			color: $third-color;
+			@extend .header-type;
+			// Medium only
+			@media only screen and (max-width: $large-size) {
+				font-size: 250%;
+			}
+			// Small only
+			@media only screen and (max-width: $medium-size) {
+				font-size: 200%;
+				text-align: center;
+			}
+		}
+		h2 {
+			padding-top: 7%;
+			font-size: 200%;
+			@extend .header-type;
 
-.iconline {
-	display: block;
-	width: 80%;
-	height: 2px;
-	background-color: $light-grey-color;
-	position: absolute;
-	top: 34px;
-	left: 10%;
-	&.iconline-right {
-		width: 50%;
-		left: initial;
-		right: 0
+			// Medium only
+			@media only screen and (max-width: $large-size) {
+				font-size: 250%;
+			}
+			// Small only
+			@media only screen and (max-width: $medium-size) {
+				font-size: 150%;
+				text-align: center;
+			}
+		}
 	}
-	&.iconline-left {
-		width: 50%;
-		left: 0;
-		right: initial;
+	.tilt-top-box {
+		-moz-transform: rotate(-4.2deg);
+		-webkit-transform: rotate(-4.2deg);
+		-o-transform: rotate(-4.2deg);
+		-ms-transform: rotate(-4.2deg);
+		transform: rotate(-4.2deg);
+		display:block;
+		width:110%;
+		height: 5%;
+		position: absolute;
+		bottom: 5%;
+		left: -5%;
+	}
+	.tilt-bottom-box {
+		-moz-transform: rotate(-3.5deg);
+		-webkit-transform: rotate(-3.5deg);
+		-o-transform: rotate(-3.5deg);
+		-ms-transform: rotate(-3.5deg);
+		transform: rotate(-3.5deg);
+		display:block;
+		width:110%;
+		height: 16%;
+		position: absolute;
+		bottom: -8%;
+		left: -5%;
+	}
+
+	.small {
+		.header-container {
+			padding: 8% 0 15%;
+			// Small only
+			@media only screen and (max-width: $medium-size) {
+				padding: 8% 0 25%;
+			}
+		}
+		.tilt-top-box {
+			bottom:12%;
+			height: 8%;
+		}
+		.tilt-bottom-box {
+			bottom:-16%;
+			height: 32%;
+		}
 	}
 }
+
+/* Custom Theme Styles and Widgets
+================================================================ */
+
 //3 Columns in text
 .large-col-3 {
 	// Large and up
@@ -65,70 +158,7 @@ a.scroll {
 	    }
     }
 }
-/* Top-bar with triangle in corner
-================================================================*/
-$top-bar-height: 75px;
-$top-bar-bg: $dark-grey-color;
-.top-bar {
-	position: fixed;
-	top: -$top-bar-height;
-	height: $top-bar-height;
-	width: 100%;
-	z-index: 996;
-	background-color: $top-bar-bg;
-	color: $light-grey-color;
-	@include transition (300ms);
-	&.active {
-		top: 0;
-	}
-	.corner-triangle {
-		position: absolute;
-		display: block;
-		z-index: 995;
-		cursor: pointer;
-		top: $top-bar-height;
-		right: 0;
-		width: 50px;
-		height: 50px;
-		border-style: solid;
-		border-width: 0 50px 50px 0;
-		border-color: transparent $dark-grey-color transparent transparent;
-		&::after {
-			content: "+";
-			font-family:"arial";
-			color:white;
-			font-size:16px;
-			font-weight:900;
-			line-height:1;
-			position:absolute;
-			right:-40px;
-			top:10px;
-		}
-	}
-}
 
-/* Bottom bar . Slide-up Overlay
-================================================================*/
-$bottom-bar-height: 245px;
-$bottom-bar-bg: $dark-grey-color;
-.bottom-bar {
-	position: fixed;
-	bottom: -$bottom-bar-height;
-	height: $bottom-bar-height;
-	padding: $column-gutter;
-	width: 100%;
-	max-width: $page-width;
-	left: 50%;
-  	transform: translateX(-50%);
-	z-index: 996;
-	background-color: $bottom-bar-bg;
-	color: $light-grey-color;
-	@include transition (300ms);
-	&.active {
-		@include transition (300ms);
-		bottom: 0;
-	}
-}
 
 /* Graph Labels
 ================================================================*/
@@ -160,265 +190,6 @@ $bottom-bar-bg: $dark-grey-color;
 	}
 }
 
-/* Cards (Panel)
-=============================================================== */
-
-.card, .panel {
-		background-color: white;
-		position: relative;
-		margin-bottom: 20px;
-		.panel-content {
-			padding: 30px 20px;
-		}
-	}	
-	.news-card {
-		@extend .card;
-
-		margin-bottom: 10px;
-		.date {
-		    font-size: 11px;
-		    color: #787878;
-		    font-weight: 300;
-		    position: absolute;
-		    right: 10px;
-		    top: 10px;
-		    line-height: 1;
-		}
-		a.link {
-			text-transform: uppercase;
-			font-size: 12px;
-			font-weight: 900;
-			display: block;
-		}
-		a.facebook-link {
-			@extend .link;
-			color: #3B5998 !important;
-		}
-		a.label {
-			position: absolute;
-			right: 0;
-			top:30px;
-			padding: 8px 8px;
-			color: white;
-			background-color: $dark-grey-color;
-			text-transform: uppercase;
-			font-size: 11px;
-			font-weight: $font-thick;
-			line-height: 1;
-		}
-		img {
-			margin-bottom: 10px;
-		}
-		h5,h4,h3 { 
-			letter-spacing: 0;
-			text-transform: none;
-		}
-		p,li {
-			font-size: 0.9em;
-			color: $font-color;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-		a.fancybox-media {
-		position: relative;
-		display: block;
-		&:after {
-			content:"SPILL AV VIDEO";
-			background-color: rgba(0,0,0,0.5);
-			color: white;
-			font-family: "montserrat";
-			display: block;
-			position: absolute;
-			bottom: 10px;
-			left: 0;
-			right: 0;
-			padding: 10px 0;
-			text-align: center;
-		}
-		}
-	}
-
-/* Bottom Fixed Menu
-================================================================ */
-.bottom-menu {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	z-index: 999;
-	background-color: white;
-	-webkit-box-shadow: 	0px -1px 1px 0px rgba(50, 50, 50, 0.30);
-		-moz-box-shadow:    0px -1px 1px 0px rgba(50, 50, 50, 0.30);
-		box-shadow:         0px -1px 1px 0px rgba(50, 50, 50, 0.30);
-	a {
-		display: inline-block;
-		text-transform: uppercase;
-		font-weight: $header-weight-thick;
-		font-size: 0.85em;
-		padding: 20px ($column-gutter / 1.25);
-		color: $dark-grey-color;
-	}
-	.bm-share-icons a {
-		font-size: 16px;
-	}
-}
-
-
-
-/* Common Infobar & Extend Left & Right
-================================================================ */
-$info-bar-tab-top: 97px;
-$info-bar-tab-display: none; //block or None
-
-.info-bar {
-	position: fixed;
-	height: 100%;
-	padding-bottom: 20px;
-	position: fixed;
-	z-index: 998;
-	background-size: cover;
-	@include transition (300ms);
-	.ib-scroll {
-		overflow-y:auto;
-		height: 100%;
-	}
-	a.ib-tab {
-		position: absolute;
-		cursor: pointer;
-		display: $info-bar-tab-display;
-		top: $info-bar-tab-top;
-		z-index: 9998;
-		padding: 20px 15px;
-		white-space: nowrap;
-		text-transform: uppercase;
-		font-weight: $header-weight-thick;
-		font-size: 0.85em;
-		// ONLY Small
-		@media only screen and (max-width: medium-size) {
-			display:none;
-		}
-	}
-	.ib-container {
-		padding: 15px 15px 45px 15px;
-	}
-	
-	// ONLY Small
-		@media only screen and (max-width: $medium-size) {
-			max-width: 100%;
-			border-right:0;
-		}
-}
-
-$info-bar-left-bg: $dark-grey-color;
-$info-bar-left-width: 340px;
-
-.info-bar-left {
-	@extend .info-bar;
-	left: 0;
-	width: $info-bar-left-width;
-	margin-left: -($info-bar-left-width+4);
-	background-color: $info-bar-left-bg;
-	//background-image: url('/img/globals/placeholder-08.jpg');
-	@include box-shadow (2px, 0px, 2px, 0px, 0.3);
-	&.active {
-		margin-left: 0;
-	}
-	a.ib-tab {
-		color: white;
-		left: $info-bar-left-width;
-		background-color: $info-bar-left-bg;
-		border-radius: 0 $global-radius $global-radius 0;
-		-webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.30);
-		-moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.30);
-		box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.30);
-	}
-}
-
-$info-bar-right-bg: $dark-grey-color;
-$info-bar-right-width: 340px;
-
-.info-bar-right {
-	@extend .info-bar;
-	right: 0;
-	width: $info-bar-right-width;
-	margin-right: -($info-bar-right-width+4);
-	background-color: $info-bar-right-bg;
-	//background-image: url('/img/globals/placeholder-08.jpg');
-	@include box-shadow (-2px, 0px, 2px, 0px, 0.3);
-	&.active {
-		margin-right: 0;
-	}
-	a.ib-tab {
-		color: white;
-		right: $info-bar-right-width;
-		background-color: $info-bar-right-bg;
-		border-radius: $global-radius 0 0 $global-radius;
-		-webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.30);
-		-moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 0.30);
-		box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 0.30);
-	}
-}
-
-/* OffCanvas
-================================================================ */
-$offcanvas-bg: $dark-grey-color;
-
-.offcanvas {
-	display: block;
-	width: 350px;
-	background-color: $offcanvas-bg;
-	height: 100%;
-}
-
-.offcanvas-right {
-	@extend .offcanvas;
-}
-
-
-
-/* Page Loader
-================================================================ */
-.page-loader {
-	position: fixed;
-	top: 0;
-	bottom: 0%;
-	left: 0;
-	right: 0%;
-	z-index: 9999;
-	display: block;
-	text-align: center;
-	width: 100%;
-	padding-top: 25px;
-	background: white;
-}
-.pulsing-logo {
-	position: fixed;
-	width: 90px;
-	height: 90px;
-	top: 50%;
-	left: 50%;
-	margin: -45px 0 0 -45px;
-	-moz-animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;
-	-o-animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;    
-	-webkit-animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;
-	animation: pulsingLogo 2000ms infinite linear, fadeInLogo 1000ms 1 linear;
-}
-@keyframes pulsingLogo {
-    0% { transform: scale(0.8); }
-    50% { transform: scale(1); }
-    100% { transform: scale(0.8); }
-}
-@keyframes fadeInLogo {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-/* Charachters
-================================================================ */
-.char-1 {
-	font-family: "raleway";
-	font-weight: 300;
-	color: $font-color;
-}
 
 /* Buttons
 ================================================================ */
@@ -456,38 +227,6 @@ $offcanvas-bg: $dark-grey-color;
 	}
 }
 
-/* Big Screens on Index 
-================================================================ */
-.big-screens {
-	margin-top: -8%;
-	@media only screen and (max-width: $medium-size) {
-		margin-top: -16%;
-	}
-	.owl-carousel .item {
-		margin: 0 20px;
-		text-align: center;
-	}
-	span {
-		@extend .char-1;
-		display: block;
-		margin-top: 2em;
-	}
-	a .fa {
-		color: black !important;
-	}
-	.owl-theme .owl-controls {
-		margin: 2em 0;
-	}
-}
-
-
-/* Custom Bands
-================================================================ */
-
-.band-dark {
-	@include type-color (lighten($font-color,40%),$light-grey-color,$light-grey-color,$light-grey-color);
-}
-
 
 /* Footer
 ================================================================ */
@@ -499,37 +238,65 @@ $offcanvas-bg: $dark-grey-color;
 	}
 }
 
-/* Custom Fullscreen
+/* Custom Dropdown
 ================================================================ */
+
+.dropdown-1 {
+	ul {
+		-webkit-border-radius: $global-radius;
+		-webkit-border-top-left-radius: 0;
+		-moz-border-radius: $global-radius;
+		-moz-border-radius-topleft: 0;
+		border-radius: $global-radius;
+		border-top-left-radius: 0;
+		-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+		-moz-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+		box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+	}
+	li {
+		padding-bottom: 6px;
+		padding-top: 6px;
+	}
+	li img {
+		width: 30px;
+		height: 30px;
+		float: left;
+		margin: 0 12px 0 0;
+		clear: left;
+	}
+	p {
+		line-height: 12px;
+		margin: 0;
+		padding-top: 4px;
+		small {
+			color: lighten($dark-grey-color, 20%)
+		}
+	}
+}
 
 
 /* Background images
 ================================================================ */
 .bg-img-01 {
-	background-image: url("/img/globals/placeholder-01.jpg");
+	background-image: url("/img/theme/bg_header.jpg");
 	@media only screen and (min-width: $medium-size) {
-		background-image: url("/img/globals/placeholder-01.jpg");
-	};
-}
-.bg-img-02 {
-	background-image: url("/img/globals/placeholder-05.jpg");
-	@media only screen and (min-width: $medium-size) {
-		background-image: url("/img/globals/placeholder-05.jpg");
-	};
-}
-.bg-img-03 {
-	background-image: url("/img/globals/placeholder-05.jpg");
-	@media only screen and (min-width: $medium-size) {
-		background-image: url("/img/globals/placeholder-05.jpg");
+		background-image: url("/img/theme/bg_header.jpg");
 	};
 }
 /* Custom HRs
 ================================================================ */
 
 .hr-1 {
-	@include hr ($height:3px, $color:$hr-color, $pattern:2, $opacity:0.3);
+	@include hr ($height: 6px, $color: transparent, $pattern: 6, $opacity: 0.1);
 }
 
+.hr-2 {
+	@include hr-line ($width: 25%, $color: darken($hr-color, 10%), $left: 0px);
+}
+
+.hr-3 {
+	@include hr-bullet ($width: 16px, $height: 16px, $color: $third-color, $radius: $global-radius, $left: 50%);
+}
 
 /* Custom Forms
 ================================================================ */

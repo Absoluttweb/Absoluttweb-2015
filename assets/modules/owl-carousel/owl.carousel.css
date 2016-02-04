@@ -79,7 +79,7 @@
   /* Clickable class fix problem with hover on touch devices */
   /* Use it for non-touch hover action */ }
   .owl-theme .owl-controls .owl-pagination {
-    max-width: 1032px;
+    max-width: 1120px;
     margin: 0 auto; }
     .owl-theme .owl-controls .owl-pagination .owl-page {
       display: inline-block;
@@ -116,27 +116,27 @@
   .owl-theme .owl-controls .owl-theme .owl-controls.clickable .owl-page:hover span {
     filter: Alpha(Opacity=100);
     /*IE7 fix*/
-    background: #df4a43;
-    border-color: #df4a43;
+    background: #0084B4;
+    border-color: #0084B4;
     opacity: 1; }
   .owl-theme .owl-controls .owl-buttons {
-    max-width: 1032px;
+    max-width: 1120px;
     margin: 0.81em auto 0; }
     .owl-theme .owl-controls .owl-buttons div {
-      font-family: "raleway";
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
       font-size: 0.688em;
-      font-weight: 300;
-      letter-spacing: 0.4em;
+      font-weight: 800;
+      letter-spacing: 1px;
       padding: 0 0.81em;
       line-height: 1.62em;
       margin: 0 7px 0 0;
-      color: #c1c1cf;
+      color: #A4A4A4;
       display: inline-block;
       zoom: 1;
       *display: inline;
       /*IE7 life-saver */
       border-radius: 3px;
-      background: #F1F1EF;
+      background: #EBEFF4;
       filter: Alpha(Opacity=50);
       /*IE7 fix*/
       opacity: 1; }

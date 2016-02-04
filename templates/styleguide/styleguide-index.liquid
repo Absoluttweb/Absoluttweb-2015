@@ -2,14 +2,17 @@
 
 {% block main %}
 
-{% include 'blocks/tops/top-03' %}
-
+{% include 'blocks/pretops/pretop-01' %}
+{% include 'blocks/tops/top-01' %}
 {% include 'blocks/headers/header-01' %}
+
+{% include 'blocks/ports/port-01' %}
+{% include 'blocks/ports/port-02' %}
 
 {% include 'blocks/content/block-01' %}
 {% include 'blocks/content/block-02' %}
 {% include 'blocks/content/block-03' %}
-{% include 'blocks/content/block-04' %}
+
 {% include 'blocks/content/block-05' %}
 {% include 'blocks/content/block-06' %}
 {% include 'blocks/content/block-07' %}
@@ -78,7 +81,7 @@
 
 <!-- Block-04 -->
 <script type="text/javascript">
-var container04 = $('#block-04').imagesLoaded( function() {;
+var container04 = $('#port-01').imagesLoaded( function() {;
   container04.isotope({
     itemSelector: '.item',
     layoutMode: 'masonry',
