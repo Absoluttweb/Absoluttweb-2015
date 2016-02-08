@@ -1,0 +1,11 @@
+form.form-02 {
+	textarea,input:not([type="submit"]) {
+		border-top-width: 0; 
+		border-right-width: 0;
+		border-left-width: 0;
+		padding: 0;
+	}
+	input:not([type="submit"]) {
+		height: 2em;
+	}
+}

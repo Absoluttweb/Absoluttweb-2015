@@ -1,0 +1,72 @@
+.header { 
+	overflow: hidden;
+	margin:0 0px 0px;
+	//border-bottom:5px solid #775F50;
+	.container {
+		padding: 13% 0 25%;
+		// Small only
+		@media only screen and (max-width: $medium-size) {
+			padding: 16% 0 35%;
+		}
+		h1 {
+			padding-top: 3%;
+		}
+		h2 {
+			padding-top: 7%;
+
+			// Medium only
+			@media only screen and (max-width: $large-size) {
+				font-size: 250%;
+			}
+			// Small only
+			@media only screen and (max-width: $medium-size) {
+				font-size: 200%;
+				text-align: center;
+			}
+		}
+	}
+	.tilt-top-box {
+		-moz-transform: rotate(-4.2deg);
+		-webkit-transform: rotate(-4.2deg);
+		-o-transform: rotate(-4.2deg);
+		-ms-transform: rotate(-4.2deg);
+		transform: rotate(-4.2deg);
+		display:block;
+		width:110%;
+		height: 5%;
+		position: absolute;
+		bottom: 5%;
+		left: -5%;
+	}
+	.tilt-bottom-box {
+		-moz-transform: rotate(-3.5deg);
+		-webkit-transform: rotate(-3.5deg);
+		-o-transform: rotate(-3.5deg);
+		-ms-transform: rotate(-3.5deg);
+		transform: rotate(-3.5deg);
+		display:block;
+		width:110%;
+		height: 16%;
+		position: absolute;
+		bottom: -8%;
+		left: -5%;
+	}
+
+	.small {
+		.header-container {
+			padding: 8% 0 15%;
+			// Small only
+			@media only screen and (max-width: $medium-size) {
+				padding: 8% 0 25%;
+			}
+		}
+		.tilt-top-box {
+			bottom:12%;
+			height: 8%;
+		}
+		.tilt-bottom-box {
+			bottom:-16%;
+			height: 32%;
+		}
+	}
+}

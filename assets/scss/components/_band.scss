@@ -10,7 +10,7 @@
 		margin-right: auto;
 	}
 	// Use Background image
-	&.bg-img {
+	&.bg-img, &.band-img {
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;

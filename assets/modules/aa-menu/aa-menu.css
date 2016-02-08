@@ -5,7 +5,7 @@
   z-index: 9999;
   width: 100%;
   height: 100%;
-  background-color: #252A2E;
+  background-color: #202020;
   display: none;
   overflow-y: auto; }
   .aa-menu-wrapper a.close {
@@ -17,9 +17,9 @@
     color: #ffffff;
     text-transform: uppercase;
     font-size: 18px;
-    border: 0 solid #30373c;
+    border: 0 solid #2d2d2d;
     border-radius: 0;
-    margin: 24px;
+    margin: 30px;
     width: 45px;
     height: 45px;
     text-align: center; }
@@ -51,28 +51,28 @@
     text-align: center;
     padding-left: 0 !important;
     width: 100%;
-    color: #F1F1EF !important;
-    font-family: "Raleway", "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
+    color: #EBEFF4 !important;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-weight: 500;
-    letter-spacing: 0.2em;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    border-bottom: 1px solid #30373c;
+    border-bottom: 1px solid #2d2d2d;
     line-height: 40px;
     padding-left: 21px; }
   .aa-menu li.active a {
-    color: #e71634;
+    color: #5BA921;
     font-weight: 900; }
   .aa-menu li:first-child {
-    border-top: 1px solid #30373c; }
+    border-top: 1px solid #2d2d2d; }
   .aa-menu li a.next {
     float: right;
     width: auto;
     padding-right: 21px;
     line-height: 40px;
-    border-left: 1px solid #30373c;
+    border-left: 1px solid #2d2d2d;
     border-bottom: none;
-    background-color: #30373c; }
+    background-color: #2d2d2d; }
     .aa-menu li a.next:before {
       content: " ";
       display: none; }
@@ -82,13 +82,13 @@
       content: " \f054"; }
   .aa-menu li a.back {
     display: block;
-    color: #F1F1EF;
-    border-top: 1px solid #30373c; }
+    color: #EBEFF4;
+    border-top: 1px solid #2d2d2d; }
     .aa-menu li a.back:before {
       content: " ";
       display: none; }
   .aa-menu li.label {
-    background: #030304;
+    background: black;
     line-height: 36px;
     text-indent: 21px;
     color: white;
@@ -99,7 +99,7 @@
 .js .aa-menu li ul {
   list-style: none;
   position: absolute;
-  background-color: #252A2E;
+  background-color: #202020;
   top: 0;
   bottom: 0;
   width: 100%;

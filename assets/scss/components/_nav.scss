@@ -3,22 +3,27 @@
 h2.logo {
 	position:relative;
   margin: $logo-margin auto;
-	max-width:75%;
   z-index:1;
+  width:100%;
 	@media only screen and (max-width: $large-size) {
 		margin-top: $logo-margin * $sticky-shrink;
 		margin-bottom: $logo-margin * $sticky-shrink;
 	}
 	a {
-		display: block;
-		height: $logo-height;	
+		display: inline-block;
+		height: $logo-height;
+    width: $logo-width;
 		background-size: contain;
 		background-position: center center;
 		background-image: url(/img/theme/logo.png);
 		background-repeat: no-repeat;
-		font: 0/0 a;
+		//font: 0/0 a;
 		text-shadow: none;
 		color: transparent;
+    @media only screen and (max-width: $large-size) {
+        height: $logo-height * $sticky-shrink;
+        width: $logo-width * $sticky-shrink;
+      }
 	}
 	&.transparent a {
 		background-image: url(/img/theme/logo-transparent.png);
@@ -26,21 +31,11 @@ h2.logo {
 	&.invert a {
 		background-image: url(/img/theme/logo-invert.png);
 	}
-	&.left {
-		max-width: 100%;
-		width: $logo-width;
-		a {
-			background-position: center left;
-			@media only screen and (max-width: $large-size) {
-				height: $logo-height * $sticky-shrink;
-			}
-		}
-	}
 }
 
 /* Sticky and Clone Top Navigation
 ================================================================ */
-.band.sticky {
+.band.sticky, .band.fixed {
 	position:fixed;
 	width: 100%;
 	z-index: 900;

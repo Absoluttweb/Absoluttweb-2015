@@ -127,7 +127,7 @@
       opacity: 0.7; }
       .flex-control-nav li a.flex-active {
         opacity: 1;
-        background-color: #df4a43; }
+        background-color: #0084B4; }
 
 .flex-control-thumbs {
   position: absolute;
@@ -157,15 +157,15 @@
   right: 0;
   top: 41%;
   text-align: center;
-  padding: 21px 274px;
+  padding: 21px 230px;
   background: rgba(255, 255, 255, 0.7);
-  color: #252A2E; }
+  color: #202020; }
   .flex-caption span {
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    font-family: "Raleway"; }
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif; }
 
 .flex-feature {
   position: absolute;

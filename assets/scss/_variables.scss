@@ -2,8 +2,8 @@
 
 //Pagesizes
 //-------------------------------------------------------------------------------------
-$page-width: 1080px;
-$column-gutter:24px;
+$page-width: 1180px;
+$column-gutter:30px;
 $band-padding: 6em;
 $headers: #{h1,h2,h3,h4,h5,h6};
 $box-padding: 0.5em 1em;
@@ -21,25 +21,26 @@ $frame-size: 30%;
 
 //Type and elements
 //-------------------------------------------------------------------------------------
-$font-family: 'Raleway','Helvetica Neue',Helvetica,Helvetica,Arial,sans-serif;
+$font-family: 'Open Sans','Helvetica Neue',Helvetica,Helvetica,Arial,sans-serif;
 $font-handwriting: 'Playfair Display', serif;
-$font-size: 15px;
-$font-color: #454545;
-$font-weight: 300;
-$font-thin: 100;
-$font-thick: 900;
+$font-size: 14px;
+$font-color: #505050;
+$font-weight: 400;
+$font-thin: 300;
+$font-thick: 800;
 $font-line-height: 1.62em;
-$strong-weight: 500;
+$lead-size: 1.2em;
+$strong-weight: 600;
 $strong-color: $dark-grey-color;
 $link-color: $primary-color;
-$link-weight: 300;
+$link-weight: $font-weight;
 $subtle-lighten: 50%;
 
 
 //logo
 //-------------------------------------------------------------------------------------
-$logo-width: 360px; //180
-$logo-height: 48px; //24
+$logo-width: 220px; //180
+$logo-height: 45px; //24
 $logo-margin: 35px;
 	//Calculation used in aligning logo and navigation
 	$logo-space: $logo-height + ($logo-margin * 2); // static in EM
@@ -47,23 +48,20 @@ $logo-margin: 35px;
 
 //Navigation
 //-------------------------------------------------------------------------------------
-$nav-position: center;
-$nav-logo-adjust: false; //Will vertically center nav with logo
-$nav-padding: 1em; //Vertical size of the LI elements
-$nav-height: 24px; // height of superfish UL. Used to calculate correct
-$sticky-shrink: 1; // How much logo and margins will shrink on small screens
+$nav-logo-adjust: true; //Will vertically center nav with logo
+$nav-padding: 1em; // Padding of the LI elements
+$nav-height: 50px; // height of superfish UL. Used to calculate correct
+$sticky-shrink: 0.7; // How much logo and margins will shrink on small screens
 
 $nav-border-color: $light-grey-color;
-$nav-border-weight: 1px;
+$nav-border-weight: 0px;
 $nav-family: $font-family;
 $nav-bg: transparent;
-$nav-color: $dark-grey-color;
-$nav-font-size: 12px;
-$nav-font-weight: 500;
+$nav-color: white;
+$nav-font-size: 14px;
+$nav-font-weight: 600;
 $nav-text-transform: uppercase;
-$nav-letter-spacing: 0.2em;
-
-
+$nav-letter-spacing: 1px;
 
 		//Active
 		$nav-color-active: $primary-color;
@@ -96,7 +94,7 @@ $nav-letter-spacing: 0.2em;
 $burger-position: center;
 $burger-size: 28px;
 $burger-bg-color: $light-grey-color;
-$burger-color: $dark-grey-color;
+$burger-color: white;
 $burger-color-active: white;
 $burger-border: false;
 $burger-border-color: #3B4761;
@@ -140,13 +138,13 @@ $hr-size: 1px;
 
 //Header
 //-------------------------------------------------------------------------------------
-$header-family: "Raleway";
-$header-weight: 500;
-$header-weight-thin: 300;
+$header-family: $font-family;
+$header-weight: 800;
+$header-weight-thin: 400;
 $header-weight-thick: 900;
 $header-color: $dark-grey-color;
-$header-letter-spacing: 4px;
-$header-text-transform: uppercase;
+$header-letter-spacing: 0.25px;
+$header-text-transform: normal;
 $subheader-family: $header-family;
 $subheader-size: 13px;
 $subheader-style: normal;
@@ -166,9 +164,6 @@ $h5:1em; //Not in use
 $h6:1em; //Not in use
 
 
-
-
-
 //Breadcrumbs
 //--------------------------
 $breadcrumbs-transform: uppercase;
@@ -182,8 +177,6 @@ $breadcrumbs-active: $font-color;
 $nav-icon-color: $nav-color;
 $nav-icon-size: $nav-font-size;
 $nav-icon-padding: $nav-padding;
-
-
 
 
 //Panels
@@ -233,12 +226,12 @@ $fullscreen-close: $third-color;
 
 //Buttons
 //-------------------------------------------------------------------------------------
-$button-family: "raleway";
-$button-padding: 1.5em 2em;
-$button-font-weight: 300;
+$button-family: $font-family;
+$button-padding: 1.25em 2em;
+$button-font-weight: 800;
 $button-color: white;
 $button-font-size: 0.86em;
-$button-letter-spacing: 0.4em;
+$button-letter-spacing: 1px;
 $button-text-transform: uppercase;
 
 
@@ -262,20 +255,9 @@ $list-icon-color: $secondary-color;
 $list-divider: 1px solid $light-grey-color;
 
 
-//Caption Hover Effect
-//====================================================
-$caption-bg: $third-color;
-$caption-header-color: white;
-$caption-link-color: white;
-$caption-opacity:0.7;
-
-
-
-
-
 //Sticky Footer
 //-------------------------------------------------------------------------------------
-$footer-height: 75px; // Height of the footer
+$footer-height: 88px; // Height of the footer
 
 
 //Gmap

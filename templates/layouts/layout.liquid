@@ -3,91 +3,87 @@
 
 <head>
   <meta charset="utf-8" />
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Absoluttweb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Blocks</title>
   <meta name="Keywords" content="" />
   <meta name="Description" content="" />
-  {% block meta %}{% endblock %}
   <link rel="icon" type="image/png" href="/img/theme/favicon.png">
-  {% include 'basics/css' %}
   {{ "modernizr.js" | asset_url | script_tag }}
   {% include 'basics/fonts' %}
+  {% include 'basics/css' %}
+  <link href="/assets/scss/style.css" rel="stylesheet" type="text/css" media="all">
+  {% block meta %}{% endblock %}
   <style> [data-sr] { visibility: hidden; }</style>
-</head>
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  </head>
 
-<body class="wide"> <!-- 'boxed' 'wide' 'left-aside'. Add 'snow' if we want snow -->
- 
   {% include 'basics/aa-menu' %}
-  <!-- {% include 'basics/aa-sidenav' %} Include if sidenav is wanted. Set width in variables-->
-  <div class="wrapper">
-  {% block infobar %}{% endblock %}
-
-   <div class="page-loader">
-     <img src="/img/theme/logo-icon-220-black.png" class="pulsing-logo">
-   </div>
-    <div class="wrapper-inner">
+  <body class="wide">
     
-    {% block header %}
-    {% endblock %}
-      
-    {% block main %}
-    {% endblock %}
+    
 
-    <!--{% include 'bottom' %}-->
+    {% block slidein %}{% endblock %}
 
-    </div>
-    <div class="push"></div>
-  </div>
-  
-  {% include 'footer' %}
-  {% include 'basics/scripts' %}
+    <div class="wrapper">
 
-  {% block script %}
-  {% endblock %}
+      <div class="wrapper-inner">
 
-  <div class="fullscreen-overlay text-center">
-  <a href="#" class="fullscreen-close">x</a>
-  <div class="outer">
-    <div class="middle">
-      <div class="inner">
-           
+        {% include 'blocks/pretop-01' %}
+        {% include 'blocks/top-01' %}
+        
+        {% block header %}{% endblock %}
+        {% block main %}{% endblock %}
       </div>
-    </div>
-  </div>
-  </div> 
-
-  <script>
-    $(window).load(function() {
-      //Superfish Dropdown Menu
-      $('ul.sf-menu').superfish({
-        cssArrows: true,
-        animation: {opacity:'show'},
-      });
       
-      //Mobile Menu
-      $('ul.aa-menu').aamenu();
-    });
-  </script>
-  <script>
-    $(window).load(function() {
-        //Infobar
-        $(".info-trigger, .pure-info-trigger").click(function(){
-          $(".info-bar").show();
-          $(".info-bar").toggleClass('active');
-          $("body").toggleClass('no-scroll darken');
+      <div class="push"></div>
+    </div>
+    
+    {% include 'blocks/footer-01' %}
+
+    {% include 'basics/scripts' %} 
+    {% block script %}{% endblock %}
+
+    <script type="text/javascript">
+      (function($) {
+        'use strict';
+        window.sr= new scrollReveal({
+          mobile: false
         });
-      });
-  </script>
+      })();
+    </script>
 
-  <script type="text/javascript">
-    (function($) {
-      'use strict';
-      window.sr= new scrollReveal({
-        mobile: false
-      });
-    })();
-  </script>
-</body>
+    <script>
+      $(document).ready(function () {
 
-</html>
+        //Superfish Dropdown Menu
+        $('ul.sf-menu').superfish({
+          cssArrows: true,
+          animation: {
+            opacity: 'show',
+            height: 'show'
+          },
+        });
+
+        //Animated Burger
+        $('#nav-icon4').click(function(){
+          $('#n#nav-icon4').toggleClass('open');
+        });
+
+        //AA Menu
+        $("ul.aa-menu").aamenu();
+
+        //Readmore
+        $(".readmore").readmore({
+          embedCSS: false,
+          maxHeight: 72,
+          speed: 300,
+          moreLink: '<a href="#">..... les mer</a>',
+          lessLink: '<a href="#"> lukk</a>'
+        });
+
+      });
+    </script>
+
+  </body>
+
+  </html>

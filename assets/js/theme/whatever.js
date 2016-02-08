@@ -175,4 +175,24 @@ $(window).load(function() {
   $(".pulsing-logo").delay(500).fadeOut(500);
   $(".page-loader").delay(1000).fadeOut(500);
 });
+$(window).load(function() {
+
+    //Bar Triggers
+    $("*[data-trigger='info-bar-left']").click(function(){
+      $(".info-bar-left").toggleClass('active');
+      $(".info-bar-right").removeClass('active');
+    });
+    $("*[data-trigger='info-bar-right']").click(function(){
+      $(".info-bar-right").toggleClass('active');
+      $(".info-bar-left").removeClass('active');
+    });
+    $("*[data-trigger='top-bar']").click(function(){
+      $(".top-bar").toggleClass('active');
+    });
+    $("*[data-trigger='bottom-bar']").click(function(){
+      $(".bottom-bar").toggleClass('active');
+    });
+
+});
+
 

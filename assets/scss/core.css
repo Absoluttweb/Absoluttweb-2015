@@ -369,7 +369,7 @@ meta.foundation-mq-medium {
 
 meta.foundation-mq-large {
   font-family: "/only screen and (min-width:$large-size)/";
-  width: 1080px; }
+  width: 1180px; }
 
 meta.foundation-mq-xlarge {
   font-family: "/only screen and (min-width:$xlarge-size)/";
@@ -495,7 +495,7 @@ select {
 
   .small-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 760px) and (max-width: 1080px) {
+@media only screen and (min-width: 760px) and (max-width: 1180px) {
   .medium-only-text-left {
     text-align: left !important; }
 
@@ -519,7 +519,7 @@ select {
 
   .medium-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 1080px) and (max-width: 1580px) {
+@media only screen and (min-width: 1180px) and (max-width: 1580px) {
   .large-only-text-left {
     text-align: left !important; }
 
@@ -531,7 +531,7 @@ select {
 
   .large-only-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1180px) {
   .large-text-left {
     text-align: left !important; }
 
@@ -636,7 +636,7 @@ select {
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px); } }
 /* large displays */
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1180px) {
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xxlarge-only, .hide-for-xxlarge-up {
     display: inherit !important; }
 
@@ -706,7 +706,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 1080px; }
+  max-width: 1180px; }
 
 .row:before, .row:after {
   content: " ";
@@ -732,8 +732,8 @@ select {
 
 .row .row {
   width: auto;
-  margin-left: -24px;
-  margin-right: -24px;
+  margin-left: -30px;
+  margin-right: -30px;
   margin-top: 0;
   margin-bottom: 0;
   max-width: none; }
@@ -759,8 +759,8 @@ select {
 
 .column,
 .columns {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 30px;
+  padding-right: 30px;
   width: 100%;
   float: left; }
 
@@ -888,8 +888,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
     float: left; }
 
   .small-1 {
@@ -1116,8 +1116,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
     float: left; }
 
   .medium-1 {
@@ -1340,7 +1340,7 @@ select {
     position: relative;
     right: 91.66667%;
     left: auto; } }
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1180px) {
   .large-push-0 {
     position: relative;
     left: 0%;
@@ -1464,8 +1464,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
     float: left; }
 
   .large-1 {
@@ -2074,7 +2074,7 @@ label.error {
 [class*="block-grid-"] {
   display: block;
   padding: 0;
-  margin: 0 -24px; }
+  margin: 0 -30px; }
 
 [class*="block-grid-"]:before, [class*="block-grid-"]:after {
   content: " ";
@@ -2087,7 +2087,7 @@ label.error {
   display: block;
   height: auto;
   float: left;
-  padding: 0 24px 24px; }
+  padding: 0 30px 30px; }
 
 @media only screen {
   .small-block-grid-1 > li {
@@ -2329,7 +2329,7 @@ label.error {
 
   .medium-block-grid-12 > li:nth-of-type(12n+1) {
     clear: both; } }
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1180px) {
   .large-block-grid-1 > li {
     width: 100%;
     list-style: none; }

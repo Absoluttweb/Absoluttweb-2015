@@ -24,18 +24,18 @@ ul.mixitup-nav li, dl.mixitup-nav dd, dl.mixitup-nav dt {
 
 dl.mixitup-nav dt {
   padding-left: 0;
-  color: #858585; }
+  color: #909090; }
 
 ul.mixitup-nav li, dl.mixitup-nav dd {
-  color: #454545;
-  background: #F1F1EF;
+  color: #505050;
+  background: #EBEFF4;
   cursor: pointer;
   margin: 0 1px 1px 0; }
 
 ul.mixitup-nav li:hover, ul.mixitup-nav li:focus, dl.mixitup-nav dd:hover, dl.mixitup-nav dd:focus {
-  color: #454545;
-  background: #F1F1EF; }
+  color: #505050;
+  background: #EBEFF4; }
 
 ul.mixitup-nav li.active, dl.mixitup-nav dd.active {
   color: white;
-  background: #e71634; }
+  background: #5BA921; }

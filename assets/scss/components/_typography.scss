@@ -11,9 +11,9 @@
 		}
 	//Lead
 		&.lead,.intro {
-			font-size: 1.4em;
+			font-size: $lead-size;
 			font-weight:300;
-			color:lighten($font-color,20%);
+			//color:lighten($font-color,20%);
 			// Small only
 			@media only screen and (max-width: $medium-size) { 
 			font-size: 1.2em;	
@@ -72,7 +72,7 @@
 		user-select: none;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 		color: $link-color;
-		font-weight: $link-weight;
+		//font-weight: $link-weight;
 		&:hover, &:focus {
 			color: darken($link-color,15%);
 			&.underline {

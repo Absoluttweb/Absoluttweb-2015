@@ -1,0 +1,25 @@
+.block-01 {
+	.img {
+		position: relative;
+		display: block;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		// ONLY Small
+		@media only screen and (max-width: $medium-size) {
+			position: relative;
+			height: 200px !important;
+		}	
+	}
+	.container {
+		padding: 7% 7%;
+		max-width:1000px;
+	}
+	a.btn {
+		position: absolute;
+		text-align: center;
+		right: $column-gutter;
+		left: $column-gutter;
+		max-width: 250px;
+	}
+}

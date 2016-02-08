@@ -3,51 +3,51 @@
 
 <head>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+	<title>Blocks</title>
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+	<link rel="icon" type="image/png" href="/img/theme/favicon.png">
+	{{ "modernizr.js" | asset_url | script_tag }}
+	{% include 'basics/fonts' %}
+	{% include 'basics/css' %}
+	<link href="/assets/scss/styleguide.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/assets/scss/style.css" rel="stylesheet" type="text/css" media="all">
+	{% block meta %}{% endblock %}
+	<style> [data-sr] { visibility: hidden; }</style>
 	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Styleguide</title>
-		<meta name="description" content="This is the Styleguide">
-		<meta name="author" content="Absoluttweb"> {% block meta %}{% endblock %}
-
-		<link rel="icon" type="image/png" href="/img/logo.png"> {% include 'basics/css' %}
-		<link href="/assets/styleguide/styleguide.css" rel="stylesheet" type="text/css" media="all"> {{ "modernizr.js" | asset_url | script_tag }} {% include 'basics/fonts' %}
-		
-		<style>
-			[data-sr] {
-				visibility: hidden;
-			}
-		</style>
-
 	</head>
 
 	<body class="wide">
-		{% include 'basics/bottom-bar'%}
-		{% include 'basics/bottom-menu'%}
-		{% include 'basics/infobar-left' %}
-		{% include 'basics/infobar-right' %}
+		{% include 'widgets/bottom-bar'%}
+		{% include 'widgets/bottom-menu'%}
+		{% include 'widgets/infobar-left' %}
+		{% include 'widgets/infobar-right' %}
 
-			<div class="wrapper">
+		<div class="wrapper">
 
-				<div class="wrapper-inner">
-					{% block main %}{% endblock %}
-				</div>
-				<div class="push"></div>
+			<div class="wrapper-inner">
+				{% block main %}{% endblock %}
 			</div>
-			{% include 'blocks/footers/block-40' %}
+			
+			<div class="push"></div>
+		</div>
+		
+		{% include 'blocks/footer-01' %}
 
-			{% include 'basics/scripts' %} 
-			{% block script %}{% endblock %}
+		{% include 'basics/scripts' %} 
+		{% block script %}{% endblock %}
 
-			<script type="text/javascript">
-				(function($) {
-					'use strict';
-					window.sr= new scrollReveal({
-						mobile: false
-					});
-				})();
-			</script>
+		<script type="text/javascript">
+			(function($) {
+				'use strict';
+				window.sr= new scrollReveal({
+					mobile: false
+				});
+			})();
+		</script>
 
-			<script>
+		<script>
 			$(document).ready(function () {
 				
 				//Superfish Dropdown Menu
@@ -59,12 +59,12 @@
 					},
 				});
 
-				//Animated Burgers
-				$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-					$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').toggleClass('open');
+				//Animated Burger
+				$('#nav-icon4').click(function(){
+					$('#n#nav-icon4').toggleClass('open');
 				});
 
-				//Mobile Menu
+				//AA Menu
 				$("ul.aa-menu").aamenu();
 
 				//Readmore
@@ -77,32 +77,8 @@
 				});
 
 			});
-			</script>
+		</script>
 
-			<script>
-			$(window).load(function() {
-		        
-		        //Bar Triggers
-		        $("*[data-trigger='info-bar-left']").click(function(){
-		        	$(".info-bar-left").toggleClass('active');
-		        	$(".info-bar-right").removeClass('active');
-		        });
-		        $("*[data-trigger='info-bar-right']").click(function(){
-		        	$(".info-bar-right").toggleClass('active');
-		        	$(".info-bar-left").removeClass('active');
-		        });
-		        $("*[data-trigger='top-bar']").click(function(){
-		        	$(".top-bar").toggleClass('active');
-		        });
-		        $("*[data-trigger='bottom-bar']").click(function(){
-		        	$(".bottom-bar").toggleClass('active');
-		        });
+	</body>
 
-		    });
-			</script>
-			
-
-
-		</body>
-
-		</html>
+	</html>
