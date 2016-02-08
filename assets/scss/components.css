@@ -766,8 +766,8 @@ h2.logo {
   z-index: 1; }
   @media only screen and (max-width: 1180px) {
     h2.logo {
-      margin-top: 35px;
-      margin-bottom: 35px; } }
+      margin-top: 24.5px;
+      margin-bottom: 24.5px; } }
   h2.logo a {
     display: block;
     height: 45px;
@@ -790,7 +790,7 @@ h2.logo {
       background-position: center left; }
       @media only screen and (max-width: 1180px) {
         h2.logo.left a {
-          height: 45px; } }
+          height: 31.5px; } }
 
 /* Sticky and Clone Top Navigation
 ================================================================ */
@@ -814,9 +814,9 @@ h2.logo {
   padding-right: 0;
   opacity: 1; }
   .band.clone.cloned h2.logo-left a {
-    height: 45px;
-    margin-top: 35px;
-    margin-bottom: 35px; }
+    height: 31.5px;
+    margin-top: 24.5px;
+    margin-bottom: 24.5px; }
   .band.clone.cloned ul.sf-menu {
     margin-top: 32.5px; }
 
@@ -838,20 +838,20 @@ h2.logo {
 ====================================================== */
 a.animated-burger {
   display: block;
-  color: #202020;
+  color: white;
   float: right; }
 
 a.burger, a.top-icon {
   display: block;
-  color: #202020;
-  line-height: 115px;
-  height: 115px;
+  color: white;
+  line-height: 80.5px;
+  height: 80.5px;
   width: 60px;
   text-align: center;
   font-size: 28px;
   margin: 0 auto; }
   a.burger.active, a.burger:hover, a.burger:focus, a.top-icon.active, a.top-icon:hover, a.top-icon:focus {
-    color: #202020; }
+    color: white; }
 
 input.q-phone {
   background: white; }
@@ -1335,7 +1335,7 @@ nav.breadcrumbs {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 0.85em; }
-    @media only screen and (max-width: medium-size) {
+    @media only screen and (max-width: 760px) {
       .info-bar a.ib-tab, .info-bar-left a.ib-tab, .info-bar-right a.ib-tab {
         display: none; } }
   .info-bar .ib-container, .info-bar-left .ib-container, .info-bar-right .ib-container {

@@ -52,7 +52,7 @@ $nav-position: right;
 $nav-logo-adjust: true; //Will vertically center nav with logo
 $nav-padding: 1em; // Padding of the LI elements
 $nav-height: 50px; // height of superfish UL. Used to calculate correct
-$sticky-shrink: 1; // How much logo and margins will shrink on small screens
+$sticky-shrink: 0.7; // How much logo and margins will shrink on small screens
 
 $nav-border-color: $light-grey-color;
 $nav-border-weight: 0px;
@@ -95,7 +95,7 @@ $nav-letter-spacing: 1px;
 $burger-position: center;
 $burger-size: 28px;
 $burger-bg-color: $light-grey-color;
-$burger-color: $dark-grey-color;
+$burger-color: white;
 $burger-color-active: white;
 $burger-border: false;
 $burger-border-color: #3B4761;
