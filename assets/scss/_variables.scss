@@ -29,6 +29,7 @@ $font-weight: 400;
 $font-thin: 300;
 $font-thick: 800;
 $font-line-height: 1.62em;
+$lead-size: 1.2em;
 $strong-weight: 600;
 $strong-color: $dark-grey-color;
 $link-color: $primary-color;
@@ -38,7 +39,6 @@ $subtle-lighten: 50%;
 
 //logo
 //-------------------------------------------------------------------------------------
-$logo-position: left;
 $logo-width: 220px; //180
 $logo-height: 45px; //24
 $logo-margin: 35px;
@@ -48,7 +48,6 @@ $logo-margin: 35px;
 
 //Navigation
 //-------------------------------------------------------------------------------------
-$nav-position: right;
 $nav-logo-adjust: true; //Will vertically center nav with logo
 $nav-padding: 1em; // Padding of the LI elements
 $nav-height: 50px; // height of superfish UL. Used to calculate correct

@@ -1,8 +1,40 @@
 @import "../scss/_variables.scss";
 @import "../scss/_mixins.scss";
 
+/* Blocks with specific styles 
+====================================*/
+@import "../scss/blocks/_block-01.scss";
+@import "../scss/blocks/_block-09.scss";
+@import "../scss/blocks/_block-10.scss";
+@import "../scss/blocks/_block-11.scss";
+@import "../scss/blocks/_block-13.scss";
+@import "../scss/blocks/_form-02.scss";
+@import "../scss/blocks/_port-01.scss";
+@import "../scss/blocks/_port-02.scss";
 
-/* Code
+/* Background images
+====================================== */
+.bg-img-01 {
+	background-image: url("/img/globals/placeholder-01.jpg");
+	@media only screen and (min-width: $medium-size) {
+		background-image: url("/img/globals/placeholder-01.jpg");
+	};
+}
+.bg-img-02 {
+	background-image: url("/img/globals/placeholder-05.jpg");
+	@media only screen and (min-width: $medium-size) {
+		background-image: url("/img/globals/placeholder-05.jpg");
+	};
+}
+.bg-img-03 {
+	background-image: url("/img/globals/placeholder-05.jpg");
+	@media only screen and (min-width: $medium-size) {
+		background-image: url("/img/globals/placeholder-05.jpg");
+	};
+}
+
+
+/* Code used in Styleguide
 =================================== */
 
 a.code {

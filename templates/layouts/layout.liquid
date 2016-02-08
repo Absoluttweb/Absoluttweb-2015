@@ -1,61 +1,44 @@
 <!doctype html>
 <html class="no-js" lang="no">
 
-{% include 'head' %}
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Blocks</title>
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <link rel="icon" type="image/png" href="/img/theme/favicon.png">
+  {{ "modernizr.js" | asset_url | script_tag }}
+  {% include 'basics/fonts' %}
+  {% include 'basics/css' %}
+  <link href="/assets/scss/style.css" rel="stylesheet" type="text/css" media="all">
+  {% block meta %}{% endblock %}
+  <style> [data-sr] { visibility: hidden; }</style>
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  </head>
 
+  {% include 'basics/aa-menu' %}
   <body class="wide">
-    <div class="bottom-menu hide-for-medium-up">
-      <div class="row full collapse">
-        <div class="small-6 columns">
-          <a data-trigger="info-bar-left"><i class="fa fa-chevron-left"></i> GUIDE</a>  
-        </div>
-        <div class="small-6 columns text-right">
-          <a id="toTop">TOPP <i class="fa fa-chevron-up"></i>  </a>  
-        </div>
-      </div>
-    </div>
+    
+    
 
-    <div class="info-bar-left">
-      <div class="ib-scroll">
-        <a class="ib-tab" data-trigger="info-bar-left"><i class="fa fa-chevron-left"></i> Guide</a>
-        <div class="ib-container">
-          
-          <div class="news-card">
-            <div class="panel-content">
-              <h4>HMS kurs er lovpålagt</h4>
-              <p>Super kort om hvem det gjelder og en link til loven hvor det står skrevet</p>
-            </div>
-          </div>
-
-          <div class="news-card">
-            <div class="panel-content">
-              <h4>Slik tar man kursene</h4>
-              <p>Gå til ønsket kurs, og start den interaktive opplæringen. Du må laste ned <a href="#">Adobe Flash Player</a> om den spør om dette.</p>
-              <p>Les gjennom kurset, og svar på spørsmålene i slutten av filmen</p>
-              <p>Du har 3 forsøk på å oppnå 75% riktig svar. Når testen er bestått, vil du få tildelt en kode.</p>
-              <p>Bruk skjemaet på kurssiden, og send koden til FokusHMS. Vi sender deg kursbevis og faktura per. epost</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
+    {% block slidein %}{% endblock %}
 
     <div class="wrapper">
 
       <div class="wrapper-inner">
 
-        {% include 'blocks/pretops/pretop-01' %}
-        {% include 'blocks/tops/top-01' %}
-        {% include 'blocks/headers/header-01' %}
+        {% include 'blocks/pretop-01' %}
+        {% include 'blocks/top-01' %}
         
+        {% block header %}{% endblock %}
         {% block main %}{% endblock %}
       </div>
       
       <div class="push"></div>
     </div>
     
-    {% include 'blocks/footers/block-40' %}
+    {% include 'blocks/footer-01' %}
 
     {% include 'basics/scripts' %} 
     {% block script %}{% endblock %}
@@ -71,7 +54,7 @@
 
     <script>
       $(document).ready(function () {
-        
+
         //Superfish Dropdown Menu
         $('ul.sf-menu').superfish({
           cssArrows: true,

@@ -1,8 +1,24 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
+/* Blocks
+================================================================ */
+@import "blocks/_port-01.scss";
 
-/* Custom Elements
+/* Background images
+================================================================ */
+
+@each $number,$image,$format in (1,bg_header,jpg),(2,bg-climbing,jpg),(3,bg-construction,jpg)
+ {
+	.bg-img-#{$number} {
+		background-image: url("/img/theme/#{$image}.#{$format}");
+		@media only screen and (min-width: $medium-size) {
+			background-image: url("/img/theme/#{$image}.#{$format}");
+		};
+	}
+}
+
+/* Theme styles
 ================================================================ */
 
 .svg-header {
@@ -13,6 +29,18 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+#port-01 .item {
+	width:100%;
+		// Medium and up
+		@media only screen and (min-width: $medium-size) {
+			width:50%;
+		}
+			
+		// Large and up
+		@media only screen and (min-width: $large-size) {
+			width:33.33%;
+		}
+		}
 
 /* Custom Bands
 ================================================================ */
@@ -57,89 +85,37 @@
 
 /* Header-01 - Header as Absoluttweb 2015
 ================================================================ */
-
-.header-01 { 
-	overflow: hidden;
-	margin:0 0px 0px;
-	//border-bottom:5px solid #775F50;
+@import "blocks/_header";
+.header { 
 	.container {
+
 		padding: 13% 0 13%;
-		.header-type {
-			color: $dark-grey-color;
-		}
 		h1 {
-			padding-top: 3%;
-			font-size: 500%;
-			color: $third-color;
-			@extend .header-type;
+			font-size: 400%;
 			// Medium only
 			@media only screen and (max-width: $large-size) {
 				font-size: 400%;
 			}
 			// Small only
 			@media only screen and (max-width: $medium-size) {
-				font-size: 300%;
+				font-size: 200%;
 				text-align: center;
 			}
 		}
 		h2 {
 			padding-top: 7%;
 			font-size: 200%;
-			@extend .header-type;
-
+			color:grey;
+			
 			// Medium only
 			@media only screen and (max-width: $large-size) {
 				font-size: 250%;
 			}
 			// Small only
 			@media only screen and (max-width: $medium-size) {
-				font-size: 150%;
+				font-size: 120%;
 				text-align: center;
 			}
-		}
-	}
-	.tilt-top-box {
-		-moz-transform: rotate(-4.2deg);
-		-webkit-transform: rotate(-4.2deg);
-		-o-transform: rotate(-4.2deg);
-		-ms-transform: rotate(-4.2deg);
-		transform: rotate(-4.2deg);
-		display:block;
-		width:110%;
-		height: 5%;
-		position: absolute;
-		bottom: 5%;
-		left: -5%;
-	}
-	.tilt-bottom-box {
-		-moz-transform: rotate(-3.5deg);
-		-webkit-transform: rotate(-3.5deg);
-		-o-transform: rotate(-3.5deg);
-		-ms-transform: rotate(-3.5deg);
-		transform: rotate(-3.5deg);
-		display:block;
-		width:110%;
-		height: 16%;
-		position: absolute;
-		bottom: -8%;
-		left: -5%;
-	}
-
-	.small {
-		.header-container {
-			padding: 8% 0 15%;
-			// Small only
-			@media only screen and (max-width: $medium-size) {
-				padding: 8% 0 25%;
-			}
-		}
-		.tilt-top-box {
-			bottom:12%;
-			height: 8%;
-		}
-		.tilt-bottom-box {
-			bottom:-16%;
-			height: 32%;
 		}
 	}
 }
@@ -154,6 +130,25 @@
 	    -webkit-column-count: 3; /* Chrome, Safari, Opera */
 	    -moz-column-count: 3; /* Firefox */
 	    column-count: 3;
+	    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+	    -moz-column-gap: 40px; /* Firefox */
+	    column-gap: 40px;
+	    -webkit-column-rule: 1px solid darken($light-grey-color,10%); /* Chrome, Safari, Opera */
+	    -moz-column-rule: 1px solid darken($light-grey-color,10%); /* Firefox */
+	    column-rule: 1px solid darken($light-grey-color,10%);
+	    h1,h2,h3,h4,p.lead {
+	    	-webkit-column-span: all; /* Chrome, Safari, Opera */
+	    	column-span: all;
+	    }
+    }
+}
+//2 Columns in text
+.large-col-2 {
+	// Large and up
+	@media only screen and (min-width: $large-size) {
+	    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+	    -moz-column-count: 2; /* Firefox */
+	    column-count: 2;
 	    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
 	    -moz-column-gap: 40px; /* Firefox */
 	    column-gap: 40px;
@@ -246,69 +241,16 @@
 	}
 }
 
-/* Custom Dropdown
-================================================================ */
-
-.dropdown-1 {
-	ul {
-		-webkit-border-radius: $global-radius;
-		-webkit-border-top-left-radius: 0;
-		-moz-border-radius: $global-radius;
-		-moz-border-radius-topleft: 0;
-		border-radius: $global-radius;
-		border-top-left-radius: 0;
-		-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
-		-moz-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
-		box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
-	}
-	li {
-		padding-bottom: 6px;
-		padding-top: 6px;
-	}
-	li img {
-		width: 30px;
-		height: 30px;
-		float: left;
-		margin: 0 12px 0 0;
-		clear: left;
-	}
-	p {
-		line-height: 12px;
-		margin: 0;
-		padding-top: 4px;
-		small {
-			color: lighten($dark-grey-color, 20%)
-		}
-	}
-}
-
-
-/* Background images
-================================================================ */
-.bg-img-01 {
-	background-image: url("/img/theme/bg_header.jpg");
-	@media only screen and (min-width: $medium-size) {
-		background-image: url("/img/theme/bg_header.jpg");
-	};
-}
 /* Custom HRs
+@mixin hr ($height:1px, $color:$hr-color, $pattern:none, $opacity:1)
 ================================================================ */
 
-.hr-1 {
-	@include hr ($height: 6px, $color: transparent, $pattern: 6, $opacity: 0.1);
-}
-
-.hr-2 {
-	@include hr-line ($width: 25%, $color: darken($hr-color, 10%), $left: 0px);
-}
-
-.hr-3 {
-	@include hr-bullet ($width: 16px, $height: 16px, $color: $third-color, $radius: $global-radius, $left: 50%);
-}
-
-/* Custom Forms
+/* Custom Panels
+@mixin panel ($bg-color:white)
 ================================================================ */
-
+.panel-light-trans {
+	@include panel(rgba(255,255,255,0.8));
+}
 
 /* Custom Tabs
 ================================================================ */

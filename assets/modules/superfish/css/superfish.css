@@ -30,8 +30,11 @@ ul.sf-menu, ul.sf-menu * {
 ======================================================= */
 ul.sf-menu {
   margin-top: 32.5px;
-  float: right;
   /* CHILD ELEMENTS */ }
+  ul.sf-menu .centered {
+    display: table;
+    float: none;
+    margin: 0 auto; }
   ul.sf-menu a {
     zoom: 1;
     /* IE7 */
