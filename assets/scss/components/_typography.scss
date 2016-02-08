@@ -11,9 +11,9 @@
 		}
 	//Lead
 		&.lead,.intro {
-			font-size: 1.4em;
+			font-size: $lead-size;
 			font-weight:300;
-			color:lighten($font-color,20%);
+			//color:lighten($font-color,20%);
 			// Small only
 			@media only screen and (max-width: $medium-size) { 
 			font-size: 1.2em;	

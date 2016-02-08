@@ -1,0 +1,15 @@
+.block-11 {
+	.item {
+		padding: 5px;
+	}
+	a.fancybox {
+		display: block;
+		@include transition (200ms);
+		&:hover {
+			@include transition (400ms);
+			z-index: 3;
+			position: relative;
+			opacity: 0.8;
+		}
+	}	
+}

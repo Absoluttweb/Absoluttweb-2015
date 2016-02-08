@@ -1,4 +1,6 @@
 
+@import "../../scss/_variables";
+
 @mixin apply_transition($transition-property, $transition-duration, $transition-timing) {
   transition-property: $transition-property;transition-duration: $transition-duration;-moz-transition-property:$transition-property;-moz-transition-duration: $transition-duration;-webkit-transition-property:$transition-property;-webkit-transition-duration: $transition-duration;-o-transition-property:$transition-property;-o-transition-duration: $transition-duration;-ms-transition-property:$transition-property;
   -ms-transition-duration: $transition-duration;-ms-transition-timing-function:$transition-timing;
@@ -244,4 +246,6 @@
   left:50%; top:50%;
   transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
+  width: $page-width - ($column-gutter*2);
+  max-width:80%;
 }

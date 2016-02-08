@@ -117,10 +117,10 @@ $info-bar-tab-display: block; //block or None
 		text-transform: uppercase;
 		font-weight: $header-weight-thick;
 		font-size: 0.85em;
-		// ONLY Small
-		@media only screen and (max-width: medium-size) {
+		@media only screen and (max-width: $medium-size) {
 			display:none;
 		}
+		
 	}
 	.ib-container {
 		padding: 15px 15px 45px 15px;

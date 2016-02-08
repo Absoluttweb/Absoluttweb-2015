@@ -33,13 +33,13 @@
     max-width: 1580px;
     margin-left: auto;
     margin-right: auto; }
-  .band.bg-img {
+  .band.bg-img, .band.band-img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
-    .band.bg-img.fixed {
+    .band.bg-img.fixed, .band.band-img.fixed {
       background-attachment: fixed; }
-    .band.bg-img.darken:before {
+    .band.bg-img.darken:before, .band.band-img.darken:before {
       content: " ";
       display: block;
       position: absolute;
@@ -762,35 +762,31 @@ ul, ol {
 ==================================== */
 h2.logo {
   position: relative;
-  margin: 35px 0;
-  z-index: 1; }
+  margin: 35px auto;
+  z-index: 1;
+  width: 100%; }
   @media only screen and (max-width: 1180px) {
     h2.logo {
-      margin-top: 35px;
-      margin-bottom: 35px; } }
+      margin-top: 24.5px;
+      margin-bottom: 24.5px; } }
   h2.logo a {
-    display: block;
+    display: inline-block;
     height: 45px;
     width: 220px;
     background-size: contain;
     background-position: center center;
     background-image: url(/img/theme/logo.png);
     background-repeat: no-repeat;
-    font: 0/0 a;
     text-shadow: none;
     color: transparent; }
+    @media only screen and (max-width: 1180px) {
+      h2.logo a {
+        height: 31.5px;
+        width: 154px; } }
   h2.logo.transparent a {
     background-image: url(/img/theme/logo-transparent.png); }
   h2.logo.invert a {
     background-image: url(/img/theme/logo-invert.png); }
-  h2.logo.left {
-    max-width: 100%;
-    width: 220px; }
-    h2.logo.left a {
-      background-position: center left; }
-      @media only screen and (max-width: 1180px) {
-        h2.logo.left a {
-          height: 45px; } }
 
 /* Sticky and Clone Top Navigation
 ================================================================ */
@@ -814,9 +810,9 @@ h2.logo {
   padding-right: 0;
   opacity: 1; }
   .band.clone.cloned h2.logo-left a {
-    height: 45px;
-    margin-top: 35px;
-    margin-bottom: 35px; }
+    height: 31.5px;
+    margin-top: 24.5px;
+    margin-bottom: 24.5px; }
   .band.clone.cloned ul.sf-menu {
     margin-top: 32.5px; }
 
@@ -838,20 +834,20 @@ h2.logo {
 ====================================================== */
 a.animated-burger {
   display: block;
-  color: #202020;
+  color: white;
   float: right; }
 
 a.burger, a.top-icon {
   display: block;
-  color: #202020;
-  line-height: 115px;
-  height: 115px;
+  color: white;
+  line-height: 80.5px;
+  height: 80.5px;
   width: 60px;
   text-align: center;
   font-size: 28px;
   margin: 0 auto; }
   a.burger.active, a.burger:hover, a.burger:focus, a.top-icon.active, a.top-icon:hover, a.top-icon:focus {
-    color: #202020; }
+    color: white; }
 
 input.q-phone {
   background: white; }
@@ -1161,7 +1157,7 @@ nav.breadcrumbs {
   position: relative;
   margin-bottom: 20px; }
   .card .panel-content, .news-card .panel-content, .panel .panel-content {
-    padding: 30px 20px; }
+    padding: 30px 30px; }
   .card.panel-light-grey, .panel-light-grey.news-card, .panel.panel-light-grey {
     background-color: #EBEFF4; }
 
@@ -1335,7 +1331,7 @@ nav.breadcrumbs {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 0.85em; }
-    @media only screen and (max-width: medium-size) {
+    @media only screen and (max-width: 760px) {
       .info-bar a.ib-tab, .info-bar-left a.ib-tab, .info-bar-right a.ib-tab {
         display: none; } }
   .info-bar .ib-container, .info-bar-left .ib-container, .info-bar-right .ib-container {
@@ -1536,9 +1532,8 @@ p {
     p {
       line-height: 1.35em; } }
   p.lead, p .intro {
-    font-size: 1.4em;
-    font-weight: 300;
-    color: #838383; }
+    font-size: 1.2em;
+    font-weight: 300; }
     @media only screen and (max-width: 760px) {
       p.lead, p .intro {
         font-size: 1.2em; } }

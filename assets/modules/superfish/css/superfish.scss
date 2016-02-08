@@ -47,9 +47,7 @@ ul.sf-menu {
 	@else if $nav-logo-adjust == false {
 		margin-top:0;
 	}
-	@if $nav-position == left {float:left;}
-	@else if $nav-position == right {float:right;}
-	@else if $nav-position == center {
+	.centered {
 		display:table;
 		float:none;
 		margin:0 auto;

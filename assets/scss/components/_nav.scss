@@ -2,41 +2,34 @@
 ==================================== */
 h2.logo {
 	position:relative;
-  @if $logo-position == center {margin: $logo-margin auto}
-  @else {margin: $logo-margin 0}
-	//max-width:75%;
+  margin: $logo-margin auto;
   z-index:1;
+  width:100%;
 	@media only screen and (max-width: $large-size) {
 		margin-top: $logo-margin * $sticky-shrink;
 		margin-bottom: $logo-margin * $sticky-shrink;
 	}
 	a {
-		display: block;
+		display: inline-block;
 		height: $logo-height;
-    width: $logo-width; 
+    width: $logo-width;
 		background-size: contain;
 		background-position: center center;
 		background-image: url(/img/theme/logo.png);
 		background-repeat: no-repeat;
-		font: 0/0 a;
+		//font: 0/0 a;
 		text-shadow: none;
 		color: transparent;
+    @media only screen and (max-width: $large-size) {
+        height: $logo-height * $sticky-shrink;
+        width: $logo-width * $sticky-shrink;
+      }
 	}
 	&.transparent a {
 		background-image: url(/img/theme/logo-transparent.png);
 	}
 	&.invert a {
 		background-image: url(/img/theme/logo-invert.png);
-	}
-	&.left {
-		max-width: 100%;
-		width: $logo-width;
-		a {
-			background-position: center left;
-			@media only screen and (max-width: $large-size) {
-				height: $logo-height * $sticky-shrink;
-			}
-		}
 	}
 }
 

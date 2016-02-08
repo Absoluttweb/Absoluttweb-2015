@@ -1,0 +1,54 @@
+.block-13 {
+	.loader {
+		visibility: hidden;
+	}
+
+	a {
+		@include transition (100ms);
+		&:hover {
+			@include transform ($scale:1.05);
+			@include transition (300ms);
+			z-index: 2;
+
+		}
+		display: block;
+		padding: 8% 0;
+		position: relative;
+		h3,h4,p {
+			color: white;
+		}
+		h3 {
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: 1.25em;
+		}
+		h4 {
+			font-weight: 300;
+		}
+		img.rounded {
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			border: 1px solid $light-grey-color;
+			border-radius: 80px;
+			margin-bottom: 1em;
+		}
+		&.primary {
+			background-color: $primary-color;
+		}
+		&.dark-grey {
+			background-color: $dark-grey-color;
+		}
+		&.image {
+			background-size: cover;
+			background-position: center center;
+			h3 {
+				position: absolute;
+				top: 50%;
+				margin-top: -9px;
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}

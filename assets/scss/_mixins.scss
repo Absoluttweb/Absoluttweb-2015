@@ -17,6 +17,15 @@
 	transition: background ($speed) ease-in-out;
 }
 
+@mixin panel ($bg-color:white) {
+	background-color: $bg-color;
+	position: relative;
+	margin-bottom: 20px;
+		.panel-content {
+			padding: 30px 30px;
+		}
+	}
+
 @mixin transform($scale:1,$rotate:0deg,$translate-x:0px,$translate-y:0px,$skew-x:0deg,$skew-y:0deg) {
 	-moz-transform: scale($scale) rotate($rotate) translateX($translate-x) translateY($translate-y) skewX($skew-x) skewY($skew-y);
 	-webkit-transform: scale($scale) rotate($rotate) translateX($translate-x) translateY($translate-y) skewX($skew-x) skewY($skew-y);

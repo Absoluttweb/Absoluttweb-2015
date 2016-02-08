@@ -1,3 +1,70 @@
+/* Blocks
+================================================================ */
+.port-01 .panel {
+  position: relative;
+  padding-top: 50px; }
+.port-01 .icon {
+  display: block;
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: -10px;
+  left: 28px;
+  margin-left: -28px;
+  text-align: center;
+  line-height: 56px;
+  background-color: #5BA921; }
+  .port-01 .icon img {
+    width: 32px; }
+  .port-01 .icon .fa {
+    line-height: 56px; }
+
+#port-01 .item {
+  width: 50%;
+  padding: 10px; }
+  @media only screen and (max-width: 760px) {
+    #port-01 .item {
+      width: 100%; } }
+
+/* Background images
+================================================================ */
+.bg-img-1 {
+  background-image: url("/img/theme/bg_header.jpg"); }
+  @media only screen and (min-width: 760px) {
+    .bg-img-1 {
+      background-image: url("/img/theme/bg_header.jpg"); } }
+
+.bg-img-2 {
+  background-image: url("/img/theme/bg-climbing.jpg"); }
+  @media only screen and (min-width: 760px) {
+    .bg-img-2 {
+      background-image: url("/img/theme/bg-climbing.jpg"); } }
+
+.bg-img-3 {
+  background-image: url("/img/theme/bg-construction.jpg"); }
+  @media only screen and (min-width: 760px) {
+    .bg-img-3 {
+      background-image: url("/img/theme/bg-construction.jpg"); } }
+
+/* Theme styles
+================================================================ */
+.svg-header {
+  width: 100%;
+  height: 0px;
+  padding-bottom: 4%;
+  background-image: url("/img/theme/svg-line.svg");
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+#port-01 .item {
+  width: 100%; }
+  @media only screen and (min-width: 760px) {
+    #port-01 .item {
+      width: 50%; } }
+  @media only screen and (min-width: 1180px) {
+    #port-01 .item {
+      width: 33.33%; } }
+
 /* Custom Bands
 ================================================================ */
 .band-pretop {
@@ -50,38 +117,26 @@
 
 /* Header-01 - Header as Absoluttweb 2015
 ================================================================ */
-.header-01 {
+.header {
   overflow: hidden;
   margin: 0 0px 0px; }
-  .header-01 .container {
-    padding: 13% 0 13%; }
+  .header .container {
+    padding: 13% 0 25%; }
     @media only screen and (max-width: 760px) {
-      .header-01 .container {
+      .header .container {
         padding: 16% 0 35%; } }
-    .header-01 .container .header-type, .header-01 .container h1, .header-01 .container h2 {
-      color: #202020; }
-    .header-01 .container h1 {
-      padding-top: 3%;
-      font-size: 500%;
-      color: #5BA921; }
+    .header .container h1 {
+      padding-top: 3%; }
+    .header .container h2 {
+      padding-top: 7%; }
       @media only screen and (max-width: 1180px) {
-        .header-01 .container h1 {
+        .header .container h2 {
           font-size: 250%; } }
       @media only screen and (max-width: 760px) {
-        .header-01 .container h1 {
+        .header .container h2 {
           font-size: 200%;
           text-align: center; } }
-    .header-01 .container h2 {
-      padding-top: 7%;
-      font-size: 200%; }
-      @media only screen and (max-width: 1180px) {
-        .header-01 .container h2 {
-          font-size: 250%; } }
-      @media only screen and (max-width: 760px) {
-        .header-01 .container h2 {
-          font-size: 150%;
-          text-align: center; } }
-  .header-01 .tilt-top-box {
+  .header .tilt-top-box {
     -moz-transform: rotate(-4.2deg);
     -webkit-transform: rotate(-4.2deg);
     -o-transform: rotate(-4.2deg);
@@ -93,7 +148,7 @@
     position: absolute;
     bottom: 5%;
     left: -5%; }
-  .header-01 .tilt-bottom-box {
+  .header .tilt-bottom-box {
     -moz-transform: rotate(-3.5deg);
     -webkit-transform: rotate(-3.5deg);
     -o-transform: rotate(-3.5deg);
@@ -105,17 +160,40 @@
     position: absolute;
     bottom: -8%;
     left: -5%; }
-  .header-01 .small .header-container {
+  .header .small .header-container {
     padding: 8% 0 15%; }
     @media only screen and (max-width: 760px) {
-      .header-01 .small .header-container {
+      .header .small .header-container {
         padding: 8% 0 25%; } }
-  .header-01 .small .tilt-top-box {
+  .header .small .tilt-top-box {
     bottom: 12%;
     height: 8%; }
-  .header-01 .small .tilt-bottom-box {
+  .header .small .tilt-bottom-box {
     bottom: -16%;
     height: 32%; }
+
+.header .container {
+  padding: 13% 0 13%; }
+  .header .container h1 {
+    font-size: 400%; }
+    @media only screen and (max-width: 1180px) {
+      .header .container h1 {
+        font-size: 400%; } }
+    @media only screen and (max-width: 760px) {
+      .header .container h1 {
+        font-size: 200%;
+        text-align: center; } }
+  .header .container h2 {
+    padding-top: 7%;
+    font-size: 200%;
+    color: grey; }
+    @media only screen and (max-width: 1180px) {
+      .header .container h2 {
+        font-size: 250%; } }
+    @media only screen and (max-width: 760px) {
+      .header .container h2 {
+        font-size: 120%;
+        text-align: center; } }
 
 /* Custom Theme Styles and Widgets
 ================================================================ */
@@ -137,6 +215,28 @@
     /* Firefox */
     column-rule: 1px solid #cad5e2; }
     .large-col-3 h1, .large-col-3 h2, .large-col-3 h3, .large-col-3 h4, .large-col-3 p.lead {
+      -webkit-column-span: all;
+      /* Chrome, Safari, Opera */
+      column-span: all; } }
+
+@media only screen and (min-width: 1180px) {
+  .large-col-2 {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px;
+    /* Firefox */
+    column-gap: 40px;
+    -webkit-column-rule: 1px solid #cad5e2;
+    /* Chrome, Safari, Opera */
+    -moz-column-rule: 1px solid #cad5e2;
+    /* Firefox */
+    column-rule: 1px solid #cad5e2; }
+    .large-col-2 h1, .large-col-2 h2, .large-col-2 h3, .large-col-2 h4, .large-col-2 p.lead {
       -webkit-column-span: all;
       /* Chrome, Safari, Opera */
       column-span: all; } }
@@ -290,80 +390,19 @@
   .footer a, .footer p {
     color: #847676; }
 
-/* Custom Dropdown
-================================================================ */
-.dropdown-1 ul {
-  -webkit-border-radius: 3px;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius: 3px;
-  -moz-border-radius-topleft: 0;
-  border-radius: 3px;
-  border-top-left-radius: 0;
-  -webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
-  -moz-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
-  box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5); }
-.dropdown-1 li {
-  padding-bottom: 6px;
-  padding-top: 6px; }
-.dropdown-1 li img {
-  width: 30px;
-  height: 30px;
-  float: left;
-  margin: 0 12px 0 0;
-  clear: left; }
-.dropdown-1 p {
-  line-height: 12px;
-  margin: 0;
-  padding-top: 4px; }
-  .dropdown-1 p small {
-    color: #535353; }
-
-/* Background images
-================================================================ */
-.bg-img-01 {
-  background-image: url("/img/theme/bg_header.jpg"); }
-  @media only screen and (min-width: 760px) {
-    .bg-img-01 {
-      background-image: url("/img/theme/bg_header.jpg"); } }
-
 /* Custom HRs
+@mixin hr ($height:1px, $color:$hr-color, $pattern:none, $opacity:1)
 ================================================================ */
-.hr-1 {
-  height: 6px;
-  background-color: #EBEFF4;
-  background-image: url("/img/overlays/6.png");
-  opacity: 0.1; }
-
-.hr-2::after {
-  content: "";
-  display: block;
-  width: 25%;
-  height: inherit;
-  background: #cad5e2;
-  position: absolute;
-  left: 0px;
-  bottom: 0;
-  z-index: 2; }
-
-.hr-3::after {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 16px;
-  background: #5BA921;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -8px -8px 0 0;
-  z-index: 2;
-  -webkit-border-radius: 3px;
-  -mos-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px; }
-
-/* Custom Forms
+/* Custom Panels
+@mixin panel ($bg-color:white)
 ================================================================ */
+.panel-light-trans {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  margin-bottom: 20px; }
+  .panel-light-trans .panel-content {
+    padding: 30px 30px; }
+
 /* Custom Tabs
 ================================================================ */
 /* MEDIA QUERIES

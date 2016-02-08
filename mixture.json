@@ -1,7 +1,7 @@
 {
     "debug": true,
     "lintScripts": false,
-    "preprocessorLocations": ["assets/scss","assets/modules","assets/styleguide"],
+    "preprocessorLocations": ["assets/scss","assets/modules"],
     "preprocessorScriptOutput": null,
     "preprocessorStyleOutput": null,
     "projectName": "Blocks",
