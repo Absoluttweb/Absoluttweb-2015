@@ -201,7 +201,7 @@ nav.breadcrumbs {
   position: absolute;
   height: 4px;
   width: 100%;
-  background: #252A2E;
+  background: $burger-color;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -213,6 +213,11 @@ nav.breadcrumbs {
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
   }
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+  &.open span {
+    background-color: $burger-color-active;
+  }
+}
 
 /* Icon 1 */
 #nav-icon1 span:nth-child(1) {

@@ -147,28 +147,25 @@ form.form-02 input:not([type="submit"]) {
     #port-01 .item {
       width: 100%; } }
 
-.port-02 .panel {
-  border: 2px solid #d9d8d2; }
-
 /* Background images
-====================================== */
-.bg-img-01 {
+================================================================ */
+.bg-placeholder-1 {
   background-image: url("/img/globals/placeholder-01.jpg"); }
   @media only screen and (min-width: 760px) {
-    .bg-img-01 {
+    .bg-placeholder-1 {
       background-image: url("/img/globals/placeholder-01.jpg"); } }
 
-.bg-img-02 {
+.bg-placeholder-2 {
   background-image: url("/img/globals/placeholder-05.jpg"); }
   @media only screen and (min-width: 760px) {
-    .bg-img-02 {
+    .bg-placeholder-2 {
       background-image: url("/img/globals/placeholder-05.jpg"); } }
 
-.bg-img-03 {
-  background-image: url("/img/globals/placeholder-05.jpg"); }
+.bg-placeholder-3 {
+  background-image: url("/img/globals/placeholder-07.jpg"); }
   @media only screen and (min-width: 760px) {
-    .bg-img-03 {
-      background-image: url("/img/globals/placeholder-05.jpg"); } }
+    .bg-placeholder-3 {
+      background-image: url("/img/globals/placeholder-07.jpg"); } }
 
 /* Code used in Styleguide
 =================================== */

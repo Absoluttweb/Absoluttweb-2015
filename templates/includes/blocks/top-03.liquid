@@ -3,7 +3,7 @@ centered navbar with no logo, and an animated burger
 Options: FIXED, CLONE
 -->
 
-<div class="band top-03">
+<div class="band band-top top-03">
   <div class="row">
     <div class="large-12 columns text-center">
       <nav class=" hide-for-small">
@@ -11,11 +11,13 @@ Options: FIXED, CLONE
           {% include 'basics/menu' %}
         </ul>
       </nav>
-      <div id="nav-icon4" class="show-for-small" data-trigger="aa-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <a data-trigger="aa-menu" style="display:inline-block;padding:1rem">
+        <div id="nav-icon4" class="show-for-small">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
     </div>
   </div>
 </div>
