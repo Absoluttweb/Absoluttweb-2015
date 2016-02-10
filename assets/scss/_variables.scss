@@ -1,5 +1,11 @@
 @import "_colors.scss";
 
+//Fontkit
+//-------------------------------------------------------------------------------------
+
+//@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,400italic,600,300);
+@import "fontkits/_fokushms.scss";
+
 //Pagesizes
 //-------------------------------------------------------------------------------------
 $page-width: 1180px;
@@ -21,21 +27,39 @@ $frame-size: 30%;
 
 //Type and elements
 //-------------------------------------------------------------------------------------
-$font-family: 'Open Sans','Helvetica Neue',Helvetica,Helvetica,Arial,sans-serif;
-$font-handwriting: 'Playfair Display', serif;
+$font-family: 'Open Sans','Helvetica Neue',Helvetica,Helvetica,Arial,sans-serif !default;
+$font-weight: 400 !default;
+$font-thin: 300 !default;
+$font-thick: 800 !default;
+$lead-size: 1.2em !default;
+$strong-weight: 600 !default;
+$font-handwriting: $font-family !default;
 $font-size: 14px;
 $font-color: #505050;
-$font-weight: 400;
-$font-thin: 300;
-$font-thick: 800;
 $font-line-height: 1.62em;
-$lead-size: 1.2em;
-$strong-weight: 600;
 $strong-color: $dark-grey-color;
 $link-color: $primary-color;
 $link-weight: $font-weight;
 $subtle-lighten: 50%;
 
+//Header
+//-------------------------------------------------------------------------------------
+$headers: h1,h2,h3,h4,h5,h6;
+$header-family: $font-family !default;
+$header-weight: 800 !default;
+$header-weight-thin: 400 !default;
+$header-weight-thick: 900 !default;
+$header-letter-spacing: 0.25px !default;
+$header-text-transform: uppercase !default;
+$header-color: $dark-grey-color;
+
+$subheader-family: $header-family !default;
+$subheader-weight: 300 !default;
+$subheader-size: 13px;
+$subheader-style: normal;
+$subheader-color: lighten($font-color, 20%);
+$subheader-letter-spacing: 0;
+$subheader-text-transform:uppercase;
 
 //logo
 //-------------------------------------------------------------------------------------
@@ -53,15 +77,15 @@ $nav-padding: 1em; // Padding of the LI elements
 $nav-height: 50px; // height of superfish UL. Used to calculate correct
 $sticky-shrink: 0.7; // How much logo and margins will shrink on small screens
 
+$nav-family: $font-family !default;
+$nav-font-size: 14px !default;
+$nav-font-weight: 600 !default;
+$nav-text-transform: uppercase !default;
+$nav-letter-spacing: 1px !default;
 $nav-border-color: $light-grey-color;
 $nav-border-weight: 0px;
-$nav-family: $font-family;
 $nav-bg: transparent;
 $nav-color: white;
-$nav-font-size: 14px;
-$nav-font-weight: 600;
-$nav-text-transform: uppercase;
-$nav-letter-spacing: 1px;
 
 		//Active
 		$nav-color-active: $primary-color;
@@ -76,7 +100,6 @@ $nav-letter-spacing: 1px;
 		$nav-border-size-active: 0;
 
 		//Sublevels
-
 		$nav-sublevel-bg: $light-grey-color;
 		$nav-sublevel-bg-hover: $light-grey-color;
 		$nav-sublevel-bg-active: $light-grey-color;
@@ -89,6 +112,28 @@ $nav-letter-spacing: 1px;
 		$nav-sublevel-font-weight: 300;
 
 
+//AA Menu
+//-------------------------------------------------------------------------------------
+$aa-menu-show-close: false;
+$aa-menu-height: 350px;
+$aa-menu-text-align: center;
+$aa-menu-bullets: false;
+$aa-menu-bg-image: true;
+$aa-menu-bg: #E4E3DF;
+$aa-menu-line-difference:5%;
+$aa-menu-font-color: $dark-grey-color;
+$aa-menu-close-color: #ffffff;
+
+$aa-menu-font-family: 'Montserrat';
+$aa-menu-font-size: 18px;
+$aa-menu-font-weight: 500;
+$aa-menu-letter-spacing: $nav-letter-spacing;
+	
+	//Active
+	$aa-menu-font-color-active: $primary-color;
+	$aa-menu-font-weight-active: 900;
+
+
 //Burger Icon
 //-------------------------------------------------------------------------------------
 $burger-position: center;
@@ -98,25 +143,6 @@ $burger-color: white;
 $burger-color-active: white;
 $burger-border: false;
 $burger-border-color: #3B4761;
-
-
-//AA Menu
-//-------------------------------------------------------------------------------------
-$aa-menu-text-align: center;
-$aa-menu-bullets: false;
-$aa-menu-bg-image: false;
-$aa-menu-bg: $dark-grey-color;
-$aa-menu-line-difference:5%;
-$aa-menu-font-color: $light-grey-color;
-$aa-menu-close-color: #ffffff;
-$aa-menu-font-family: $font-family;
-$aa-menu-font-size: 12px;
-$aa-menu-font-weight: 500;
-$aa-menu-height: 650px;
-$aa-menu-letter-spacing: $nav-letter-spacing;
-	//Active
-	$aa-menu-font-color-active: $third-color;
-	$aa-menu-font-weight-active: 900;
 
 
 //Sticky Nav
@@ -134,24 +160,6 @@ $phone-font-size: 0.9em;
 //-------------------------------------------------------------------------------------
 $hr-color: $light-grey-color;
 $hr-size: 1px;
-
-
-//Header
-//-------------------------------------------------------------------------------------
-$header-family: $font-family;
-$header-weight: 800;
-$header-weight-thin: 400;
-$header-weight-thick: 900;
-$header-color: $dark-grey-color;
-$header-letter-spacing: 0.25px;
-$header-text-transform: normal;
-$subheader-family: $header-family;
-$subheader-size: 13px;
-$subheader-style: normal;
-$subheader-weight: 300;
-$subheader-color: lighten($font-color, 20%);
-$subheader-letter-spacing: 0;
-$subheader-text-transform:uppercase;
 
 
 //Header sizes (Large Screen. Small is adjusted by percent)
@@ -257,7 +265,7 @@ $list-divider: 1px solid $light-grey-color;
 
 //Sticky Footer
 //-------------------------------------------------------------------------------------
-$footer-height: 88px; // Height of the footer
+$footer-height: 123px; // Height of the footer
 
 
 //Gmap

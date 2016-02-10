@@ -43,7 +43,7 @@
 			@include button($button-color, $link-color);
 		}
 		&.btn-light-grey {
-			@include button($medium-grey-color, $light-grey-color);
+			@include button($link-color, $light-grey-color);
 		}
 		&.btn-black {
 			@include button($light-grey-color, #000000);

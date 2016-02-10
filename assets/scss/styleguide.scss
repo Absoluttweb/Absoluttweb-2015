@@ -10,7 +10,13 @@
 @import "../scss/blocks/_block-13.scss";
 @import "../scss/blocks/_form-02.scss";
 @import "../scss/blocks/_port-01.scss";
-@import "../scss/blocks/_port-02.scss";
+
+
+.port-02 {
+	.panel {
+		border: 2px solid darken($light-grey-color,5%);
+	}
+}
 
 /* Background images
 ====================================== */

@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,400italic,600,300|Playfair+Display:400,700|Montserrat);
 /* Blocks with specific styles 
 ====================================*/
 .block-01 .img {
@@ -95,7 +96,7 @@
     display: inline-block;
     width: 80px;
     height: 80px;
-    border: 1px solid #EBEFF4;
+    border: 1px solid #E5E4E0;
     border-radius: 80px;
     margin-bottom: 1em; }
   .block-13 a.primary {
@@ -147,7 +148,7 @@ form.form-02 input:not([type="submit"]) {
       width: 100%; } }
 
 .port-02 .panel {
-  border: 2px solid #dbe2eb; }
+  border: 2px solid #d9d8d2; }
 
 /* Background images
 ====================================== */
@@ -188,7 +189,7 @@ code {
   clear: both;
   height: auto;
   font-family: Consolas, monospace;
-  border: 1px solid #EBEFF4;
+  border: 1px solid #E5E4E0;
   background: #f7f7f7;
   padding: 1.62em;
   border-radius: 3px;
@@ -222,7 +223,7 @@ code {
   .colorbox.secondary {
     background-color: #FB970D; }
   .colorbox.light-grey {
-    background-color: #EBEFF4; }
+    background-color: #E5E4E0; }
   .colorbox.medium-grey {
     background-color: #A4A4A4; }
   .colorbox.dark-grey {
