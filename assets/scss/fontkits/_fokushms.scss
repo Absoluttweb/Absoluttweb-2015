@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,400italic,600,300|Playfair+Display:400,700|Montserrat);
+
+$font-family: 'Open Sans','Helvetica Neue',Helvetica,Helvetica,Arial,sans-serif;
+$font-handwriting: 'Playfair Display', serif;
+$font-weight: 400;
+$font-thin: 300;
+$font-thick: 800;
+$lead-size: 1.2em;
+$strong-weight: 600;
+
+$header-family: $font-family;
+$header-weight: 800;
+$header-weight-thin: 400;
+$header-weight-thick: 900;
+$header-letter-spacing: 0.25px;
+$header-text-transform: uppercase;
+
+$subheader-family: $header-family;
+$subheader-weight: 300;
+
+$nav-family: $font-family;
+$nav-font-size: 14px;
+$nav-font-weight: 600;
+$nav-text-transform: uppercase;
+$nav-letter-spacing: 1px;

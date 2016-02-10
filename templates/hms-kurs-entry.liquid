@@ -1,0 +1,95 @@
+{% layout 'layout' %}
+
+{% block header %}
+	{% include 'theme/header-pages' %}
+{% endblock %}
+
+{% block main %}
+
+<div class="band pad-top pad-bot-half">
+	<div class="row">
+
+		<div class="medium-6 columns">
+			<img src="/img/theme/laptop-screen.jpg" data-sr="wait 200ms then scale-up 50%" class="marg-bot">
+			<div class="figcaption"><p>Dette kurset krever at man har Adobe FlashPlayer installert. <br><a  href="https://get.adobe.com/flashplayer/" target="_blank">Sjekk om du har Flash Player</a>.</p>
+			<p>
+			<p><a href="/img/theme/kurs-for-ledere.swf" class="btn btn-primary with-icon" target="_blank">Start testen <i class="fa fa-play"></i> </a></p>
+			</div>
+		</div>
+		<div class="medium-6 columns">
+			<div class="row">
+				<div class="large-12 columns">
+					<h3 class="marg-bot-half">Kun kr. 690,- eks-mva</h3>
+
+					<p>Du er n&aring; i ferd med &aring; starte v&aring;rt HMS Kurs for daglig leder.&nbsp;Her finner du 30 sider med HMS pensum som du b&oslash;r lese igjennom f&oslash;r du tar HMS testen.</p>
+<p>Etter du har lest selve kurset g&aring;r du til Ta HMS Testen registrerer firmainformasjonen din og svarer p&aring; noen sp&oslash;rsm&aring;l med svaralternativer.&nbsp;<br><strong>Slik fungerer kurset:</strong></p>
+<ol>
+	<li>Start testen. Du vil bli presentert med ett interaktivt kurs, hvor du selv bestemmer tempoet.</li>
+	<li>Svar på spørsmålene på slutten av testen. Du må ha 75% korrekt beswvarelse for å bestå.</li>
+	<li>Ved bestått test får du oppgitt en kode. Fyll inn skjema under, og vi vil returnere kursbevis og faktura.</li>
+</ol>
+<h3 class="handwriting">Lykke til!</h3>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div class="band band-light-grey pad">
+	<div class="row">
+		<div class="large-12 columns medium-text-center">
+			<h1 class="thick">Har du bestått?</h1>
+			<p class="lead marg-bot-2x">Fyll inn kode og dine personalia i skjemaet under. Vil vil så returnere svaret med ditt kursbevis og faktura. Alle spørsmål kan sendes til <a href="mailto:post@fokushms.no">post@fokushms.no</a>
+			</p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="large-10 large-centered columns">
+					<form class="form-01">
+						     <div class="row">
+						    <div class="medium-4 columns">
+						       <label for="name">Navn *</label>
+						      <input id="name" name="name" type="text" placeholder="" required/>
+						    </div>
+						    <div class="medium-4 columns">
+						      <label for="tel">Telefon*</label>
+						      <input id="tel" name="tel" type="tel" placeholder="" required/>
+						    </div>
+						    <div class="medium-4 columns">
+						     <label for="email">Epost *</label>
+						       <input id="email" name="email" type="email" placeholder="" required/> 
+						    </div>
+						    <div class="medium-12 columns">
+						      <label for="code">Kode *</label>
+						      <input id="code" name="code" type="text" placeholder="skriv inn kurskoden du fikk her" required/>
+						    </div>
+						    
+						  </div>
+						 <div class="row">
+						  	<div class="medium-12 columns">
+						  		<label for="message">Firmadetaljer *</label>
+						  		<textarea id="message" name="message" rows="3" placeholder="Firmanavn, adresse mm. Skriv detaljene du ønsker å ha med på faktura." required></textarea>	
+						  	</div>
+
+						  </div>
+
+						  <div class="row">
+						  	<div class="medium-12 columns">
+						  		<input type="submit" value="Send" class="btn btn-3 no-marg">
+						  			
+						  	</div>
+						  </div>
+						</form>	
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block fullscreen %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}
