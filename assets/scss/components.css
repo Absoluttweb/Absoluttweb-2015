@@ -835,12 +835,12 @@ h2.logo {
 ====================================================== */
 a.animated-burger {
   display: block;
-  color: white;
+  color: #252A2E;
   float: right; }
 
 a.burger, a.top-icon {
   display: block;
-  color: white;
+  color: #252A2E;
   line-height: 80.5px;
   height: 80.5px;
   width: 60px;
@@ -848,7 +848,7 @@ a.burger, a.top-icon {
   font-size: 28px;
   margin: 0 auto; }
   a.burger.active, a.burger:hover, a.burger:focus, a.top-icon.active, a.top-icon:hover, a.top-icon:focus {
-    color: white; }
+    color: #252A2E; }
 
 input.q-phone {
   background: white; }
@@ -939,6 +939,9 @@ nav.breadcrumbs {
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out; }
+
+#nav-icon1.open span, #nav-icon2.open span, #nav-icon3.open span, #nav-icon4.open span {
+  background-color: red; }
 
 /* Icon 1 */
 #nav-icon1 span:nth-child(1) {

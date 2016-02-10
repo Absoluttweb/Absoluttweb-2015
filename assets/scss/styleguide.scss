@@ -11,34 +11,20 @@
 @import "../scss/blocks/_form-02.scss";
 @import "../scss/blocks/_port-01.scss";
 
-
-.port-02 {
-	.panel {
-		border: 2px solid darken($light-grey-color,5%);
+/* Background images
+================================================================ */
+@each $number,$image,$format in 
+(1,placeholder-01,jpg),
+(2,placeholder-05,jpg),
+(3,placeholder-07,jpg)
+ {
+	.bg-placeholder-#{$number} {
+		background-image: url("/img/globals/#{$image}.#{$format}");
+		@media only screen and (min-width: $medium-size) {
+			background-image: url("/img/globals/#{$image}.#{$format}");
+		};
 	}
 }
-
-/* Background images
-====================================== */
-.bg-img-01 {
-	background-image: url("/img/globals/placeholder-01.jpg");
-	@media only screen and (min-width: $medium-size) {
-		background-image: url("/img/globals/placeholder-01.jpg");
-	};
-}
-.bg-img-02 {
-	background-image: url("/img/globals/placeholder-05.jpg");
-	@media only screen and (min-width: $medium-size) {
-		background-image: url("/img/globals/placeholder-05.jpg");
-	};
-}
-.bg-img-03 {
-	background-image: url("/img/globals/placeholder-05.jpg");
-	@media only screen and (min-width: $medium-size) {
-		background-image: url("/img/globals/placeholder-05.jpg");
-	};
-}
-
 
 /* Code used in Styleguide
 =================================== */
