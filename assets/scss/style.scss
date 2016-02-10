@@ -8,7 +8,13 @@
 /* Background images
 ================================================================ */
 
-@each $number,$image,$format in (1,bg_header,jpg),(2,bg-climbing,jpg),(3,bg-construction,jpg)
+@each $number,$image,$format in 
+(1,bg_header,jpg),
+(2,bg-climbing,jpg),
+(3,bg-construction-pin,jpg),
+(4,bg-heaven,jpg),
+(5,bg-desk,jpg),
+(6,bg-contact,jpg)
  {
 	.bg-img-#{$number} {
 		background-image: url("/img/theme/#{$image}.#{$format}");
@@ -41,6 +47,30 @@
 			width:33.33%;
 		}
 		}
+.price-label {
+	background-color: $dark-grey-color;
+    padding: 0.75rem;
+    color: #FFF;
+    font-size: 1.25em;
+    font-weight: 900;
+    border-radius: 5px;
+    margin: 0 1.5em 1.5em;
+    float: right;
+    @include transition (200ms);
+    @media only screen and (max-width: $medium-size) {
+    	width:100%;
+    	margin:0;
+    	margin-bottom: 1.5em;
+    }
+    span {
+    	font-weight: 400;
+    }
+    &:hover {
+    	color: white;
+    	@include transform (1.2);
+    	@include transition (300ms);
+    }
+}
 
 /* Custom Bands
 ================================================================ */
@@ -75,20 +105,11 @@
 	}
 }
 
-/* PORT 02 - Panels equalized in 2 columns, with stroke
-================================================================ */
-.port-02 {
-	.panel {
-		border: 2px solid darken($light-grey-color,5%);
-	}
-}
-
 /* Header-01 - Header as Absoluttweb 2015
 ================================================================ */
 @import "blocks/_header";
 .header { 
 	.container {
-
 		padding: 13% 0 13%;
 		h1 {
 			font-size: 400%;
@@ -105,7 +126,10 @@
 		h2 {
 			padding-top: 7%;
 			font-size: 200%;
-			color:grey;
+			color:$font-color;
+			font-weight: 600;
+			text-transform: none;
+			letter-spacing: -0.05em;
 			
 			// Medium only
 			@media only screen and (max-width: $large-size) {
@@ -116,6 +140,12 @@
 				font-size: 120%;
 				text-align: center;
 			}
+		}
+	}
+	&.pages {
+		border-bottom: 2px solid darken($light-grey-color,5%); 
+		.container {
+			padding: 18% 0;
 		}
 	}
 }
@@ -231,13 +261,27 @@
 }
 
 
+/*Forms
+=============================================================== */
+form.form-02 {
+	textarea,input:not([type="submit"]) {
+		border-top-width: 0; 
+		border-right-width: 0;
+		border-left-width: 0;
+		padding: 0;
+	}
+	input:not([type="submit"]) {
+		height: 2em;
+	}
+}
+
 /* Footer
 ================================================================ */
 .footer {
-	background-color: black;
-	padding: 2rem 0;
+	background-color: #202020;
+	padding: 24px 0 80px;
 	a,p {
-		color: #847676;
+		color: lighten($font-color,20%);
 	}
 }
 
@@ -251,10 +295,32 @@
 .panel-light-trans {
 	@include panel(rgba(255,255,255,0.8));
 }
-
-/* Custom Tabs
+.panel-courses{
+	@include panel($light-grey-color);
+	border: 2px solid darken($light-grey-color,5%);
+	a,a:hover {
+		color:$font-color;
+	}
+}
+.panel-ebooks {
+	@include panel($light-grey-color);
+	border: 2px solid darken($light-grey-color,5%);
+}
+/* Title with icon and stroke
 ================================================================ */
+h4.stroke {
+	border-bottom: 2px solid $primary-color;
+	i.fa {
+		margin-right: 10px
+	}
+}
 
+/* Link with stroke
+================================================================ */
+.link-stroke {
+	font-size: 2em;
+	border-bottom: 2px solid $link-color;
+}
 
 /* MEDIA QUERIES
 ============================================================ */

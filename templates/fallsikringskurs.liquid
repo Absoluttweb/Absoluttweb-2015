@@ -1,114 +1,125 @@
 {% layout 'layout' %}
 
+{% block slidein %}{% endblock %}
+
 {% block header %}
-<div class="band band-img bg-img-2  header">
-  <div class="overlay" style="opacity:0.8;background-color:white"></div>
-    <div class="row">
-      <div class="medium-8 columns">
-        <div class="container">   
-          <h1>Fallsikringskurs - HMS</h1>
-        </div>
-      </div>
-
-    </div>
-	<!--<div class="tilt-top-box" style="background-color:#CFA08F"></div>
-	<div class="tilt-bottom-box" style="background-color:#F1F1EF"></div>-->
-</div>
-
-<div class="svg-header"></div>
+{% include 'theme/header-pages' %}
 {% endblock %}
 
 {% block main %}
 
-<div class="band pad-top-half pad-bot block-08">
+<div class="band pad-top pad-bot-half">
 	<div class="row">
-		<div class="large-12 columns large-col-2 centered">
+		<div class="medium-4 columns medium-push-8 text-center">
+			<img src="/img/theme/worker.png" data-sr="wait 200ms then scale-up 50%" style="max-height:400px">
+		</div>
+		<div class="medium-8 medium-pull-4 columns">
 			
-			<h3>Praktisk HMS kurs for fallsikring<span class="subheader">Etter fagplan fra Samarbeid og sikkerhet</span></h3>
+					<h3><span class="subheader">Etter fagplan fra Samarbeid og sikkerhet</span>HMS kurs for fallsikring</h3>
 
-			<p>Dette er ett praktisk bedriftsinternt fallsikringskurs, som går over ca. 4 timer. Det kan gjennomføres på både norsk og engelsk.</p>
-			<p>FokusHMS kan gjennomføre kurset hos bedrifter i Bergen og omegn, eller ved våre lokaler på Laksevåg.</p>
-			<blockquote>Vi er veldig fornøyd med innholdet i kurset og tjenesten fra FokusHMS for vår internopplæring.<br><small>Rune Nedreaas - Noryards Bmv AS</small></blockquote>
-			<h5>Bedriftsintern fallsikringskurs, 4 timer</h5>
-			<p>Etter fagplan fra samarbeid for sikkerhet. En enklere fallsikringsopplæring som gir opplæring i det fallsikringsutstyret bedriften bruker. Inneholder ikke opplæring i høyderedning.</p>
+					<p>Dette er ett praktisk bedriftsinternt fallsikringskurs, som går over ca. 4 timer. Det kan gjennomføres på både norsk og engelsk.</p>
+					<p>FokusHMS kan gjennomføre kurset hos bedrifter i Bergen og omegn, eller ved våre lokaler på Laksevåg.</p>
+					
+					<h5>Bedriftsintern fallsikringskurs, 4 timer</h5>
+					<p>Etter fagplan fra samarbeid for sikkerhet. En enklere fallsikringsopplæring som gir opplæring i det fallsikringsutstyret bedriften bruker. Inneholder ikke opplæring i høyderedning.</p>
 
-			<p>Omhandler kun bruk av det fallsikringsutstyret som er på arbeidsplassen. Det er i hovudsak beregnet på personell som skal utføre kortvarige arbeidsoppdrag som krever personlig verneutstyr mot fall.</p>
-			<h5>Kurset er i 3 deler:</h5>
-			<ul class="bullet">
-				<li>Teori</li>
-				<li>Praksis</li>
-				<li>Skriftlig prøve</li>
+					<p>Omhandler kun bruk av det fallsikringsutstyret som er på arbeidsplassen. Det er i hovudsak beregnet på personell som skal utføre kortvarige arbeidsoppdrag som krever personlig verneutstyr mot fall.</p>
+					<h5>Kurset er i 3 deler:</h5>
+					<ul>
+						<li>Teori</li>
+						<li>Praksis</li>
+						<li>Skriftlig prøve</li>
+					</ul>	
+			
+			
+		</div>
+		
+	</div>
+</div>
+
+<div class="band band-white pad-bot">
+	<div class="row" data-equalizer>
+
+		<div class="large-4 columns" data-equalizer-watch>
+			<h4 class="stroke"><i class="fa fa-book fa-bg-color-primary fa-fixed fa-color-white"></i>Teoretisk del</h4>
+			<p>Den praktiske delen inneholder dette som vi må skrive her i korte drag.</p>
+			<ul>
+				<li>Kort om lover og regler</li>
+				<li>Kunnskap om personlig verneutstr</li>
+				<li>Risikohåndtering</li>
+				<li>Personlig fallforhindrende tiltak og forankringer</li>
+				<li>Tiltak for å dempe konsekvensene av fall</li>
+				<li>Kunnskap om beredskap ved arbeid i høyden</li>
+				<li>Kunnskap omm falsikringsutyr</li>
+				<li>Kunnskap om krav til brukerkontroll av utstyr</li>
+			</ul>	
+		</div>
+
+		<div class="large-4 columns" data-equalizer-watch>
+			<h4 class="stroke"><i class="fa fa-wrench fa-bg-color-primary fa-fixed fa-color-white"></i>Praktisk del</h4>
+			<p>Den praktiske delen inneholder dette som vi må skrive her i korte drag.</p>
+			<ul>
+				<li>Brukerkontroll av fallsikrinsutstyret</li>
+				<li>Kameratsjeken</li>
+				<li>Valg av festepunkt</li>
+				<li>Fallsikringsseler</li>
+				<li>Aktivt utstyr - Støttestropp</li>
+				<li>Passivt utstyr</li>
+				<li>Relevant ekstra utstyr</li>
 			</ul>
-			
 		</div>
+
+		<div class="large-4 columns" data-equalizer-watch>
+			<h4 class="stroke"><i class="fa fa-list-ol fa-bg-color-primary fa-fixed fa-color-white"></i>Skriftlig prøve</h4>
+			<p>Denne prøven er en multiple choice oppgave.</p>
+			<ul>
+				<li>Totalt 25 spørsmål</li>
+				<li>75% korrekt besvarelse for bestått kurs</li>
+
+			</ul>
+		</div>
+
 	</div>
 </div>
 
-<div class="band pad bg-img bg-img-2 port-01">
-	<div class="overlay" style="background-color:#000;opacity:0.9"></div>
+<div class="band band-light-grey pad">
 	<div class="row">
-		<div class="large-12 columns">
-			<div id="port-01" class="isotope clearfix">
+		<div class="medium-4 columns">
+			<h3>Kun kr: 1290,- per person</h3>
+			<p>Alle praktiske kurs kan gjennomføres i deres lokaler, eller på Laksevåg i Bergen. <br>Minimum 8 stk per kurs</p>
+			<p>Ring <a href="tel:91328419"><span class="numbers">913 28 419</span></a> om du vil snakke med oss. Eller benytt <a href="mailto:post@absoluttweb.no"><span class="numbers">post@absoluttweb.no</span></a></p>
+		</div>
+		<div class="medium-8 columns">
+			<form class="on-light-grey no-marg">
 				
-				<div class="item">
-					<div class="panel panel-light-trans no-marg">
-						<div class="icon"><i class="fa fa-book fa-color-white fa-2x no-marg"></i> </div>
-						<div class="panel-content">
-							<h3>Teoretisk del</h3>
-							<p class="lead">Den praktiske delen inneholder dette som vi må skrive her i korte drag.</p>
-							<ul>
-								<li>Kort om lover og regler</li>
-								<li>Kunnskap om personlig verneutstr</li>
-								<li>Risikohåndtering</li>
-								<li>Personlig fallforhindrende tiltak og forankringer</li>
-								<li>Tiltak for å dempe konsekvensene av fall</li>
-								<li>Kunnskap om beredskap ved arbeid i høyden</li>
-								<li>Kunnskap omm falsikringsutyr</li>
-								<li>Kunnskap om krav til brukerkontroll av utstyr</li>
-							</ul>
-						</div>
+				<div class="row">
+					<div class="medium-4 columns ">
+						
+						<input id="name" name="name" type="text" placeholder="Navn"/>
+					</div>
+					<div class="medium-4 columns">
+						
+						<input id="mob" name="mob" type="email" placeholder="Epost"/>
+					</div>
+					<div class="medium-4 columns">
+						<input id="email" name="email" type="tel" placeholder="Mobil"/> 
 					</div>
 				</div>
-				
-				<div class="item">
-					<div class="panel panel-light-trans no-marg">
-						<div class="icon"><i class="fa fa-wrench fa-color-white fa-2x no-marg"></i></div>
-						<div class="panel-content">
-						<h3>Praktisk del</h3>
-							<p class="lead">Den praktiske delen inneholder dette som vi må skrive her i korte drag.</p>
-							<ul>
-								<li>Brukerkontroll av fallsikrinsutstyret</li>
-								<li>Kameratsjeken</li>
-								<li>Valg av festepunkt</li>
-								<li>Fallsikringsseler</li>
-								<li>Aktivt utstyr - Støttestropp</li>
-								<li>Passivt utstyr</li>
-								<li>Relevant ekstra utstyr</li>
-							</ul>
-						</div>
+				<div class="row">
+					<div class="medium-12 columns">
+						<textarea id="message" name="message" rows="6" placeholder="Informasjon"></textarea>	
 					</div>
 				</div>
-
-				<div class="item">
-					<div class="panel panel-light-trans no-marg">
-						<div class="icon"><i class="fa fa-list-ol fa-color-white fa-2x no-marg"></i></div>
-						<div class="panel-content">
-						<h3>Skriftlig prøve</h3>
-							<p class="lead">Denne prøven er en multiple choice oppgave.</p>
-							<ul>
-								<li>Totalt 25 spørsmål</li>
-								<li>75% korrekt besvarelse for bestått kurs</li>
-								
-							</ul>
-							<p><a href="" class="btn btn-primary no-marg">påmelding her</a></p>
-						</div>
+				<div class="row">
+					<div class="medium-12 columns">
+						<input type="submit" value="Send" class="btn btn-primary">	
 					</div>
-				</div>
-
-			</div>	
+				</div>			
+			</form>
 		</div>
 	</div>
 </div>
+
 
 {% endblock %}
 
@@ -118,16 +129,16 @@
 {% block script %}
 <!-- Port 01 -->
 <script type="text/javascript">
-var container04 = $('#port-01').imagesLoaded( function() {;
-  container04.isotope({
-    itemSelector: '.item',
-    layoutMode: 'masonry',
-    transitionDuration: '300ms',
-     masonry: {
-          columnWidth: '.item',
-          gutter: 0
-      }
-  })
-});
+	var container04 = $('#port-01').imagesLoaded( function() {;
+		container04.isotope({
+			itemSelector: '.item',
+			layoutMode: 'masonry',
+			transitionDuration: '300ms',
+			masonry: {
+				columnWidth: '.item',
+				gutter: 0
+			}
+		})
+	});
 </script>
 {% endblock %}

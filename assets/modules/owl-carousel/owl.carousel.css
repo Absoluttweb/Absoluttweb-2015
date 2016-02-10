@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,400italic,600,300|Playfair+Display:400,700|Montserrat);
 /* 
  * 	Core Owl Carousel CSS File
  *	v1.3.2
@@ -136,7 +137,7 @@
       *display: inline;
       /*IE7 life-saver */
       border-radius: 3px;
-      background: #EBEFF4;
+      background: #E5E4E0;
       filter: Alpha(Opacity=50);
       /*IE7 fix*/
       opacity: 1; }

@@ -179,12 +179,12 @@ nav.breadcrumbs {
 
 /* Animated Burger Icon. 4 styles
 ================================================================ */
-/* Icon 1 */
+
 #nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
   width: 30px;
   height: 20px;
+  padding:0;
   position: relative;
-  margin: 18px auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -214,6 +214,7 @@ nav.breadcrumbs {
   transition: .25s ease-in-out;
   }
 
+/* Icon 1 */
 #nav-icon1 span:nth-child(1) {
   top: 0px; }
 
