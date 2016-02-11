@@ -48,37 +48,7 @@
   border-radius: $radius;
 }
 
-//Shadows in top of band. Types is 'shadow-in' and 'shadow-out'
-@mixin shadow($opacity,$type,$padding) {
-	$url:"/img/globals/#{$type}.png";
-	position: absolute;
-	top:0;
-	left: 0;
-	display: block;
-	padding: $padding 0;
-	width:100%;
-	background: transparent url($url) center top no-repeat;
-	background-size: contain;
-	opacity:$opacity;
-}
 
-@mixin sprite($width,$height) {
-	background-repeat: no-repeat;
-	background-position: top center;
-	display: inline-block;
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent;
-	z-index: 99;
-	background-image: url(/img/globals/sprite-placeholder.jpg);
-	top: 0;
-	right:0;
-	width: $width;
-	height: $height; 
-	&:hover {
-		background-position: bottom center;
-	}
-}
 //MIXIN TYPE COLOR
 //----------------------------------------------------------------
 
@@ -130,8 +100,7 @@
 			color: $color;
 		}	
 }
-//MIXIN HR WITH PATTERN BG
-//----------------------------------------------------------------
+
 @mixin hr ($height:1px, $color:$light-grey-color, $pattern:none, $opacity:1) {
 	height: $height;
 	background-color: $light-grey-color;
@@ -139,27 +108,6 @@
 	opacity: $opacity;
 }
 
-//Add this if you want a bullet -----------------------------------
-@mixin hr-bullet ($width:16px,$height:16px,$color:$light-grey-color,$radius:$global-radius,$left:50%) {
-	&::after {
-	content: "";
-	display: block;
-	width:$width;
-	height: $height;
-	background: $color;
-	position:absolute;
-	left:$left;
-	top:50%;
-	margin: (-$height/2) (-$width/2) 0 0;
-	z-index: 2;
-	-webkit-border-radius: $radius;
-	-mos-border-radius: $radius;
-	-ms-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
-	}
-}
-//Add this if you want a line -------------------------------------
 @mixin hr-line ($width:25%,$color:darken($light-grey-color,10%),$left:0px) {
 	&::after {
 	content: "";

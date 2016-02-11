@@ -17,8 +17,9 @@
   position: absolute;
   text-align: center;
   right: 30px;
-  left: 30px;
-  max-width: 250px; }
+  bottom: 30px;
+  max-width: 250px;
+  margin-bottom: 0; }
 
 .block-09 .wide-panel {
   width: 75%;
@@ -95,7 +96,6 @@
     display: inline-block;
     width: 80px;
     height: 80px;
-    border: 1px solid #e7e7e7;
     border-radius: 80px;
     margin-bottom: 1em; }
   .block-13 a.primary {
@@ -129,16 +129,52 @@ form.form-02 input:not([type="submit"]) {
       background-image: url("/img/globals/placeholder-01.jpg"); } }
 
 .bg-placeholder-2 {
-  background-image: url("/img/globals/placeholder-05.jpg"); }
+  background-image: url("/img/globals/placeholder-02.jpg"); }
   @media only screen and (min-width: 760px) {
     .bg-placeholder-2 {
-      background-image: url("/img/globals/placeholder-05.jpg"); } }
+      background-image: url("/img/globals/placeholder-02.jpg"); } }
 
 .bg-placeholder-3 {
-  background-image: url("/img/globals/placeholder-07.jpg"); }
+  background-image: url("/img/globals/placeholder-03.jpg"); }
   @media only screen and (min-width: 760px) {
     .bg-placeholder-3 {
+      background-image: url("/img/globals/placeholder-03.jpg"); } }
+
+.bg-placeholder-4 {
+  background-image: url("/img/globals/placeholder-04.jpg"); }
+  @media only screen and (min-width: 760px) {
+    .bg-placeholder-4 {
+      background-image: url("/img/globals/placeholder-04.jpg"); } }
+
+.bg-placeholder-5 {
+  background-image: url("/img/globals/placeholder-05.jpg"); }
+  @media only screen and (min-width: 760px) {
+    .bg-placeholder-5 {
+      background-image: url("/img/globals/placeholder-05.jpg"); } }
+
+.bg-placeholder-6 {
+  background-image: url("/img/globals/placeholder-06.jpg"); }
+  @media only screen and (min-width: 760px) {
+    .bg-placeholder-6 {
+      background-image: url("/img/globals/placeholder-06.jpg"); } }
+
+.bg-placeholder-7 {
+  background-image: url("/img/globals/placeholder-07.jpg"); }
+  @media only screen and (min-width: 760px) {
+    .bg-placeholder-7 {
       background-image: url("/img/globals/placeholder-07.jpg"); } }
+
+.bg-placeholder-8 {
+  background-image: url("/img/globals/placeholder-08.jpg"); }
+  @media only screen and (min-width: 760px) {
+    .bg-placeholder-8 {
+      background-image: url("/img/globals/placeholder-08.jpg"); } }
+
+.bg-placeholder-9 {
+  background-image: url("/img/globals/placeholder-09.jpg"); }
+  @media only screen and (min-width: 760px) {
+    .bg-placeholder-9 {
+      background-image: url("/img/globals/placeholder-09.jpg"); } }
 
 /* Code used in Styleguide
 =================================== */

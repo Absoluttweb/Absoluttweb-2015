@@ -36,7 +36,7 @@ $lead-size: 1.2em !default;
 $strong-weight: 600 !default;
 $font-handwriting: $font-family !default;
 
-$font-size: 14px;
+$font-size: 16px;
 $font-color: #505050;
 $font-line-height: 1.62em;
 $strong-color: $dark-grey-color;
@@ -62,7 +62,7 @@ $subheader-size: 13px;
 $subheader-style: normal;
 $subheader-color: lighten($font-color, 20%);
 $subheader-letter-spacing: 0;
-$subheader-text-transform:uppercase;
+$subheader-text-transform:normal;
 
 //logo
 //-------------------------------------------------------------------------------------
@@ -94,7 +94,6 @@ $nav-color: $primary-color;
 		$nav-color-active: $primary-color;
 		$nav-bg-active: $light-grey-color;
 		$nav-border-active: $third-color; //Border on Bottom
-		$nav-border-size-active: 2px; //TODO: Fix this . Border on Bottom
 
 		//Hover and focus
 		$nav-color-hover: $primary-color;
@@ -120,7 +119,7 @@ $nav-color: $primary-color;
 $aa-menu-show-close: false;
 $aa-menu-height: 350px;
 $aa-menu-text-align: left;
-$aa-menu-bullets: true; //TODO: Add color to this, similar as text
+$aa-menu-bullets: true;
 $aa-menu-bg-image: true;
 $aa-menu-bg: #E4E3DF;
 $aa-menu-line-difference:5%;
@@ -158,24 +157,22 @@ $phone-font-size: 1em;
 
 
 //Hr
-//TODO: Add Mixins here
+//@mixin hr ($height:1px, $color:$light-grey-color, $pattern:none, $opacity:1)
+//@mixin hr-line ($width:25%,$color:darken($light-grey-color,10%),$left:0px)
 //-------------------------------------------------------------------------------------
 
 
 
 //Header sizes (Large Screen. Small is adjusted by percent)
-//TODO: MAke theses modular and golden aso.
 //-------------------------------------------------------------------------------------
-$h1:3em; //Not in use
-$h2:2.5em; //Not in use
-$h3:1.7em;
-$h4:1.2em;
-$h5:1em; //Not in use
-$h6:1em; //Not in use
+$h1:3em; //3
+$h2:2.25em; //2.25
+$h3:1.75em; //1.7
+$h4:1.2em; //1.2
+$h5:1em; //1
 
 
 //Breadcrumbs
-//TODO: Add breadcrumbs to Blocks
 //------------------------------------------------------------------------------------
 $breadcrumbs-transform: uppercase;
 $breadcrumbs-size: 12px;
@@ -184,7 +181,6 @@ $breadcrumbs-active: $font-color;
 
 
 //Tabs
-//Add to Block in different types
 //-------------------------------------------------------------------------------------
 $tab-font-size: 0.9em;
 $tab-font-weight: 400;

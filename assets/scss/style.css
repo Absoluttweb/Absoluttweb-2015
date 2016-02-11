@@ -1,11 +1,10 @@
 /* Background images
-/* TODO: Add a default placeholder image. Must be a pattern
 ================================================================ */
 .bg-img-1 {
-  background-image: url("/img/theme/placeholder.jpg"); }
+  background-image: url("/img/theme/filename.jpg"); }
   @media only screen and (min-width: 760px) {
     .bg-img-1 {
-      background-image: url("/img/theme/placeholder.jpg"); } }
+      background-image: url("/img/theme/filename.jpg"); } }
 
 /* Theme styles
 ================================================================ */

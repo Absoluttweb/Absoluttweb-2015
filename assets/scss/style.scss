@@ -3,11 +3,10 @@
 
 
 /* Background images
-/* TODO: Add a default placeholder image. Must be a pattern
 ================================================================ */
 
 @each $number,$image,$format in 
-(1,placeholder,jpg),
+(1,filename,jpg),
  {
 	.bg-img-#{$number} {
 		background-image: url("/img/theme/#{$image}.#{$format}");

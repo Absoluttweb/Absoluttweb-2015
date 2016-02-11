@@ -19,7 +19,8 @@
 		position: absolute;
 		text-align: center;
 		right: $column-gutter;
-		left: $column-gutter;
+		bottom: $column-gutter;
 		max-width: 250px;
+		margin-bottom:0;
 	}
 }
