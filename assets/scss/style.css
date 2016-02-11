@@ -1,32 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,400italic,600,300|Playfair+Display:400,700|Montserrat);
-/* Blocks
-================================================================ */
-.port-01 .panel {
-  position: relative;
-  padding-top: 50px; }
-.port-01 .icon {
-  display: block;
-  position: absolute;
-  width: 56px;
-  height: 56px;
-  top: -10px;
-  left: 28px;
-  margin-left: -28px;
-  text-align: center;
-  line-height: 56px;
-  background-color: #5BA921; }
-  .port-01 .icon img {
-    width: 32px; }
-  .port-01 .icon .fa {
-    line-height: 56px; }
-
-#port-01 .item {
-  width: 50%;
-  padding: 10px; }
-  @media only screen and (max-width: 760px) {
-    #port-01 .item {
-      width: 100%; } }
-
 /* Background images
 ================================================================ */
 .bg-img-1 {
