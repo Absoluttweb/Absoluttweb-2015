@@ -29,14 +29,14 @@ dl.mixitup-nav dt {
 
 ul.mixitup-nav li, dl.mixitup-nav dd {
   color: #505050;
-  background: #E5E4E0;
+  background: #EEEEEE;
   cursor: pointer;
   margin: 0 1px 1px 0; }
 
 ul.mixitup-nav li:hover, ul.mixitup-nav li:focus, dl.mixitup-nav dd:hover, dl.mixitup-nav dd:focus {
   color: #505050;
-  background: #E5E4E0; }
+  background: #EEEEEE; }
 
 ul.mixitup-nav li.active, dl.mixitup-nav dd.active {
   color: white;
-  background: #5BA921; }
+  background: #75D366; }

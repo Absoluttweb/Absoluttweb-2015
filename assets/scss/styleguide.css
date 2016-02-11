@@ -96,13 +96,13 @@
     display: inline-block;
     width: 80px;
     height: 80px;
-    border: 1px solid #E5E4E0;
+    border: 1px solid #EEEEEE;
     border-radius: 80px;
     margin-bottom: 1em; }
   .block-13 a.primary {
-    background-color: #0084B4; }
+    background-color: #2A363F; }
   .block-13 a.dark-grey {
-    background-color: #202020; }
+    background-color: #2A363F; }
   .block-13 a.image {
     background-size: cover;
     background-position: center center; }
@@ -120,32 +120,6 @@ form.form-02 textarea, form.form-02 input:not([type="submit"]) {
   padding: 0; }
 form.form-02 input:not([type="submit"]) {
   height: 2em; }
-
-.port-01 .panel {
-  position: relative;
-  padding-top: 50px; }
-.port-01 .icon {
-  display: block;
-  position: absolute;
-  width: 56px;
-  height: 56px;
-  top: -10px;
-  left: 28px;
-  margin-left: -28px;
-  text-align: center;
-  line-height: 56px;
-  background-color: #5BA921; }
-  .port-01 .icon img {
-    width: 32px; }
-  .port-01 .icon .fa {
-    line-height: 56px; }
-
-#port-01 .item {
-  width: 50%;
-  padding: 10px; }
-  @media only screen and (max-width: 760px) {
-    #port-01 .item {
-      width: 100%; } }
 
 /* Background images
 ================================================================ */
@@ -186,7 +160,7 @@ code {
   clear: both;
   height: auto;
   font-family: Consolas, monospace;
-  border: 1px solid #E5E4E0;
+  border: 1px solid #EEEEEE;
   background: #f7f7f7;
   padding: 1.62em;
   border-radius: 3px;
@@ -216,15 +190,15 @@ code {
   .colorbox.white {
     background-color: white; }
   .colorbox.primary {
-    background-color: #0084B4; }
+    background-color: #2A363F; }
   .colorbox.secondary {
-    background-color: #FB970D; }
+    background-color: #7399E7; }
   .colorbox.light-grey {
-    background-color: #E5E4E0; }
+    background-color: #EEEEEE; }
   .colorbox.medium-grey {
-    background-color: #A4A4A4; }
+    background-color: grey; }
   .colorbox.dark-grey {
-    background-color: #202020; }
+    background-color: #2A363F; }
   .colorbox.font-color {
     background-color: #505050; }
   @media only screen and (max-width: 760px) {

@@ -71,19 +71,19 @@ body.wide {
     max-width: 100%; }
 
 .sidebar-right {
-  border-left: 0px solid #E5E4E0;
+  border-left: 0px solid #EEEEEE;
   padding-left: 60px; }
 
 .sidebar-right-pad {
-  border-right: 1px solid #E5E4E0;
+  border-right: 1px solid #EEEEEE;
   padding-right: 60px; }
 
 .sidebar-left {
-  border-right: 1px solid #E5E4E0;
+  border-right: 1px solid #EEEEEE;
   padding-right: 60px; }
 
 .sidebar-left-pad {
-  border-left: 1px solid #E5E4E0;
+  border-left: 1px solid #EEEEEE;
   padding-left: 60px; }
 
 .no-wrap, .no-wrapping {
@@ -180,7 +180,7 @@ a:hover, a:focus, input:hover, input:focus {
   .block p:last-child {
     margin-bottom: 0; }
   .block.panel, .block .panel {
-    background-color: #E5E4E0;
+    background-color: #EEEEEE;
     padding-left: 30px;
     padding-right: 30px; }
 

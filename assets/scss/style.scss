@@ -1,15 +1,12 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
-/* Blocks
-================================================================ */
-@import "blocks/_port-01.scss";
 
 /* Background images
 ================================================================ */
 
 @each $number,$image,$format in 
-(1,bg_header,jpg),
+(1,bg-office,jpg),
 (2,bg-climbing,jpg),
 (3,bg-construction-pin,jpg),
 (4,bg-heaven,jpg),
@@ -27,70 +24,17 @@
 /* Theme styles
 ================================================================ */
 
-.svg-header {
-	width: 100%;
-	height: 0px;
-	padding-bottom: 4%;
-	background-image: url("/img/theme/svg-line.svg");
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-#port-01 .item {
-	width:100%;
-		// Medium and up
-		@media only screen and (min-width: $medium-size) {
-			width:50%;
-		}
-			
-		// Large and up
-		@media only screen and (min-width: $large-size) {
-			width:33.33%;
-		}
-		}
-.price-label {
-	background-color: $dark-grey-color;
-    padding: 0.75rem;
-    color: #FFF;
-    font-size: 1.25em;
-    font-weight: 900;
-    border-radius: 5px;
-    margin: 0 1.5em 1.5em;
-    float: right;
-    @include transition (200ms);
-    @media only screen and (max-width: $medium-size) {
-    	width:100%;
-    	margin:0;
-    	margin-bottom: 1.5em;
-    }
-    span {
-    	font-weight: 400;
-    }
-    &:hover {
-    	color: white;
-    	@include transform (1.2);
-    	@include transition (300ms);
-    }
-}
 
 /* Custom Bands
 ================================================================ */
 
 .band-pretop {
-	background-color: #303030;
+	background-color: $primary-color;
 	@include type-color (#a9a9a9,#a9a9a9,#a9a9a9,#a9a9a9);
 	padding:10px 0;
 }
 .band-top {
-	background-color: #202020;
-}
-.band-primary {
-	@include type-color($font-color, $primary-color);
-	h3,h2 {
-	color:white;
-	}
-}
-.band-stillas {
-	@include type-color (white,white);
+	background-color: white;
 }
 
 /* PRETOP 01

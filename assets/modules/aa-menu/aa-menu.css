@@ -55,17 +55,17 @@
     text-align: center;
     padding-left: 0 !important;
     width: 100%;
-    color: #202020 !important;
+    color: #2A363F !important;
     font-family: "Montserrat";
     font-size: 18px;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     text-transform: uppercase;
     border-bottom: 1px solid #d8d7d1;
     line-height: 40px;
     padding-left: 21px; }
   .aa-menu li.active a {
-    color: #0084B4 !important;
+    color: #2A363F !important;
     font-weight: 900; }
   .aa-menu li:first-child {
     border-top: 1px solid #d8d7d1; }
@@ -86,7 +86,7 @@
       content: " \f054"; }
   .aa-menu li a.back {
     display: block;
-    color: #202020;
+    color: #2A363F;
     border-top: 1px solid #d8d7d1; }
     .aa-menu li a.back:before {
       content: " ";

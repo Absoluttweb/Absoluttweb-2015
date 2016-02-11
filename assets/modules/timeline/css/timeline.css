@@ -55,7 +55,7 @@
       font-size: 14px;
       z-index: 100; }
       .timeline .timeline-row .timeline-icon .bg-primary {
-        background: #0084B4; }
+        background: #2A363F; }
       .timeline .timeline-row .timeline-icon .bg-black {
         background: #000000; }
       .timeline .timeline-row .timeline-icon > div {
@@ -66,7 +66,7 @@
       margin-left: 40px;
       position: relative;
       background-color: white;
-      border-bottom: 2px solid #d9d8d2; }
+      border-bottom: 2px solid #e1e1e1; }
       .timeline .timeline-row .timeline-content:after {
         content: "";
         position: absolute;
@@ -87,7 +87,7 @@
       .timeline .timeline-row .timeline-content img {
         margin-bottom: 1em; }
       .timeline .timeline-row .timeline-content blockquote {
-        border-color: #0084B4;
+        border-color: #2A363F;
         margin: 0;
         padding: 20px; }
         .timeline .timeline-row .timeline-content blockquote img {

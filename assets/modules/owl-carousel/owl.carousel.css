@@ -117,8 +117,8 @@
   .owl-theme .owl-controls .owl-theme .owl-controls.clickable .owl-page:hover span {
     filter: Alpha(Opacity=100);
     /*IE7 fix*/
-    background: #0084B4;
-    border-color: #0084B4;
+    background: #2A363F;
+    border-color: #2A363F;
     opacity: 1; }
   .owl-theme .owl-controls .owl-buttons {
     max-width: 1120px;
@@ -131,13 +131,13 @@
       padding: 0 0.81em;
       line-height: 1.62em;
       margin: 0 7px 0 0;
-      color: #A4A4A4;
+      color: grey;
       display: inline-block;
       zoom: 1;
       *display: inline;
       /*IE7 life-saver */
       border-radius: 3px;
-      background: #E5E4E0;
+      background: #EEEEEE;
       filter: Alpha(Opacity=50);
       /*IE7 fix*/
       opacity: 1; }

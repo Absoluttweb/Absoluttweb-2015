@@ -41,10 +41,10 @@ ul.sf-menu {
     /* IE7 */
     text-transform: uppercase;
     padding: 1em 1em;
-    font-weight: 600;
-    font-size: 14px;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: "Roboto";
+    letter-spacing: 0;
     color: white;
     white-space: nowrap;
     /* no need for Supersubs plugin */
@@ -52,14 +52,14 @@ ul.sf-menu {
     /* ...unless you support IE7 (let it wrap) */ }
   ul.sf-menu > li {
     background: transparent;
-    border-left: 0px solid #E5E4E0;
+    border-left: 0px solid #EEEEEE;
     -webkit-transition: background 200ms ease-in-out;
     -moz-transition: background 200ms ease-in-out;
     -ms-transition: background 200ms ease-in-out;
     -o-transition: background 200ms ease-in-out;
     transition: background 200ms ease-in-out; }
     ul.sf-menu > li:last-child {
-      border-right: 0px solid #E5E4E0; }
+      border-right: 0px solid #EEEEEE; }
     ul.sf-menu > li:hover, ul.sf-menu > li.sfHover {
       background: transparent;
       -webkit-transition: background 200ms ease-in-out;
@@ -68,7 +68,7 @@ ul.sf-menu {
       -o-transition: background 200ms ease-in-out;
       transition: background 200ms ease-in-out; }
       ul.sf-menu > li:hover > a, ul.sf-menu > li.sfHover > a {
-        color: #0084B4; }
+        color: #2A363F; }
     ul.sf-menu > li.active {
       background: transparent;
       -webkit-transition: background 200ms ease-in-out;
@@ -76,9 +76,9 @@ ul.sf-menu {
       -ms-transition: background 200ms ease-in-out;
       -o-transition: background 200ms ease-in-out;
       transition: background 200ms ease-in-out;
-      border-bottom: 0 solid #5BA921; }
+      border-bottom: 0 solid #75D366; }
       ul.sf-menu > li.active > a {
-        color: #0084B4; }
+        color: #2A363F; }
   ul.sf-menu ul {
     min-width: 12em;
     /* allow long menu items to determine submenu width */
@@ -88,25 +88,25 @@ ul.sf-menu {
     -moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
     box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43); }
     ul.sf-menu ul li {
-      background-color: #E5E4E0;
+      background-color: #EEEEEE;
       margin-top: 0px;
-      border-bottom: 1px solid #d9d8d2; }
+      border-bottom: 1px solid #e1e1e1; }
       ul.sf-menu ul li:hover, ul.sf-menu ul li.sfHover {
-        background: #E5E4E0; }
+        background: #EEEEEE; }
       ul.sf-menu ul li.active {
-        background: #E5E4E0; }
+        background: #EEEEEE; }
         ul.sf-menu ul li.active a {
           color: #505050; }
           ul.sf-menu ul li.active a:hover, ul.sf-menu ul li.active a.sfHover {
             color: #505050; }
       ul.sf-menu ul li a {
         padding: 12px 20px;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 0.75em;
         text-transform: none;
         letter-spacing: 0;
         line-height: 1em;
-        color: #0084B4; }
+        color: #2A363F; }
         ul.sf-menu ul li a:hover, ul.sf-menu ul li a.sfHover {
           color: #505050; }
     ul.sf-menu ul ul li {
