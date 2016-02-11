@@ -2,18 +2,16 @@
 =============================================================== */
 
 .card, .panel {
-		background-color: $bg-color;
-		position: relative;
-		margin-bottom: 20px;
-		.panel-content {
-			padding: 2rem;
-		}
-	
-		&.panel-light-grey {
-			background-color: $light-grey-color;
-		}
+	background-color: white;
+	position: relative;
+	margin-bottom: 20px;
+	.panel-content {
+		padding: 2rem;
 	}
+}
 
+//Cards used in infobars
+//---------------------------------------------------------------
 	.news-card {
 		@extend .card;
 

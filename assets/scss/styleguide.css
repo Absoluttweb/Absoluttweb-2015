@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,400italic,600,300|Playfair+Display:400,700|Montserrat);
 /* Blocks with specific styles 
 ====================================*/
 .block-01 .img {
@@ -96,13 +95,13 @@
     display: inline-block;
     width: 80px;
     height: 80px;
-    border: 1px solid #EEEEEE;
+    border: 1px solid #e7e7e7;
     border-radius: 80px;
     margin-bottom: 1em; }
   .block-13 a.primary {
     background-color: #2A363F; }
   .block-13 a.dark-grey {
-    background-color: #2A363F; }
+    background-color: #272727; }
   .block-13 a.image {
     background-size: cover;
     background-position: center center; }
@@ -160,7 +159,7 @@ code {
   clear: both;
   height: auto;
   font-family: Consolas, monospace;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #e7e7e7;
   background: #f7f7f7;
   padding: 1.62em;
   border-radius: 3px;
@@ -194,11 +193,11 @@ code {
   .colorbox.secondary {
     background-color: #7399E7; }
   .colorbox.light-grey {
-    background-color: #EEEEEE; }
+    background-color: #e7e7e7; }
   .colorbox.medium-grey {
     background-color: grey; }
   .colorbox.dark-grey {
-    background-color: #2A363F; }
+    background-color: #272727; }
   .colorbox.font-color {
     background-color: #505050; }
   @media only screen and (max-width: 760px) {

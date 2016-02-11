@@ -9,7 +9,6 @@
   <meta name="Description" content="" />
   <link rel="icon" type="image/png" href="/img/theme/favicon.png">
   {{ "modernizr.js" | asset_url | script_tag }}
-  <!--{% include 'basics/fonts' %}-->
   {% include 'basics/css' %}
   <link href="/assets/scss/style.css" rel="stylesheet" type="text/css" media="all">
   {% block meta %}{% endblock %}
@@ -40,66 +39,12 @@
       </div>
     </div>
 
-    <div class="info-bar-left">
-      <div class="ib-scroll">
-        <a class="ib-tab" data-trigger="info-bar-left"><i class="fa fa-chevron-left"></i> Guide</a>
-        <div class="ib-container">
 
-          <div class="news-card">
-            <div class="panel-content">
-              <h4>HMS er lovpålagt</h4>
-              <p>Super kort om hvem det gjelder og en link til loven hvor det står skrevet</p>
-            </div>
-          </div>
-
-          <div class="news-card">
-            <div class="panel-content">
-              <h4>Slik tar man e-kursene</h4>
-              <p>Gå til ønsket kurs, og start den interaktive opplæringen. Du må laste ned <a href="#">Adobe Flash Player</a> om den spør om dette.</p>
-              <p>Les gjennom kurset, og svar på spørsmålene i slutten av filmen</p>
-              <p>Du har 3 forsøk på å oppnå 75% riktig svar. Når testen er bestått, vil du få tildelt en kode.</p>
-              <p>Bruk skjemaet på kurssiden, og send koden til FokusHMS. Vi sender deg kursbevis og faktura per. epost</p>
-            </div>
-          </div>
-
-          <div class="news-card">
-            <div class="panel-content">
-              <h4>Praktiske kurs i Bergen</h4>
-              <p>Her skriver vi kort om at du utfører kurs i Bergen. Både Laksevåg og ved oppmøte. Minimun 8 personer.<br>
-              Pris: xxxx kr.eks.mva</p>
-            </div>
-          </div>
-
-                    <div class="news-card">
-            <div class="panel-content">
-              <h4>HMS Bøker - Lovpålagt</h4>
-              <p>Fortell at bøkene er laget for å oppfylle lovensbestemmelser om HMS dokumentasjon. Samt annen info.<br>
-              Pris fra: xxxx kr.eks.mva</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
 
     <div class="wrapper">
 
       <div class="wrapper-inner">
 
-        <div class="band band-pretop hide-for-small pretop-01">
-          <div class="row">
-            <div class="medium-6 columns text-left">
-              <div class="pretop-icons">
-                <a href="tel:4"><i class="fa fa-phone fa-color-white"></i> 56 33 33 33</a>
-                <a href="tel:4"><i class="fa fa-envelope fa-color-white"></i> post@fokushms.no</a>
-              </div>
-            </div>
-            <div class="medium-6 columns text-right">
-              <a href="/hms-kurs" class="btn btn-primary with-icon no-marg">HMS kursliste<i class="fa fa-play"></i> </a>
-            </div>
-          </div>
-
-        </div>
         <div class="band band-top top-01">
           <div class="row">
             <div class="small-12 large-4 columns small-text-center medium-text-left">
@@ -117,12 +62,24 @@
         
         {% block header %}{% endblock %}
         {% block main %}{% endblock %}
+      
       </div>
       
       <div class="push"></div>
     </div>
     
-    {% include 'blocks/footer-01' %}
+    <footer>
+      <div class="band footer">
+        <div class="row">
+          <div class="medium-6 columns text-center medium-text-left">
+            <p>© 2015 <a href="/" class="fadeOut">Firmanavn AS</a><a href="/styleguide/styleguide-index"> Guide</a></p>
+          </div>
+          <div class="medium-6 columns text-center medium-text-right">
+            <p><a href="/" class="fadeOut">Utvikler: Absoluttweb - webdesign Bergen</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     {% include 'basics/scripts' %} 
     {% block script %}{% endblock %}
@@ -134,9 +91,7 @@
           mobile: false
         });
       })();
-    </script>
 
-    <script>
       $(document).ready(function () {
 
         //Superfish Dropdown Menu

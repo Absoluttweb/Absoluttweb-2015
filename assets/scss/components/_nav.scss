@@ -78,11 +78,6 @@ h2.logo {
 
 /* Burger Toggle for Mobile Menus
 ====================================================== */
-a.animated-burger {
-	display:block;
-	color: $burger-color;
-	float:right;
-}
 
 a.burger, a.top-icon {
 	display:block;
@@ -92,9 +87,6 @@ a.burger, a.top-icon {
 	width: 60px;
 	text-align:center;	
 	font-size:$burger-size;
-	@if $burger-position =="center" {
-		margin: 0 auto;
-	}
 	&.active, &:hover, &:focus {
 		color: $burger-color;
 	}

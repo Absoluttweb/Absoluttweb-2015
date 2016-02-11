@@ -1,41 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,400italic,600,300|Playfair+Display:400,700|Montserrat);
 /* Background images
+/* TODO: Add a default placeholder image. Must be a pattern
 ================================================================ */
 .bg-img-1 {
-  background-image: url("/img/theme/bg-office.jpg"); }
+  background-image: url("/img/theme/placeholder.jpg"); }
   @media only screen and (min-width: 760px) {
     .bg-img-1 {
-      background-image: url("/img/theme/bg-office.jpg"); } }
-
-.bg-img-2 {
-  background-image: url("/img/theme/bg-climbing.jpg"); }
-  @media only screen and (min-width: 760px) {
-    .bg-img-2 {
-      background-image: url("/img/theme/bg-climbing.jpg"); } }
-
-.bg-img-3 {
-  background-image: url("/img/theme/bg-construction-pin.jpg"); }
-  @media only screen and (min-width: 760px) {
-    .bg-img-3 {
-      background-image: url("/img/theme/bg-construction-pin.jpg"); } }
-
-.bg-img-4 {
-  background-image: url("/img/theme/bg-heaven.jpg"); }
-  @media only screen and (min-width: 760px) {
-    .bg-img-4 {
-      background-image: url("/img/theme/bg-heaven.jpg"); } }
-
-.bg-img-5 {
-  background-image: url("/img/theme/bg-desk.jpg"); }
-  @media only screen and (min-width: 760px) {
-    .bg-img-5 {
-      background-image: url("/img/theme/bg-desk.jpg"); } }
-
-.bg-img-6 {
-  background-image: url("/img/theme/bg-contact.jpg"); }
-  @media only screen and (min-width: 760px) {
-    .bg-img-6 {
-      background-image: url("/img/theme/bg-contact.jpg"); } }
+      background-image: url("/img/theme/placeholder.jpg"); } }
 
 /* Theme styles
 ================================================================ */
@@ -43,15 +13,15 @@
 ================================================================ */
 .band-pretop {
   background-color: #2A363F;
-  padding: 10px 0; }
+  height: 50px; }
   .band-pretop p, .band-pretop li, .band-pretop ul.icon li:before {
-    color: #a9a9a9; }
+    color: #ffffff; }
   .band-pretop h1, .band-pretop h2, .band-pretop h3, .band-pretop h4, .band-pretop h5, .band-pretop h6 {
-    color: #a9a9a9; }
+    color: #ffffff; }
   .band-pretop a {
-    color: #a9a9a9; }
+    color: #ffffff; }
   .band-pretop hr {
-    background-color: #EEEEEE; }
+    background-color: #e7e7e7; }
 
 .band-top {
   background-color: white; }
@@ -60,24 +30,24 @@
 ================================================================ */
 .pretop-01 .pretop-icons {
   font-size: 0.85em;
-  padding-top: 9px; }
+  line-height: 50px; }
   .pretop-01 .pretop-icons a {
     margin-right: 15px; }
 
-/* Header-01 - Header as Absoluttweb 2015
+/* Header-01
 ================================================================ */
 .header {
   overflow: hidden;
   margin: 0 0px 0px; }
   .header .container {
-    padding: 13% 0 25%; }
+    padding: 12% 0; }
     @media only screen and (max-width: 760px) {
       .header .container {
-        padding: 16% 0 35%; } }
+        padding: 12% 0; } }
     .header .container h1 {
-      padding-top: 3%; }
+      padding-top: 0; }
     .header .container h2 {
-      padding-top: 7%; }
+      padding-top: 0; }
       @media only screen and (max-width: 1180px) {
         .header .container h2 {
           font-size: 250%; } }
@@ -121,37 +91,7 @@
     bottom: -16%;
     height: 32%; }
 
-.header .container {
-  padding: 13% 0 13%; }
-  .header .container h1 {
-    font-size: 400%; }
-    @media only screen and (max-width: 1180px) {
-      .header .container h1 {
-        font-size: 400%; } }
-    @media only screen and (max-width: 760px) {
-      .header .container h1 {
-        font-size: 200%;
-        text-align: center; } }
-  .header .container h2 {
-    padding-top: 7%;
-    font-size: 200%;
-    color: #505050;
-    font-weight: 600;
-    text-transform: none;
-    letter-spacing: -0.05em; }
-    @media only screen and (max-width: 1180px) {
-      .header .container h2 {
-        font-size: 250%; } }
-    @media only screen and (max-width: 760px) {
-      .header .container h2 {
-        font-size: 120%;
-        text-align: center; } }
-.header.pages {
-  border-bottom: 2px solid #e1e1e1; }
-  .header.pages .container {
-    padding: 18% 0; }
-
-/* Custom Theme Styles and Widgets
+/* Columns. TODO: Add this to components
 ================================================================ */
 @media only screen and (min-width: 1180px) {
   .large-col-3 {
@@ -165,11 +105,11 @@
     -moz-column-gap: 40px;
     /* Firefox */
     column-gap: 40px;
-    -webkit-column-rule: 1px solid #d4d4d4;
+    -webkit-column-rule: 1px solid #cecece;
     /* Chrome, Safari, Opera */
-    -moz-column-rule: 1px solid #d4d4d4;
+    -moz-column-rule: 1px solid #cecece;
     /* Firefox */
-    column-rule: 1px solid #d4d4d4; }
+    column-rule: 1px solid #cecece; }
     .large-col-3 h1, .large-col-3 h2, .large-col-3 h3, .large-col-3 h4, .large-col-3 p.lead {
       -webkit-column-span: all;
       /* Chrome, Safari, Opera */
@@ -187,11 +127,11 @@
     -moz-column-gap: 40px;
     /* Firefox */
     column-gap: 40px;
-    -webkit-column-rule: 1px solid #d4d4d4;
+    -webkit-column-rule: 1px solid #cecece;
     /* Chrome, Safari, Opera */
-    -moz-column-rule: 1px solid #d4d4d4;
+    -moz-column-rule: 1px solid #cecece;
     /* Firefox */
-    column-rule: 1px solid #d4d4d4; }
+    column-rule: 1px solid #cecece; }
     .large-col-2 h1, .large-col-2 h2, .large-col-2 h3, .large-col-2 h4, .large-col-2 p.lead {
       -webkit-column-span: all;
       /* Chrome, Safari, Opera */
@@ -222,7 +162,7 @@
     .graph-labels ul li.graph-comment {
       font-style: italic; }
 
-/* Buttons
+/* Custom Buttons
 ================================================================ */
 .btn-1 {
   color: black !important;
@@ -338,7 +278,7 @@
     -o-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out; }
 
-/*Forms
+/* Forms TODO: Add to components
 =============================================================== */
 form.form-02 textarea, form.form-02 input:not([type="submit"]) {
   border-top-width: 0;
@@ -351,55 +291,17 @@ form.form-02 input:not([type="submit"]) {
 /* Footer
 ================================================================ */
 .footer {
-  background-color: #202020;
+  background-color: #272727;
   padding: 24px 0 80px; }
   .footer a, .footer p {
     color: #838383; }
 
 /* Custom HRs
-@mixin hr ($height:1px, $color:$hr-color, $pattern:none, $opacity:1)
+@mixin hr ($height:1px, $color:$light-grey-color, $pattern:none, $opacity:1)
 ================================================================ */
 /* Custom Panels
 @mixin panel ($bg-color:white)
 ================================================================ */
-.panel-light-trans {
-  background-color: rgba(255, 255, 255, 0.8);
-  position: relative;
-  margin-bottom: 20px; }
-  .panel-light-trans .panel-content {
-    padding: 1.25rem; }
-
-.panel-courses {
-  background-color: #EEEEEE;
-  position: relative;
-  margin-bottom: 20px;
-  border: 2px solid #e1e1e1; }
-  .panel-courses .panel-content {
-    padding: 1.25rem; }
-  .panel-courses a, .panel-courses a:hover {
-    color: #505050; }
-
-.panel-ebooks {
-  background-color: #EEEEEE;
-  position: relative;
-  margin-bottom: 20px;
-  border: 2px solid #e1e1e1; }
-  .panel-ebooks .panel-content {
-    padding: 1.25rem; }
-
-/* Title with icon and stroke
-================================================================ */
-h4.stroke {
-  border-bottom: 2px solid #2A363F; }
-  h4.stroke i.fa {
-    margin-right: 10px; }
-
-/* Link with stroke
-================================================================ */
-.link-stroke {
-  font-size: 2em;
-  border-bottom: 2px solid #2A363F; }
-
 /* MEDIA QUERIES
 ============================================================ */
 /* PRINT

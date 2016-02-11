@@ -96,9 +96,9 @@ ul.sf-menu {
 	ul {
 		min-width: 12em; /* allow long menu items to determine submenu width */
 		*width: 12em; /* no auto sub width for IE7, see white-space comment below */
-		-webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
-		-moz-box-shadow:    2px 2px 2px 0px rgba(50, 50, 50, 0.43);
-		box-shadow:         2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+		-webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.25);
+		-moz-box-shadow:    2px 2px 2px 0px rgba(50, 50, 50, 0.25);
+		box-shadow:         2px 2px 2px 0px rgba(50, 50, 50, 0.25);
 		li {
 			background-color:$nav-sublevel-bg;
 			margin-top:0px;

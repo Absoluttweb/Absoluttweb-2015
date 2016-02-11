@@ -82,7 +82,7 @@
 //MIXIN TYPE COLOR
 //----------------------------------------------------------------
 
-@mixin type-color ($font:$font-color, $header:$header-color, $subheader:$subheader-color, $link:$link-color, $hr:$hr-color) {
+@mixin type-color ($font:$font-color, $header:$header-color, $subheader:$subheader-color, $link:$link-color, $hr:$light-grey-color) {
 	p,li,ul.icon li:before {
 		color: $font;
 	}
@@ -132,15 +132,15 @@
 }
 //MIXIN HR WITH PATTERN BG
 //----------------------------------------------------------------
-@mixin hr ($height:1px, $color:$hr-color, $pattern:none, $opacity:1) {
+@mixin hr ($height:1px, $color:$light-grey-color, $pattern:none, $opacity:1) {
 	height: $height;
-	background-color: $hr-color;
+	background-color: $light-grey-color;
 	background-image: url('/img/overlays/#{$pattern}.png');
 	opacity: $opacity;
 }
 
 //Add this if you want a bullet -----------------------------------
-@mixin hr-bullet ($width:16px,$height:16px,$color:$hr-color,$radius:$global-radius,$left:50%) {
+@mixin hr-bullet ($width:16px,$height:16px,$color:$light-grey-color,$radius:$global-radius,$left:50%) {
 	&::after {
 	content: "";
 	display: block;
@@ -160,7 +160,7 @@
 	}
 }
 //Add this if you want a line -------------------------------------
-@mixin hr-line ($width:25%,$color:darken($hr-color,10%),$left:0px) {
+@mixin hr-line ($width:25%,$color:darken($light-grey-color,10%),$left:0px) {
 	&::after {
 	content: "";
 	display: block;

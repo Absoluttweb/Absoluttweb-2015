@@ -9,7 +9,6 @@
 	<meta name="Description" content="" />
 	<link rel="icon" type="image/png" href="/img/theme/favicon.png">
 	{{ "modernizr.js" | asset_url | script_tag }}
-	{% include 'basics/fonts' %}
 	{% include 'basics/css' %}
 	<link href="/assets/scss/styleguide.css" rel="stylesheet" type="text/css" media="all">
 	<link href="/assets/scss/style.css" rel="stylesheet" type="text/css" media="all">
@@ -38,46 +37,44 @@
 		{% include 'basics/scripts' %} 
 		{% block script %}{% endblock %}
 
-		<script type="text/javascript">
-			(function($) {
-				'use strict';
-				window.sr= new scrollReveal({
-					mobile: false
-				});
-			})();
-		</script>
+	<script type="text/javascript">
+      (function($) {
+        'use strict';
+        window.sr= new scrollReveal({
+          mobile: false
+        });
+      })();
 
-		<script>
-			$(document).ready(function () {
-				
-				//Superfish Dropdown Menu
-				$('ul.sf-menu').superfish({
-					cssArrows: true,
-					animation: {
-						opacity: 'show',
-						height: 'show'
-					},
-				});
+      $(document).ready(function () {
 
-				//Animated Burger
-				$('#nav-icon4').click(function(){
-					$('#nav-icon4').toggleClass('open');
-				});
+        //Superfish Dropdown Menu
+        $('ul.sf-menu').superfish({
+          cssArrows: true,
+          animation: {
+            opacity: 'show',
+            height: 'show'
+          },
+        });
 
-				//AA Menu
-				$("ul.aa-menu").aamenu();
+        //Animated Burger
+        $('a[data-trigger="aa-menu"]').click(function(){
+          $('#nav-icon4').toggleClass('open');
+        });
 
-				//Readmore
-				$(".readmore").readmore({
-					embedCSS: false,
-					maxHeight: 72,
-					speed: 300,
-					moreLink: '<a href="#">..... les mer</a>',
-					lessLink: '<a href="#"> lukk</a>'
-				});
+        //AA Menu
+        $("ul.aa-menu").aamenu();
 
-			});
-		</script>
+        //Readmore
+        $(".readmore").readmore({
+          embedCSS: false,
+          maxHeight: 72,
+          speed: 300,
+          moreLink: '<a href="#">..... les mer</a>',
+          lessLink: '<a href="#"> lukk</a>'
+        });
+
+      });
+    </script>
 
 	</body>
 

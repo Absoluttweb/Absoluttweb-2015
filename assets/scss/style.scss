@@ -3,15 +3,11 @@
 
 
 /* Background images
+/* TODO: Add a default placeholder image. Must be a pattern
 ================================================================ */
 
 @each $number,$image,$format in 
-(1,bg-office,jpg),
-(2,bg-climbing,jpg),
-(3,bg-construction-pin,jpg),
-(4,bg-heaven,jpg),
-(5,bg-desk,jpg),
-(6,bg-contact,jpg)
+(1,placeholder,jpg),
  {
 	.bg-img-#{$number} {
 		background-image: url("/img/theme/#{$image}.#{$format}");
@@ -30,8 +26,8 @@
 
 .band-pretop {
 	background-color: $primary-color;
-	@include type-color (#a9a9a9,#a9a9a9,#a9a9a9,#a9a9a9);
-	padding:10px 0;
+	@include type-color (#ffffff,#ffffff,#ffffff,#ffffff);
+	height:50px;
 }
 .band-top {
 	background-color: white;
@@ -42,59 +38,19 @@
 .pretop-01 {
 	.pretop-icons {
 		font-size: 0.85em;
-		padding-top:9px;
+		line-height:50px;
 		a {
 			margin-right:15px;
 		}
 	}
 }
 
-/* Header-01 - Header as Absoluttweb 2015
+/* Header-01
 ================================================================ */
 @import "blocks/_header";
-.header { 
-	.container {
-		padding: 13% 0 13%;
-		h1 {
-			font-size: 400%;
-			// Medium only
-			@media only screen and (max-width: $large-size) {
-				font-size: 400%;
-			}
-			// Small only
-			@media only screen and (max-width: $medium-size) {
-				font-size: 200%;
-				text-align: center;
-			}
-		}
-		h2 {
-			padding-top: 7%;
-			font-size: 200%;
-			color:$font-color;
-			font-weight: 600;
-			text-transform: none;
-			letter-spacing: -0.05em;
-			
-			// Medium only
-			@media only screen and (max-width: $large-size) {
-				font-size: 250%;
-			}
-			// Small only
-			@media only screen and (max-width: $medium-size) {
-				font-size: 120%;
-				text-align: center;
-			}
-		}
-	}
-	&.pages {
-		border-bottom: 2px solid darken($light-grey-color,5%); 
-		.container {
-			padding: 18% 0;
-		}
-	}
-}
 
-/* Custom Theme Styles and Widgets
+
+/* Columns. TODO: Add this to components
 ================================================================ */
 
 //3 Columns in text
@@ -168,7 +124,7 @@
 }
 
 
-/* Buttons
+/* Custom Buttons
 ================================================================ */
 .btn-1 {
 	@include button (black, white);
@@ -205,7 +161,7 @@
 }
 
 
-/*Forms
+/* Forms TODO: Add to components
 =============================================================== */
 form.form-02 {
 	textarea,input:not([type="submit"]) {
@@ -222,7 +178,7 @@ form.form-02 {
 /* Footer
 ================================================================ */
 .footer {
-	background-color: #202020;
+	background-color: $dark-grey-color;
 	padding: 24px 0 80px;
 	a,p {
 		color: lighten($font-color,20%);
@@ -230,41 +186,13 @@ form.form-02 {
 }
 
 /* Custom HRs
-@mixin hr ($height:1px, $color:$hr-color, $pattern:none, $opacity:1)
+@mixin hr ($height:1px, $color:$light-grey-color, $pattern:none, $opacity:1)
 ================================================================ */
 
 /* Custom Panels
 @mixin panel ($bg-color:white)
 ================================================================ */
-.panel-light-trans {
-	@include panel(rgba(255,255,255,0.8));
-}
-.panel-courses{
-	@include panel($light-grey-color);
-	border: 2px solid darken($light-grey-color,5%);
-	a,a:hover {
-		color:$font-color;
-	}
-}
-.panel-ebooks {
-	@include panel($light-grey-color);
-	border: 2px solid darken($light-grey-color,5%);
-}
-/* Title with icon and stroke
-================================================================ */
-h4.stroke {
-	border-bottom: 2px solid $primary-color;
-	i.fa {
-		margin-right: 10px
-	}
-}
 
-/* Link with stroke
-================================================================ */
-.link-stroke {
-	font-size: 2em;
-	border-bottom: 2px solid $link-color;
-}
 
 /* MEDIA QUERIES
 ============================================================ */

@@ -4,7 +4,7 @@
 //-------------------------------------------------------------------------------------
 
 //@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,400italic,600,300);
-@import "fontkits/_arkacorp.scss";
+//@import "fontkits/_arkacorp.scss";
 
 
 //Pagesizes
@@ -35,6 +35,7 @@ $font-thick: 800 !default;
 $lead-size: 1.2em !default;
 $strong-weight: 600 !default;
 $font-handwriting: $font-family !default;
+
 $font-size: 14px;
 $font-color: #505050;
 $font-line-height: 1.62em;
@@ -46,16 +47,17 @@ $subtle-lighten: 50%;
 //Header
 //-------------------------------------------------------------------------------------
 $headers: h1,h2,h3,h4,h5,h6;
+
 $header-family: $font-family !default;
 $header-weight: 800 !default;
 $header-weight-thin: 400 !default;
-$header-weight-thick: 900 !default;
-$header-letter-spacing: 0.25px !default;
-$header-text-transform: uppercase !default;
-$header-color: $dark-grey-color;
-
+$header-weight-thick: 800 !default;
+$header-letter-spacing: 0 !default;
+$header-text-transform: none !default;
 $subheader-family: $header-family !default;
 $subheader-weight: 300 !default;
+
+$header-color: $dark-grey-color;
 $subheader-size: 13px;
 $subheader-style: normal;
 $subheader-color: lighten($font-color, 20%);
@@ -80,25 +82,25 @@ $sticky-shrink: 0.7; // How much logo and margins will shrink on small screens
 
 $nav-family: $font-family !default;
 $nav-font-size: 14px !default;
-$nav-font-weight: 600 !default;
+$nav-font-weight: $font-weight !default;
 $nav-text-transform: uppercase !default;
-$nav-letter-spacing: 1px !default;
-$nav-border-color: $light-grey-color;
-$nav-border-weight: 0px;
+$nav-letter-spacing: 0 !default;
+$nav-border-color: $light-grey-color; //Border on Left and Right
+$nav-border-weight: 2px; //Border on Left and Right
 $nav-bg: transparent;
-$nav-color: white;
+$nav-color: $primary-color;
 
 		//Active
 		$nav-color-active: $primary-color;
-		$nav-bg-active: transparent;
-		$nav-border-active: $third-color;
-		$nav-border-size-active: 0;
+		$nav-bg-active: $light-grey-color;
+		$nav-border-active: $third-color; //Border on Bottom
+		$nav-border-size-active: 2px; //TODO: Fix this . Border on Bottom
 
 		//Hover and focus
 		$nav-color-hover: $primary-color;
-		$nav-bg-hover: transparent;
-		$nav-border-hover: $third-color;
-		$nav-border-size-active: 0;
+		$nav-bg-hover: $nav-bg-active;
+		$nav-border-hover: $third-color; //Border on Bottom
+		$nav-border-size-active: 0; //Border on Bottom
 
 		//Sublevels
 		$nav-sublevel-bg: $light-grey-color;
@@ -109,7 +111,7 @@ $nav-color: white;
 		$nav-sublevel-color-active: $font-color;
 		$nav-sublevel-border: 1px solid darken($light-grey-color, 5%);
 		$nav-sublevel-text-transform: none;
-		$nav-sublevel-font-size: 0.75em;
+		$nav-sublevel-font-size: 0.9em;
 		$nav-sublevel-font-weight: 300;
 
 
@@ -117,13 +119,13 @@ $nav-color: white;
 //-------------------------------------------------------------------------------------
 $aa-menu-show-close: false;
 $aa-menu-height: 350px;
-$aa-menu-text-align: center;
-$aa-menu-bullets: false;
+$aa-menu-text-align: left;
+$aa-menu-bullets: true; //TODO: Add color to this, similar as text
 $aa-menu-bg-image: true;
 $aa-menu-bg: #E4E3DF;
 $aa-menu-line-difference:5%;
 $aa-menu-font-color: $dark-grey-color;
-$aa-menu-close-color: #ffffff;
+$aa-menu-close-color: $aa-menu-font-color;
 
 $aa-menu-font-family: 'Montserrat';
 $aa-menu-font-size: 18px;
@@ -137,33 +139,32 @@ $aa-menu-letter-spacing: $nav-letter-spacing;
 
 //Burger Icon
 //-------------------------------------------------------------------------------------
-$burger-position: center;
+$burger-color: #252A2E; //This is universal for all burgers
+$burger-color-active: red; //This is universal for all burgers
 $burger-size: 28px;
-$burger-bg-color: $light-grey-color;
-$burger-color: #252A2E;
-$burger-color-active: red;
-$burger-border: false;
-$burger-border-color: #3B4761;
+$burger-border: true; //Border on the left side
+$burger-border-color: $light-grey-color; //Border on the left side
 
 
 //Sticky Nav
 //-------------------------------------------------------------------------------------
 
-$sticky-opacity: 1; // How much opacity on scroll
+$sticky-opacity: 0.8; // How much opacity on scroll
 
 
 //Type on phone
 //-------------------------------------------------------------------------------------
-$phone-font-size: 0.9em;
+$phone-font-size: 1em;
 
 
 //Hr
+//TODO: Add Mixins here
 //-------------------------------------------------------------------------------------
-$hr-color: $light-grey-color;
-$hr-size: 1px;
+
 
 
 //Header sizes (Large Screen. Small is adjusted by percent)
+//TODO: MAke theses modular and golden aso.
 //-------------------------------------------------------------------------------------
 $h1:3em; //Not in use
 $h2:2.5em; //Not in use
@@ -174,27 +175,16 @@ $h6:1em; //Not in use
 
 
 //Breadcrumbs
-//--------------------------
+//TODO: Add breadcrumbs to Blocks
+//------------------------------------------------------------------------------------
 $breadcrumbs-transform: uppercase;
 $breadcrumbs-size: 12px;
 $breadcrumbs-color: $primary-color;
 $breadcrumbs-active: $font-color;
 
 
-//Icons Share, search and map
-//-------------------------------------------------------------------------------------
-$nav-icon-color: $nav-color;
-$nav-icon-size: $nav-font-size;
-$nav-icon-padding: $nav-padding;
-
-
-//Panels
-//-------------------------------------------------------------------------------------
-$panel-bg:white;
-$panel-padding:2rem;
-
-
 //Tabs
+//Add to Block in different types
 //-------------------------------------------------------------------------------------
 $tab-font-size: 0.9em;
 $tab-font-weight: 400;

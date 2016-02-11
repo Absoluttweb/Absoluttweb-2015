@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,400italic,600,300|Playfair+Display:400,700|Montserrat);
 .aa-menu-wrapper {
   position: fixed;
   top: 0;
@@ -18,7 +17,7 @@
     right: 0;
     display: none;
     line-height: 45px;
-    color: #ffffff;
+    color: #272727;
     text-transform: uppercase;
     font-size: 18px;
     border: 0 solid #d8d7d1;
@@ -52,10 +51,8 @@
   margin-top: 40%; }
   .aa-menu li a {
     display: block;
-    text-align: center;
-    padding-left: 0 !important;
     width: 100%;
-    color: #2A363F !important;
+    color: #272727 !important;
     font-family: "Montserrat";
     font-size: 18px;
     font-weight: 500;
@@ -64,6 +61,14 @@
     border-bottom: 1px solid #d8d7d1;
     line-height: 40px;
     padding-left: 21px; }
+    .aa-menu li a:before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background-color: #7399E7;
+      margin-right: 10px;
+      margin-bottom: 3px; }
   .aa-menu li.active a {
     color: #2A363F !important;
     font-weight: 900; }
@@ -86,7 +91,7 @@
       content: " \f054"; }
   .aa-menu li a.back {
     display: block;
-    color: #2A363F;
+    color: #272727;
     border-top: 1px solid #d8d7d1; }
     .aa-menu li a.back:before {
       content: " ";
