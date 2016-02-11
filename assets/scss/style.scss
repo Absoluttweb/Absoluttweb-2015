@@ -24,6 +24,16 @@
 /* Theme styles
 ================================================================ */
 
+.shadow {
+	display:block;
+	width:100%;
+	height:20px;
+	background-image: url("/img/globals/shadow.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center top
+}
+
 .svg-header {
 	width: 100%;
 	height: 0px;
