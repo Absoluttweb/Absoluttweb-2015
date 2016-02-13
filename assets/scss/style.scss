@@ -131,12 +131,12 @@
 			}
 		}
 		h2 {
-			padding-top: 7%;
-			font-size: 200%;
-			color:$font-color;
-			font-weight: 600;
-			text-transform: none;
-			letter-spacing: -0.05em;
+			padding-top: 0%;
+		    font-size: 180%;
+		    color: #456272;
+		    font-weight: 600;
+		    text-transform: none;
+		    letter-spacing: -0.05em;
 			
 			// Medium only
 			@media only screen and (max-width: $large-size) {
